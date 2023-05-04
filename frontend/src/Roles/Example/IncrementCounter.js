@@ -5,12 +5,15 @@ import { increment } from "@/Redux/Features/counter/coutersSlice";
 const IncrementCounter = () => {
   const dispatch = useDispatch();
   const counter = useSelector((state) => state.counter.count);
+  const incrementFunc = () => {
+    dispatch(increment());
+  };
   return (
     <div>
       <h1>
         Counter: <span>{counter}</span>
       </h1>
-      <button onClick={() => dispatch(increment)}>Add To Count</button>
+      <button onClick={incrementFunc}>Add To Count</button>
     </div>
   );
 };

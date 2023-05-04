@@ -10,9 +10,7 @@ const Page = (props) => {
       <AddCount />
       <br />
       <nav>
-        <Link href={props.linkTo}>
-          Navigate
-        </Link>
+        <Link href={props.linkTo}>Navigate</Link>
       </nav>
     </div>
   );

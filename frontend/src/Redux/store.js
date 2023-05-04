@@ -21,7 +21,7 @@ const masterReducer = (state, action) => {
         users: [...action.payload.users.users, ...state.users.users],
       },
     };
-    console.log({nextState});
+    console.log({ nextState });
     return nextState;
   } else {
     return combinedReducer(state, action);
