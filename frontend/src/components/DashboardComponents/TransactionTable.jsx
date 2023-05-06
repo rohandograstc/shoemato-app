@@ -244,10 +244,10 @@ export default function TransactionTable() {
                     >
                       <StyledButton
                         variant="contained"
-                        btnWidth="80px"
-                        btnRadius="8px"
-                        bgColor="#0D1A26"
-                        tColor="white"
+                        btnwidth={"80px"}
+                        btnradius={"8px"}
+                        bgcolor={"#0D1A26"}
+                        tcolor={"white"}
                       >
                         <Typography>{row.carbs}</Typography>
                       </StyledButton>

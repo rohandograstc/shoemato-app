@@ -35,16 +35,16 @@ export default function TableInfo() {
       btnWidth: "150px",
       btnRadius: "0px",
       mrx: "5px",
-      bgColor: "white",
-      tColor: "black",
+      bgcolor: "white",
+      tcolor: "black",
     },
     {
       name: "Transactions",
       btnWidth: "150px",
       btnRadius: "0px 5px 5px 0px",
       mrx: "10px",
-      bgColor: "white",
-      tColor: "black",
+      bgcolor: "white",
+      tcolor: "black",
     },
   ];
 
@@ -55,11 +55,11 @@ export default function TableInfo() {
           <StyledButton
             key={index}
             variant="contained"
-            btnWidth={headData.btnWidth}
-            btnRadius={headData.btnRadius}
+            btnwidth={headData.btnWidth}
+            btnradius={headData.btnRadius}
             sx={{ marginRight: headData.mrx, boxShadow:"0px 4px 12px rgba(0, 0, 0, 0.1)" }}
-            bgColor={headData?.bgColor}
-            tColor={headData?.tColor}
+            bgcolor={headData?.bgcolor}
+            tcolor={headData?.tcolor}
           >
             <Typography variant="h4" className={styles.tableHeaderbtnText}>
               {headData.name}
@@ -69,7 +69,7 @@ export default function TableInfo() {
         <MonthlySelect />
         <Search>
           <StyledInputBase
-            searchWidth="150px"
+            searchwidth={"150px"}
             placeholder="Search…"
             inputProps={{ "aria-label": "search" }}
           />

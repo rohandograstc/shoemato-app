@@ -124,7 +124,7 @@ export const SearchIconWrapper = styled("div")(({ theme }) => ({
   justifyContent: "center",
 }));
 
-export const StyledInputBase = styled(InputBase)(({ theme, searchWidth }) => ({
+export const StyledInputBase = styled(InputBase)(({ theme, searchwidth }) => ({
   color: "black",
   backgroundColor: "white",
   borderRadius: "5px",
@@ -135,7 +135,7 @@ export const StyledInputBase = styled(InputBase)(({ theme, searchWidth }) => ({
     transition: theme.transitions.create("width"),
     width: "100%",
     [theme.breakpoints.up("md")]: {
-      width: searchWidth ? searchWidth : "400px",
+      width: searchwidth ? searchwidth : "400px",
     },
   },
 }));
@@ -177,17 +177,17 @@ export const StyledSlider = styled(Slider)(({ theme }) => ({
 // Brand Name
 
 export const StyledButton = styled(Button)(
-  ({ btnWidth, btnRadius, bgColor, tColor }) => ({
-    backgroundColor: bgColor ? bgColor : "#0D1A26",
-    borderRadius: btnRadius ? btnRadius : "24px",
+  ({ btnwidth, btnradius, bgcolor, tcolor }) => ({
+    backgroundColor: bgcolor ? bgcolor : "#0D1A26",
+    borderRadius: btnradius ? btnradius : "24px",
     padding: "7px 10px",
-    width: btnWidth ? btnWidth : "100%",
+    width: btnwidth ? btnwidth : "100%",
     marginBottom: "4px",
     textTransform: "none",
     "&:hover": {
-      backgroundColor: bgColor ? bgColor : "#0D1A26",
+      backgroundColor: bgcolor ? bgcolor : "#0D1A26",
     },
-    color: tColor ? tColor : "white",
+    color: tcolor ? tcolor : "white",
   })
 );
 
