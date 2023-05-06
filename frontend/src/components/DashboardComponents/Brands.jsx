@@ -1,8 +1,11 @@
-import { Box, Button, Paper, Typography } from "@mui/material";
+import { Box, Paper, Typography } from "@mui/material";
 import React from "react";
 
 import styles from "./dashboard.module.css";
-import ReportGmailerrorredOutlinedIcon from '@mui/icons-material/ReportGmailerrorredOutlined';
+import {
+  StyledButton,
+  StyledReportIcon,
+} from "@/styledComponents/NavComponents";
 
 export default function Brands() {
   const brandNameArray = [
@@ -29,21 +32,11 @@ export default function Brands() {
         ))}
       </Box>
       <Box className={styles.reportButton}>
-        <Button
-          variant="contained"
-          startIcon={<ReportGmailerrorredOutlinedIcon />}
-          sx={{
-            width: "100%",
-            backgroundColor: "#0D1A26",
-            borderRadius: "24px",
-            textTransform: "none",
-            "&:hover": {
-              backgroundColor: "#0D1A26",
-            },
-          }}
-        >
-          <Typography variant="p" className={styles.reportBtnText}>Report</Typography>
-        </Button>
+        <StyledButton variant="contained" startIcon={<StyledReportIcon />}>
+          <Typography variant="p" className={styles.reportBtnText}>
+            Report
+          </Typography>
+        </StyledButton>
       </Box>
     </Paper>
   );

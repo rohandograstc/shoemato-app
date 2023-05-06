@@ -1,4 +1,4 @@
-// Components - Drawer, AppBar Styled Components, Vendors,  Daily Queue
+// Components - Drawer, AppBar Styled Components, Vendors,  Daily Queue, Brand Name
 
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
@@ -8,6 +8,8 @@ import Slider from "@mui/material/Slider";
 import LinearProgress, {
   linearProgressClasses,
 } from "@mui/material/LinearProgress";
+import Button from "@mui/material/Button";
+import ReportIcon from "@mui/icons-material/Report";
 
 //Drawer
 
@@ -15,6 +17,9 @@ const drawerWidth = 203;
 
 const openedMixin = (theme) => ({
   width: drawerWidth,
+  [theme.breakpoints.up("xl")]: {
+    width: 240,
+  },
   transition: theme.transitions.create("width", {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.enteringScreen,
@@ -119,7 +124,7 @@ export const SearchIconWrapper = styled("div")(({ theme }) => ({
   justifyContent: "center",
 }));
 
-export const StyledInputBase = styled(InputBase)(({ theme }) => ({
+export const StyledInputBase = styled(InputBase)(({ theme, searchWidth }) => ({
   color: "black",
   backgroundColor: "white",
   borderRadius: "5px",
@@ -130,7 +135,7 @@ export const StyledInputBase = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create("width"),
     width: "100%",
     [theme.breakpoints.up("md")]: {
-      width: "400px",
+      width: searchWidth ? searchWidth : "400px",
     },
   },
 }));
@@ -167,4 +172,25 @@ export const StyledSlider = styled(Slider)(({ theme }) => ({
     backgroundColor: "transparent",
     border: "2px solid black",
   },
+}));
+
+// Brand Name
+
+export const StyledButton = styled(Button)(
+  ({ btnWidth, btnRadius, bgColor, tColor }) => ({
+    backgroundColor: bgColor ? bgColor : "#0D1A26",
+    borderRadius: btnRadius ? btnRadius : "24px",
+    padding: "7px 10px",
+    width: btnWidth ? btnWidth : "100%",
+    marginBottom: "4px",
+    textTransform: "none",
+    "&:hover": {
+      backgroundColor: bgColor ? bgColor : "#0D1A26",
+    },
+    color: tColor ? tColor : "white",
+  })
+);
+
+export const StyledReportIcon = styled(ReportIcon)(({ theme }) => ({
+  borderRadius: "100%",
 }));

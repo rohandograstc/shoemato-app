@@ -1,4 +1,4 @@
-/* Components - Info of Company, Chart, Daily Queue, Vendors Component, Brand */
+/* Components - Info of Company, Chart, Daily Queue, Vendors Component, Brand, Transaction Table */
 
 /* Info of Company */
 
@@ -181,6 +181,14 @@
   outline: none;
 }
 
+.vendorSales {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12.64px;
+  line-height: 16px;
+}
+
 /* Brand  */
 
 .brandComponent {
@@ -235,4 +243,28 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
+}
+
+/* Transaction Table  */
+
+.transactionTableHeader {
+  display: flex;
+  align-items: center;
+  border-top-left-radius: 15px;
+  overflow: hidden;
+}
+
+.tableHeaderbtnText {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 160%;
+}
+
+.transactiontableHeaderName {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
 }
