@@ -11,6 +11,6 @@
 .appbarTexts {
   font-weight: 600;
   font-size: 20px;
-  font-family: "Montserrat";
-  font-style: normal;
+  font-family: "Montserrat" !important;
 }
+

@@ -1,11 +1,13 @@
-// Components - Drawer, AppBar Styled Components, Daily Queue
-
+// Components - Drawer, AppBar Styled Components, Vendors,  Daily Queue
 
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import MuiDrawer from "@mui/material/Drawer";
 import MuiAppBar from "@mui/material/AppBar";
 import Slider from "@mui/material/Slider";
+import LinearProgress, {
+  linearProgressClasses,
+} from "@mui/material/LinearProgress";
 
 //Drawer
 
@@ -133,8 +135,23 @@ export const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
+// Vendors
 
-// Daily Queue 
+export const BorderLinearProgress = styled(LinearProgress)(({ bg, value }) => ({
+  height: 13,
+  borderRadius: 5,
+  borderTopLeftRadius: 0,
+  borderBottomLeftRadius: 0,
+  [`&.${linearProgressClasses.colorPrimary}`]: {
+    backgroundColor: "transparent",
+  },
+  [`& .${linearProgressClasses.bar}`]: {
+    borderRadius: 5,
+    backgroundColor: bg ? bg : "#FE9496",
+  },
+}));
+
+// Daily Queue
 
 export const StyledSlider = styled(Slider)(({ theme }) => ({
   display: "inline-block",

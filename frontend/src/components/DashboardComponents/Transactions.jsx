@@ -1,5 +1,6 @@
 import { Grid, Typography } from '@mui/material'
 import React from 'react'
+import Brands from './Brands'
 
 export default function Transactions() {
   return (
@@ -8,7 +9,7 @@ export default function Transactions() {
             <Typography variant='h3' >Hello world</Typography>
         </Grid>
         <Grid item xs={5} md={3}>
-        <Typography variant='h3' >Hello world</Typography>
+          <Brands/>
         </Grid>
     </Grid>
   )

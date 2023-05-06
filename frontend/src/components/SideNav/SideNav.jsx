@@ -10,6 +10,8 @@ import ListItemText from "@mui/material/ListItemText";
 import IconButton from "@mui/material/IconButton";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import SearchIcon from "@mui/icons-material/Search";
+import { Typography } from "@mui/material";
+
 import {
   DrawerHeader,
   AppBar,
@@ -25,9 +27,7 @@ import Image from "next/image";
 import Logos from "../../assets/svg";
 
 // CSS
-
 import styles from "./page.module.css";
-import { Typography } from "@mui/material";
 
 export default function SideNav() {
   const open = true;
@@ -145,6 +145,7 @@ export default function SideNav() {
                   sx={{
                     opacity: open ? 1 : 0,
                     color: index === 0 ? "black" : "white",
+                    fontFamily: "Montserrat",
                   }}
                 />
               </ListItemButton>

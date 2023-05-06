@@ -2,16 +2,14 @@ import DailyQueue from "@/components/DashboardComponents/DailyQueue";
 import SummaryCards from "@/components/DashboardComponents/SummaryCards";
 import Transactions from "@/components/DashboardComponents/Transactions";
 import SideNav from "@/components/SideNav/SideNav";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import React from "react";
 
 export default function DashBoard() {
   return (
     <Box
       sx={{
-        display: "flex",
-        fontFamily: "Montserrat",
-        fontStyle: "normal",
+        display: "flex"
       }}
     >
       <SideNav />
