@@ -10,6 +10,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@devexpress/dx-react-chart": "^4.0.3",
+    "@devexpress/dx-react-chart-material-ui": "^4.0.3",
+    "@devexpress/dx-react-core": "^4.0.3",
+    "@emotion/styled": "^11.10.8",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.12.3",
+    "@mui/styled-engine-sc": "^5.12.0",
     "@reduxjs/toolkit": "^1.9.5",
     "axios": "^1.4.0",
     "eslint": "8.39.0",
@@ -24,6 +31,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-i18next": "^12.2.2",
-    "react-redux": "^8.0.5"
+    "react-redux": "^8.0.5",
+    "styled-components": "^5.3.10"
   }
 }
