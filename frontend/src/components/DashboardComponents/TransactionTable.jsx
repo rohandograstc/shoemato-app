@@ -188,6 +188,7 @@ export default function TransactionTable() {
                       "&:hover": {
                         backgroundColor: "#F1F4FA",
                       },
+                      borderRadius: "15px",
                     }}
                   >
                     <TableCell
@@ -203,6 +204,7 @@ export default function TransactionTable() {
                         "&:hover": {
                           backgroundColor: "#F1F4FA",
                         },
+                        borderRadius: "5px",
                       }}
                     >
                       {row.name}
@@ -258,6 +260,7 @@ export default function TransactionTable() {
                         borderBottom: "none",
                         boxShadow: "none",
                         textAlign: "center",
+                        borderRadius: "5px",
                       }}
                     >
                       {row.protein}

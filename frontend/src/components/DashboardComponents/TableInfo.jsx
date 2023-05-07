@@ -41,7 +41,7 @@ export default function TableInfo() {
     {
       name: "Transactions",
       btnWidth: "150px",
-      btnRadius: "0px 5px 5px 0px",
+      btnRadius: "0px 10px 10px 0px",
       mrx: "10px",
       bgcolor: "white",
       tcolor: "black",
@@ -72,21 +72,18 @@ export default function TableInfo() {
           </StyledButton>
         ))}
         <MonthlySelect />
-        <Search
-          sx={{
-            border: "1px solid #FFFFFF",
-            boxShadow: "inset 0px 0px 3px rgba(0, 0, 0, 0.25)",
-            borderRadius: "10px",
-          }}
-        >
+        <Search>
           <StyledInputBase
             searchwidth={"150px"}
-            placeholder="Search…"
-            inputProps={{ "aria-label": "search" }}
+            placeholder="Search"
+            inputProps={{
+              "aria-label": "search",
+            }}
             sx={{
-              border: "1px solid #FFFFFF",
-              boxShadow: "inset 0px 0px 3px rgba(0, 0, 0, 0.25)",
+              border: "0.3px solid #ecedec",
+              boxShadow: "inset 0px 0px 1px rgba(0, 0, 0, 0.25)",
               borderRadius: "10px",
+              width:"160px",
             }}
           />
           <SearchIconWrapper>

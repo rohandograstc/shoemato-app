@@ -137,6 +137,11 @@ export const StyledInputBase = styled(InputBase)(({ theme, searchwidth }) => ({
     [theme.breakpoints.up("md")]: {
       width: searchwidth ? searchwidth : "400px",
     },
+    "::placeholder": {
+      fontWeight: 400,
+      fontSize: "20px",
+      lineHeight: "160%",
+    },
   },
 }));
 
