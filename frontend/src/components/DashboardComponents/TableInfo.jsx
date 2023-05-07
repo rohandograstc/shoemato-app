@@ -49,7 +49,9 @@ export default function TableInfo() {
   ];
 
   return (
-    <Paper sx={{ borderTopLeftRadius: "15px", paddingBottom:"5px", height:"100%" }}>
+    <Paper
+      sx={{ borderTopLeftRadius: "15px", paddingBottom: "5px", height: "100%" }}
+    >
       <Box className={styles.transactionTableHeader}>
         {headArray.map((headData, index) => (
           <StyledButton
@@ -57,7 +59,10 @@ export default function TableInfo() {
             variant="contained"
             btnwidth={headData.btnWidth}
             btnradius={headData.btnRadius}
-            sx={{ marginRight: headData.mrx, boxShadow:"0px 4px 12px rgba(0, 0, 0, 0.1)" }}
+            sx={{
+              marginRight: headData.mrx,
+              boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
+            }}
             bgcolor={headData?.bgcolor}
             tcolor={headData?.tcolor}
           >
@@ -67,11 +72,22 @@ export default function TableInfo() {
           </StyledButton>
         ))}
         <MonthlySelect />
-        <Search>
+        <Search
+          sx={{
+            border: "1px solid #FFFFFF",
+            boxShadow: "inset 0px 0px 3px rgba(0, 0, 0, 0.25)",
+            borderRadius: "10px",
+          }}
+        >
           <StyledInputBase
             searchwidth={"150px"}
             placeholder="Search…"
             inputProps={{ "aria-label": "search" }}
+            sx={{
+              border: "1px solid #FFFFFF",
+              boxShadow: "inset 0px 0px 3px rgba(0, 0, 0, 0.25)",
+              borderRadius: "10px",
+            }}
           />
           <SearchIconWrapper>
             <SearchIcon sx={{ color: "black" }} />
@@ -86,7 +102,7 @@ export default function TableInfo() {
           }}
         />
       </Box>
-      <TransactionTable/>
+      <TransactionTable />
     </Paper>
   );
 }

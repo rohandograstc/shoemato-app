@@ -155,7 +155,7 @@ export default function TransactionTable() {
   return (
     <Box sx={{ width: "100%", height: "100%" }}>
       <Paper
-        sx={{ width: "100%", mb: 2, boxShadow: "none", paddingLeft: "20px" }}
+        sx={{ width: "100%", mb: 2, boxShadow: "none", padding: "0 20px" }}
       >
         <TableContainer>
           <Table
@@ -177,7 +177,6 @@ export default function TransactionTable() {
 
                 return (
                   <TableRow
-                    hover
                     aria-checked={isItemSelected}
                     tabIndex={-1}
                     key={row.name}

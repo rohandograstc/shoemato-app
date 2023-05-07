@@ -11,6 +11,8 @@ import React from "react";
 import styles from "./dashboard.module.css";
 import { BorderLinearProgress } from "@/styledComponents/NavComponents";
 
+import MyCustomIcon from "@/assets/svg/dropdownIcon";
+
 export const MonthlySelect = () => {
   return (
     <FormControl>
@@ -19,7 +21,16 @@ export const MonthlySelect = () => {
         id="demo-simple-select"
         value={1}
         className={styles.customSelectRoot}
-        sx={{ ".MuiOutlinedInput-notchedOutline": { border: 0 } }}
+        IconComponent={() => <MyCustomIcon />}
+        sx={{
+          ".MuiOutlinedInput-notchedOutline": { border: 0 },
+          paddingLeft: "10px",
+          paddingRight: "10px",
+          "#demo-simple-select": {
+            paddingRight: "3px",
+            paddingLeft: 0,
+          },
+        }}
       >
         <MenuItem value={1}>Monthly</MenuItem>
         <MenuItem value={2}>Yearly</MenuItem>
@@ -109,7 +120,7 @@ export default function TopVendors() {
                 value={vendorData.value}
                 variant="determinate"
                 bg={vendorData.color}
-                sx={{ width:`${vendorData.value}%` }}
+                sx={{ width: `${vendorData.value}%` }}
               />
               <Typography variant="span" className={styles.vendorSales}>
                 {vendorData.sales}
