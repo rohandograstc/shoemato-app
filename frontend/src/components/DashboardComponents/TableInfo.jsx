@@ -50,7 +50,12 @@ export default function TableInfo() {
 
   return (
     <Paper
-      sx={{ borderTopLeftRadius: "15px", paddingBottom: "5px", height: "100%" }}
+      sx={{
+        borderTopLeftRadius: "15px",
+        paddingBottom: "5px",
+        height: "100%",
+        boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
+      }}
     >
       <Box className={styles.transactionTableHeader}>
         {headArray.map((headData, index) => (
@@ -83,7 +88,7 @@ export default function TableInfo() {
               border: "0.3px solid #ecedec",
               boxShadow: "inset 0px 0px 1px rgba(0, 0, 0, 0.25)",
               borderRadius: "10px",
-              width:"160px",
+              width: "160px",
             }}
           />
           <SearchIconWrapper>
