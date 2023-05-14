@@ -9,21 +9,51 @@ import {
 
 export default function Brands() {
   const brandNameArray = [
-    "International Brands",
-    "National Brands",
-    "Local Brands",
+    {
+      name: "International Brands",
+      bcolor: "#FFFFFF",
+      num: 10,
+    },
+    {
+      name: "National Brands",
+      bcolor: "#FFFFFF",
+      num: 5,
+    },
+    {
+      name: "Local Brands",
+      bcolor: "#FFFFFF",
+      num: 15,
+    },
+    {
+      name: "Men",
+      bcolor: "#DDFBFF",
+      num: 10,
+    },
+    {
+      name: "Women",
+      bcolor: "#FEE4FF",
+      num: 5,
+    },
+    {
+      name: "Child",
+      bcolor: "#FEFFCE",
+      num: 15,
+    },
   ];
-  const bradnNumArray = [10, 5, 15];
   return (
     <Paper className={styles.brandComponent}>
       <Box className={styles.brandSection}>
         {brandNameArray.map((text, index) => (
-          <Box key={index} className={styles.brandContainer}>
+          <Box
+            key={index}
+            className={styles.brandContainer}
+            sx={{ bgcolor: text.bcolor }}
+          >
             <Typography variant="h3" className={styles.brandName}>
-              {text}
+              {text.name}
             </Typography>
             <Typography variant="h5" className={styles.brandNum}>
-              {bradnNumArray[index]}
+              {text.num}
               <Typography variant="span" className={styles.brandUnit}>
                 K
               </Typography>

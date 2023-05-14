@@ -9,16 +9,12 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import IconButton from "@mui/material/IconButton";
 import AccountCircle from "@mui/icons-material/AccountCircle";
-import SearchIcon from "@mui/icons-material/Search";
 import { Typography } from "@mui/material";
 
 import {
   DrawerHeader,
   AppBar,
   Drawer,
-  Search,
-  SearchIconWrapper,
-  StyledInputBase,
 } from "../../styledComponents/NavComponents";
 import Image from "next/image";
 
@@ -48,23 +44,28 @@ export default function SideNav() {
     Logos.settings,
   ];
 
+  const sideNavArray = [
+    "Dashboard",
+    "Products",
+    "Inventory",
+    "Sales",
+    "Return",
+    "Orders",
+    "Vendors",
+    "Users",
+    "Employees",
+    "Complaints",
+    "Transactions",
+    "Settings",
+  ];
+
   return (
     <>
       <CssBaseline />
       <AppBar position="fixed" className={styles.appBar} open={open}>
         <Toolbar>
           <Box sx={{ flexGrow: 0.5 }} />
-          <Box>
-            <Search>
-              <StyledInputBase
-                placeholder="Search…"
-                inputProps={{ "aria-label": "search" }}
-              />
-              <SearchIconWrapper>
-                <SearchIcon sx={{ color: "black" }} />
-              </SearchIconWrapper>
-            </Search>
-          </Box>
+          {/* Removed Search  */}
           <Box sx={{ flexGrow: 0.5 }} />
           <Box sx={{ display: { xs: "none", md: "flex" }, gap: "30px" }}>
             <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -101,20 +102,7 @@ export default function SideNav() {
           />
         </DrawerHeader>
         <List sx={{ marginTop: "20px" }}>
-          {[
-            "Dashboard",
-            "Products",
-            "Inventory",
-            "Sales",
-            "Return",
-            "Orders",
-            "Vendors",
-            "Users",
-            "Employees",
-            "Complaints",
-            "Transactions",
-            "Settings",
-          ].map((text, index) => (
+          {sideNavArray.map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: "block" }}>
               <ListItemButton
                 sx={{

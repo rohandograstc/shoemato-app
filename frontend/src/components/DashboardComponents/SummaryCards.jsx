@@ -13,16 +13,16 @@ export default function SummaryCards() {
         <Grid
           item
           xs={6}
-          md={6}
-          xl={5}
+          md={4}
+          xl={4}
           sx={{ height: "400px", width: "fit-content" }}
         >
           <Cards />
         </Grid>
-        <Grid item xs={6} md={3} xl={3} sx={{ height: "400px" }}>
+        <Grid item xs={6} md={4} xl={4} sx={{ height: "400px" }}>
           <ChartCard />
         </Grid>
-        <Grid item xs={6} md={3} xl={4} sx={{ height: "400px" }}>
+        <Grid item xs={6} md={4} xl={4} sx={{ height: "400px" }}>
           <TopVendors />
         </Grid>
       </Grid>

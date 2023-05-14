@@ -90,7 +90,7 @@ export default function TopVendors() {
     <Paper className={styles.vendorsComponent}>
       <Box className={styles.venderHeader}>
         <Typography variant="h3" className={styles.vendorsTitle}>
-          Top Vendors
+          Turnover
         </Typography>
         <MonthlySelect />
       </Box>
