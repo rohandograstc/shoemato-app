@@ -1,14 +1,12 @@
 import React from "react";
-import Cards from "@/components/DashboardComponents/Cards";
-import ChartCard from "@/components/DashboardComponents/ChartCard";
+import Cards from "@/components/DashboardComponents/SummaryCardsComponent/Cards";
+import ChartCard from "@/components/DashboardComponents/SummaryCardsComponent/ChartCard";
 import { Grid } from "@mui/material";
-import { DrawerHeader } from "@/styledComponents/NavComponents";
-import TopVendors from "./TopVendors";
+import TopVendors from "./SummaryCardsComponent/TopVendors";
 
 export default function SummaryCards() {
   return (
     <>
-      <DrawerHeader />
       <Grid container spacing={2} justifyContent="center">
         <Grid
           item

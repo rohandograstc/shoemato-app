@@ -15,7 +15,7 @@ import {
   DrawerHeader,
   AppBar,
   Drawer,
-} from "../../styledComponents/NavComponents";
+} from "@/styledComponents/Drawer";
 import Image from "next/image";
 
 // Image / Logo

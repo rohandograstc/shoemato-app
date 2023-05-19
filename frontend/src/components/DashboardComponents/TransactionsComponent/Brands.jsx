@@ -1,11 +1,11 @@
 import { Box, Paper, Typography } from "@mui/material";
 import React from "react";
 
-import styles from "./dashboard.module.css";
+import styles from "../dashboard.module.css";
 import {
   StyledButton,
   StyledReportIcon,
-} from "@/styledComponents/NavComponents";
+} from "@/styledComponents/StyledBtn";
 
 export default function Brands() {
   const brandNameArray = [

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./dashboard.module.css";
+import styles from "../dashboard.module.css";
 
 //Others
 
@@ -11,15 +11,15 @@ import {
   Search,
   SearchIconWrapper,
   StyledInputBase,
-} from "../../styledComponents/NavComponents";
-import { StyledButton } from "@/styledComponents/NavComponents";
+} from "../../../styledComponents/NavComponents";
+import { StyledButton } from "@/styledComponents/StyledBtn";
 
 import SearchIcon from "@mui/icons-material/Search";
 import { Box, Paper, Typography } from "@mui/material";
 
 // SubComponents
 
-import { MonthlySelect } from "./TopVendors";
+import { MonthlySelect } from "../SummaryCardsComponent/TopVendors";
 import TransactionTable from "./TransactionTable";
 
 export default function TableInfo() {

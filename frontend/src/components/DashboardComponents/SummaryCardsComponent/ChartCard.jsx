@@ -5,7 +5,7 @@ import {
   PieSeries,
   Title,
 } from "@devexpress/dx-react-chart-material-ui";
-import styles from "./dashboard.module.css";
+import styles from "../dashboard.module.css";
 
 export default function ChartCard() {
   const data = [

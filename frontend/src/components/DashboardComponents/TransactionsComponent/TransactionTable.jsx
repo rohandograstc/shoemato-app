@@ -11,7 +11,7 @@ import TableSortLabel from "@mui/material/TableSortLabel";
 import Paper from "@mui/material/Paper";
 import { visuallyHidden } from "@mui/utils";
 
-import styles from "./dashboard.module.css";
+import styles from "../dashboard.module.css";
 import { Typography } from "@mui/material";
 import { StyledButton } from "@/styledComponents/NavComponents";
 

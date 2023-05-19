@@ -7,8 +7,6 @@ const nextConfig = {
     }
     return config;
   },
-  // Add CSS module support
-  cssModules: true,
 };
 
 module.exports = nextConfig;
