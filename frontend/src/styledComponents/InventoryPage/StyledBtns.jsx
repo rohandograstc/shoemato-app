@@ -9,4 +9,7 @@ export const StyledBtns = styled(Button)(({ theme, btncolor, btnradius, btnborde
   "&:hover": {
     backgroundColor: btncolor ? btncolor : "#0D1A261A",
   },
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
 }));

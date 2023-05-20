@@ -11,7 +11,7 @@ import {
   Search,
   SearchIconWrapper,
   StyledInputBase,
-} from "../../../styledComponents/NavComponents";
+} from "@/styledComponents/SearchStyles";
 import { StyledButton } from "@/styledComponents/StyledBtn";
 
 import SearchIcon from "@mui/icons-material/Search";
@@ -88,7 +88,7 @@ export default function TableInfo() {
               border: "0.3px solid #ecedec",
               boxShadow: "inset 0px 0px 1px rgba(0, 0, 0, 0.25)",
               borderRadius: "10px",
-              width: "160px",
+
             }}
           />
           <SearchIconWrapper>

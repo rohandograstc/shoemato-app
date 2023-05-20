@@ -13,7 +13,7 @@ import { visuallyHidden } from "@mui/utils";
 
 import styles from "../dashboard.module.css";
 import { Typography } from "@mui/material";
-import { StyledButton } from "@/styledComponents/NavComponents";
+import { StyledButton } from "@/styledComponents/StyledBtn";
 
 function createData(name, calories, fat, carbs, protein) {
   return {

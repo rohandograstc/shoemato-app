@@ -5,7 +5,7 @@ import "@/styles/globals.css";
 
 import SideNav from "@/components/SideNav/SideNav";
 import { Box } from "@mui/material";
-import { DrawerHeader } from "@/styledComponents/NavComponents";
+import { DrawerHeader } from "@/styledComponents/Drawer";
 
 function App({ Component, pageProps }) {
   return (

@@ -34,13 +34,6 @@ function InventoryHead() {
       <StyledBtns
         variant="contained"
         disableElevation
-        startIcon={
-          <DoneIcon
-            sx={{
-              color: "black",
-            }}
-          />
-        }
         btnradius={"0px"}
         btncolor={"#fff"}
         sx={{
@@ -54,13 +47,6 @@ function InventoryHead() {
       <StyledBtns
         variant="contained"
         disableElevation
-        startIcon={
-          <DoneIcon
-            sx={{
-              color: "black",
-            }}
-          />
-        }
         btnradius={"0px 100px 100px 0px"}
         btncolor={"#fff"}
       >
