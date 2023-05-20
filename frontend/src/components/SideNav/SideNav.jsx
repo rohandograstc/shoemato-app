@@ -11,11 +11,7 @@ import IconButton from "@mui/material/IconButton";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import { Typography } from "@mui/material";
 
-import {
-  DrawerHeader,
-  AppBar,
-  Drawer,
-} from "@/styledComponents/Drawer";
+import { DrawerHeader, AppBar, Drawer } from "@/styledComponents/Drawer";
 import Image from "next/image";
 
 // Image / Logo
@@ -24,10 +20,18 @@ import Logos from "../../assets/svg";
 
 // CSS
 import styles from "./page.module.css";
+import Link from "next/link";
+
+// Other
+
+import { useRouter } from 'next/router';
 
 export default function SideNav() {
   const open = true;
   const menuId = "primary-search-account-menu";
+
+  const {pathname} = useRouter();
+
 
   const IconArray = [
     Logos.dashboard,
@@ -42,21 +46,33 @@ export default function SideNav() {
     Logos.complaints,
     Logos.transactions,
     Logos.settings,
+    Logos.dashboardDark,
+    Logos.products,
+    Logos.inventoryDark,
+    Logos.sales,
+    Logos.returnIcon,
+    Logos.orders,
+    Logos.vendors,
+    Logos.users,
+    Logos.employees,
+    Logos.complaints,
+    Logos.transactions,
+    Logos.settings,
   ];
 
   const sideNavArray = [
-    "Dashboard",
-    "Products",
-    "Inventory",
-    "Sales",
-    "Return",
-    "Orders",
-    "Vendors",
-    "Users",
-    "Employees",
-    "Complaints",
-    "Transactions",
-    "Settings",
+    { name: "Dashboard", link: "/dashboard" },
+    { name: "Products" },
+    { name: "Inventory", link: "/inventory" },
+    { name: "Sales" },
+    { name: "Return" },
+    { name: "Orders" },
+    { name: "Vendors" },
+    { name: "Users" },
+    { name: "Employees" },
+    { name: "Complaints" },
+    { name: "Transactions" },
+    { name: "Settings" },
   ];
 
   return (
@@ -103,40 +119,45 @@ export default function SideNav() {
         </DrawerHeader>
         <List sx={{ marginTop: "20px" }}>
           {sideNavArray.map((text, index) => (
-            <ListItem key={text} disablePadding sx={{ display: "block" }}>
-              <ListItemButton
-                sx={{
-                  minHeight: 48,
-                  justifyContent: open ? "initial" : "center",
-                  px: 2.5,
-                  backgroundColor: index === 0 && "white",
-                  borderTopRightRadius: "5px",
-                  borderBottomRightRadius: "5px",
-                }}
-              >
-                <ListItemIcon
+            <ListItem key={text.name} disablePadding sx={{ display: "block" }}>
+              <Link href={text.link !== undefined ? `${text?.link}` : '/dashboard'} style={{textDecoration: "none"}} >
+                <ListItemButton
                   sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : "auto",
-                    justifyContent: "center",
+                    minHeight: 48,
+                    justifyContent: open ? "initial" : "center",
+                    px: 2.5,
+                    backgroundColor: pathname === text?.link && "white",
+                    color: pathname === text?.link ? "black" : "white",
+                    "&:hover": {
+                      backgroundColor: pathname === text?.link && "white",
+                    },
+                    borderTopRightRadius: "5px",
+                    borderBottomRightRadius: "5px",
                   }}
                 >
-                  <Image
-                    src={IconArray[index]}
-                    alt="icons"
-                    width="30px"
-                    height="30px"
+                  <ListItemIcon
+                    sx={{
+                      minWidth: 0,
+                      mr: open ? 3 : "auto",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <Image
+                      src={pathname === text?.link ? IconArray[index + 12] : IconArray[index]}
+                      alt="icons"
+                      width="30px"
+                      height="30px"
+                    />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary={text.name}
+                    sx={{
+                      opacity: open ? 1 : 0,
+                      fontFamily: "Montserrat",
+                    }}
                   />
-                </ListItemIcon>
-                <ListItemText
-                  primary={text}
-                  sx={{
-                    opacity: open ? 1 : 0,
-                    color: index === 0 ? "black" : "white",
-                    fontFamily: "Montserrat",
-                  }}
-                />
-              </ListItemButton>
+                </ListItemButton>
+              </Link>
             </ListItem>
           ))}
         </List>

@@ -39,10 +39,14 @@ export default function InventoryTable() {
             <TableRow
               key={i}
               sx={{
-                width:"100%",
+                width: "100%",
                 "&:last-child td, &:last-child th": { border: 0 },
               }}
               bgcolor={i % 2 !== 0 && "#F1F4FA"}
+              style={{
+                
+                padding: "12px 12px",
+              }}
             >
               <TableCell
                 component="th"
@@ -51,6 +55,9 @@ export default function InventoryTable() {
                   cursor: "pointer",
                   borderBottom: "none",
                   p: "4px",
+                }}
+                style={{
+                  padding: "12px 12px",
                 }}
                 align="center"
               >
