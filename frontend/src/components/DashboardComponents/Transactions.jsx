@@ -3,6 +3,7 @@ import React from 'react'
 import Brands from './TransactionsComponent/Brands'
 import TableInfo from './TransactionsComponent/TableInfo'
 
+
 export default function Transactions() {
   return (
     <Grid container spacing={2} justifyContent="center">

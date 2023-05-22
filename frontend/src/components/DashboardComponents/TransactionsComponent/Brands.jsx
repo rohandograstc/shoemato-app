@@ -2,10 +2,9 @@ import { Box, Paper, Typography } from "@mui/material";
 import React from "react";
 
 import styles from "../dashboard.module.css";
-import {
-  StyledButton,
-  StyledReportIcon,
-} from "@/styledComponents/StyledBtn";
+import ReportBtn from "./ReportBtn";
+
+
 
 export default function Brands() {
   const brandNameArray = [
@@ -61,13 +60,7 @@ export default function Brands() {
           </Box>
         ))}
       </Box>
-      <Box className={styles.reportButton}>
-        <StyledButton variant="contained" startIcon={<StyledReportIcon />}>
-          <Typography variant="p" className={styles.reportBtnText}>
-            Report
-          </Typography>
-        </StyledButton>
-      </Box>
+      <ReportBtn/>
     </Paper>
   );
 }
