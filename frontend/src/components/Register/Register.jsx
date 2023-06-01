@@ -7,130 +7,10 @@ import googleIcon from '../../assets/google_icon.svg'
 import Image from 'next/image';
 import MenuItem from '@mui/material/MenuItem';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { Visibility } from '@mui/icons-material';
-
-//input box css started here
-const inputBoxStyle = {
-    "& .MuiInputBase-root": {
-        height: 22,
-        paddingTop: 2.3,
-        paddingBottom: 2.5,
-        marginTop: .9,
-        marginBottom: .9,
-        fontSize: 16,
-        border: 1.5,
-        borderRadius: 1.8
-
-    },
-    "& .MuiInputLabel-root": {
-        fontSize: 14,
-        padding: .5,
-    
-
-    }
-}
-// inputbox css end here
-
-//mobile country code dorpdown css started here
-const code = {
-    "& .MuiInputBase-root": {
-        height: 14,
-        paddingTop:2.5,
-        paddingBottom: 2.3,
-        marginTop: .9,
-        marginBottom: .9,
-        fontSize: 14,
-        border: 1.5,
-        borderRadius: 1.8,
-        overflow:"visible",
-
-    },
-    "& .MuiInputLabel-root": {
-        fontSize: 10,
-        padding: .2,
-        overflow:"visible"
-
-    },
-    "& MuiSelect-icon":{
-        // fontSize:10,
-        // right:20,
-        // padding:50,
-        overflow:"visible"
-        // position:"absolute",
-        // visibility:"invisible"
-    },
-    "& .MuiInputBase-input":{
-        padding:0.1,
-        fontSize:14,
-        padding:0,
-        overflow:"visible",
-    },
-    "& .MuiSelect-select":{
-        overflow:"inherit"
-    },
-    "& .MuiSvgIcon-root":{
-        right:0,
-        height:.5,
-        width:.4,
-        overflow:"visible"
-        // position:"absolute",
-        // visibility:"invisible"
-    },
-    "& .MuiSelect-outlined":{
-        overflow:"visible"
-    }
-}//mobile country code dorpdown css started here
 
 
-//checkbox css started here
-const check_box = {
-    "& .MuiFormControlLabel-root": {
-        padding: .2,
-        margin:0,
-        
 
-    },
-    "& .MuiTypography-root": {
-        fontSize: 14,
-        margin: .0,
-    },
-    "& .PrivateSwitchBase-input":{
-        margin:0,
-        padding:0
-
-    }
-}
-//checkbox css end here
-
-
-const currencies = [
-    {
-        value: '1',
-        label: 'Manufacturer',
-    },
-    {
-        value: '2',
-        label: 'WholeSeller',
-    },
-    {
-        value: '3',
-        label: 'Retailer',
-    },
-    {
-        value: '4',
-        label: 'Customer',
-    },
-];
-
-const country = [
-    {
-        value: '1',
-        label: '+91',
-    }
-
-];
-
-function Reg() {
+const Register=()=> {
     return (
         <>
             <div className={style.container}>
@@ -245,4 +125,119 @@ function Reg() {
     )
 }
 
-export default Reg
+//input box css started here
+const inputBoxStyle = {
+    "& .MuiInputBase-root": {
+        height: 22,
+        paddingTop: 2.3,
+        paddingBottom: 2.5,
+        marginTop: .9,
+        marginBottom: .9,
+        fontSize: 16,
+        border: 1.5,
+        borderRadius: 1.8
+
+    },
+    "& .MuiInputLabel-root": {
+        fontSize: 14,
+        padding: .5,
+    
+
+    }
+}
+// inputbox css end here
+
+//mobile country code dorpdown css started here
+const code = {
+    "& .MuiInputBase-root": {
+        height: 14,
+        paddingTop:2.5,
+        paddingBottom: 2.3,
+        marginTop: .9,
+        marginBottom: .9,
+        fontSize: 14,
+        border: 1.5,
+        borderRadius: 1.8,
+        overflow:"visible",
+
+    },
+    "& .MuiInputLabel-root": {
+        fontSize: 10,
+        padding: .2,
+        overflow:"visible"
+
+    },
+    "& MuiSelect-icon":{
+        overflow:"visible"
+        },
+    "& .MuiInputBase-input":{
+        padding:0.1,
+        fontSize:14,
+        padding:0,
+        overflow:"visible",
+    },
+    "& .MuiSelect-select":{
+        overflow:"inherit"
+    },
+    "& .MuiSvgIcon-root":{
+        right:0,
+        height:.5,
+        width:.4,
+        overflow:"visible"
+       
+    },
+    "& .MuiSelect-outlined":{
+        overflow:"visible"
+    }
+}//mobile country code dorpdown css started here
+
+
+//checkbox css started here
+const check_box = {
+    "& .MuiFormControlLabel-root": {
+        padding: .2,
+        margin:0,
+        
+
+    },
+    "& .MuiTypography-root": {
+        fontSize: 14,
+        margin: .0,
+    },
+    "& .PrivateSwitchBase-input":{
+        margin:0,
+        padding:0
+
+    }
+}
+//checkbox css end here
+
+
+const currencies = [
+    {
+        value: '1',
+        label: 'Manufacturer',
+    },
+    {
+        value: '2',
+        label: 'WholeSeller',
+    },
+    {
+        value: '3',
+        label: 'Retailer',
+    },
+    {
+        value: '4',
+        label: 'Customer',
+    },
+];
+
+const country = [
+    {
+        value: '1',
+        label: '+91',
+    }
+
+];
+
+export default Register;

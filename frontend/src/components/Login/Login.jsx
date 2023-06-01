@@ -1,85 +1,15 @@
 import React from 'react'
-// import { Box, Typography,TextField } from "@mui/material";
 import { Box, Button, Checkbox, FormControlLabel, FormGroup, Grid, Stack, TextField, Typography } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-// import Stack from '@mui/joy/Stack';
 import style from './Login.module.css';
 import Image from 'next/image';
 import fbIcon from '../../assets/facebook_icon.svg'
 import appleIcon from '../../assets/apple_icon.svg'
 import googleIcon from '../../assets/google_icon.svg'
 
-const check_box={
-    "& .MuiFormControlLabel-root":{
-      padding:.2
-    },
-    "& .MuiTypography-root":{
-      fontSize:14,
-      margin:.2,
-      fontWeight:550
-    },
-    "& .MuiSvgIcon-root":{
-        color:"#000000"
-    }
-  }
 
 
-//   {
-//     "& .MuiInputBase-root":{
-//       height:28,
-//       paddingTop:2.5,
-//       paddingBottom:2,
-//       marginTop:0 ,
-//       marginBottom:0,
-//       fontSize:16,
-//       border:1.5,
-//       borderRadius:1.8
-//     },
-//     "& .MuiInputLabel-root":{
-//         fontSize:12,
-//         padding:0,
-//         lineHeight:1
-//     },
-//     "& .MuiTextField-root":{
-//         margin:0
-//     }}
-  const inputBoxStyle={
-    "& .MuiInputBase-root":{
-      height:22,
-      paddingTop:3,
-  paddingBottom:2,
-      marginTop:1 ,
-      marginBottom:1,
-      fontSize:16,
-      border:1.5,
-      borderRadius:1.8
-  
-    },
-    "& .MuiInputLabel-root":{
-        fontSize:12,
-        padding:.5,
-       
-    },
-    "& .MuiFormControl-root":{
-        margin:0
-    }
-  }
-const btn_text={
-    "& .MuiButton-root":{
-        justifyContent:"flex-start",
-        margin:.1,
-        fontWeight:550,
-        color:"#000000",
-        backgroundColor:"#000000"
-
-      },
-      "& .MuiTouchRipple-root":{
-        color:"#000000",
-        backgroundColor:"#000000"
-      }
-}
-
-function Login() {
+const Login=()=> {
     return (
         <Box className={style.super_container}>
             <Stack className={style.container}>
@@ -127,4 +57,56 @@ function Login() {
         </Box>
     )
 }
-export default Login
+
+
+const check_box={
+    "& .MuiFormControlLabel-root":{
+      padding:.2
+    },
+    "& .MuiTypography-root":{
+      fontSize:14,
+      margin:.2,
+      fontWeight:550
+    },
+    "& .MuiSvgIcon-root":{
+        color:"#000000"
+    }
+  }
+
+  const inputBoxStyle={
+    "& .MuiInputBase-root":{
+      height:22,
+      paddingTop:3,
+  paddingBottom:2,
+      marginTop:1 ,
+      marginBottom:1,
+      fontSize:16,
+      border:1.5,
+      borderRadius:1.8
+  
+    },
+    "& .MuiInputLabel-root":{
+        fontSize:12,
+        padding:.5,
+       
+    },
+    "& .MuiFormControl-root":{
+        margin:0
+    }
+  }
+const btn_text={
+    "& .MuiButton-root":{
+        justifyContent:"flex-start",
+        margin:.1,
+        fontWeight:550,
+        color:"#000000",
+        backgroundColor:"#000000"
+
+      },
+      "& .MuiTouchRipple-root":{
+        color:"#000000",
+        backgroundColor:"#000000"
+      }
+}
+
+export default Login;

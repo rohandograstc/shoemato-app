@@ -1,7 +1,7 @@
 import React from 'react'
 import style from './Register.module.css';
 
-function Tologin(props) {
+const Tologin=(props)=> {
   console.log(props.title1);
   return (
     <div style={{ width: "100px", height: "100px", borderRadius: "50%", backgroundColor: "#ffffff", boxShadow: "0px 10px 36px rgba(0, 0, 0, 0.18),0px 0px 0px 0px rgba(0, 0, 0, 0.06)" }}>

@@ -108,9 +108,14 @@ body {
   overflow-x: hidden;
   margin: 0px;
 }
-@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@700&family=Rubik:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&family=Rubik:wght@600;700&display=swap');
+
 :root {
   --title-fontsize: 32px;
   --title2-fontsize:20px;
   --subtitle-fontsize:16px;
+  --Rubik-fontstyle: 'Rubik';
+  --OpenSans-fontstyle: 'Open Sans';
+  --Montserrat-fontstyle:'';
 }

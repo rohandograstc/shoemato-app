@@ -1,14 +1,12 @@
 import Login from '@/components/Login/Login'
 
 import React from 'react'
-import Img from '../../assets/shoemato_img.png'
+import LoginImage from '../../assets/LoginPage.svg'
 import Image from 'next/image'
-import Stack from '@mui/joy/Stack';
-import { Box } from '@mui/material';
 import style from '../RegisterPage/RegisterPage.module.css';
 import Tologin from '@/components/Register/Tologin';
 
-function LoginPage() {
+const LoginPage=()=>{
   return (
 
     <div className={style.Boxsuper_container}>
@@ -17,10 +15,10 @@ function LoginPage() {
       </div>
       <div className={style.container} style={{flexDirection:"row"}}>
         <Login className={style.page} />
-        <Image src={Img} alt='Loadig' className={style.image} />
+        <Image src={LoginImage} alt='Loadig' className={style.image} />
       </div>
     </div>
   )
 }
 
-export default LoginPage
+export default LoginPage;

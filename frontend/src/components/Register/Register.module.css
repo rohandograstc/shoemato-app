@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&family=Rubik:wght@500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 .container{
     width:50%;
     height: 100vh;
@@ -27,7 +25,7 @@
 .title_signup{
      width:-webkit-fill-available ;
     text-align: center;
-    font-family: 'Open Sans';
+    font-family: var(--OpenSans-fontstyle);
     font-size: var(--subtitle-fontsize);
     font-weight: 600;
 }
@@ -60,7 +58,7 @@
     text-align: justify;
     height: 35px;
     font-weight:500 ;
-    font-family: 'Open Sans';
+    font-family: var(--OpenSans-fontstyle);
     
 }
 .country {
@@ -72,14 +70,14 @@
 .title2{
     width:-webkit-fill-available ;
     text-align: start;
-    font-family: 'Rubik';
+    font-family: var(--Rubik-fontstyle);
     font-size: var(--title2-fontsize);
     font-weight: 600;
     margin: .5rem 0rem;
 }
 .title{
     
-    font-family: 'Rubik';
+    font-family: var(--Rubik-fontstyle);
     font-size: var(--title-fontsize);
     font-weight:bold;
     margin: .5rem 0rem;
@@ -97,7 +95,7 @@
     font-weight: 500;
     border: none;
     font-size: 12px;
-    font-family: 'Rubik';
+    font-family: var(--Rubik-fontstyle);
 
 }
 .mobile_number{
@@ -118,13 +116,6 @@
    
 }
 .arrow2{
-    /* width: 90px;
-    height: 90px;
-    border-color: black;
-    border-width: 3px;
-    border: 2px solid #f00;
-    
-    border-radius: 50%; */
     position: absolute;
     margin : 5px;
     height: 90px;
@@ -179,7 +170,7 @@
     position: absolute;
     width: 100px;
     height: 100px;
-    font-family: 'Rubik';
+    font-family: var(--Rubik-fontstyle);
     font-weight: 500;
     justify-content: center;
     align-items: center;
