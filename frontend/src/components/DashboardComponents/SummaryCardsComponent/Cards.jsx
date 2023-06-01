@@ -7,22 +7,22 @@ export default function Cards() {
     {
       name: "Total Turnover",
       number: 5,
-      unit: "Cr",
+      unit: "Units",
     },
     {
       name: "Commission",
       number: 5,
-      unit: "Cr",
+      unit: "Units",
     },
     {
       name: "Credit Limit",
       number: 5,
-      unit: "Cr",
+      unit: "Units",
     },
     {
       name: "Total vendor",
       number: 5,
-      unit: "Cr",
+      unit: "Units",
     },
   ];
   return (

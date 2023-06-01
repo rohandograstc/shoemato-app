@@ -25,17 +25,17 @@ export default function Brands() {
     },
     {
       name: "Men",
-      bcolor: "#DDFBFF",
+      bcolor: "#FFFFFF",
       num: 10,
     },
     {
       name: "Women",
-      bcolor: "#FEE4FF",
+      bcolor: "#FFFFFF",
       num: 5,
     },
     {
       name: "Child",
-      bcolor: "#FEFFCE",
+      bcolor: "#FFFFFF",
       num: 15,
     },
   ];

@@ -35,43 +35,34 @@ export default function SideNav() {
 
   const IconArray = [
     Logos.dashboard,
-    Logos.products,
-    Logos.inventory,
     Logos.sales,
+    Logos.products,
     Logos.returnIcon,
     Logos.orders,
     Logos.vendors,
-    Logos.users,
-    Logos.employees,
+    Logos.inventory,
     Logos.complaints,
-    Logos.transactions,
     Logos.settings,
     Logos.dashboardDark,
-    Logos.products,
-    Logos.inventoryDark,
     Logos.sales,
+    Logos.products,
     Logos.returnIcon,
     Logos.orders,
     Logos.vendors,
-    Logos.users,
-    Logos.employees,
+    Logos.inventoryDark,
     Logos.complaints,
-    Logos.transactions,
     Logos.settings,
   ];
 
   const sideNavArray = [
     { name: "Dashboard", link: "/dashboard" },
+    { name: "Daily Sales" },
     { name: "Products" },
-    { name: "Inventory", link: "/inventory" },
-    { name: "Sales" },
     { name: "Return" },
-    { name: "Orders" },
+    { name: "Invoice" },
     { name: "Vendors" },
-    { name: "Users" },
-    { name: "Employees" },
+    { name: "Inventory", link: "/inventory" },
     { name: "Complaints" },
-    { name: "Transactions" },
     { name: "Settings" },
   ];
 
@@ -81,7 +72,6 @@ export default function SideNav() {
       <AppBar position="fixed" className={styles.appBar} open={open}>
         <Toolbar>
           <Box sx={{ flexGrow: 0.5 }} />
-          {/* Removed Search  */}
           <Box sx={{ flexGrow: 0.5 }} />
           <Box sx={{ display: { xs: "none", md: "flex" }, gap: "30px" }}>
             <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -143,7 +133,7 @@ export default function SideNav() {
                     }}
                   >
                     <Image
-                      src={pathname === text?.link ? IconArray[index + 12] : IconArray[index]}
+                      src={pathname === text?.link ? IconArray[index + 9] : IconArray[index]}
                       alt="icons"
                       width="30px"
                       height="30px"
