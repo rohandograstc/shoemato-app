@@ -1,11 +1,12 @@
 import InventoryHead from "@/components/Inventory/InventoryHead";
 import InventoryInfo from "@/components/Inventory/InventoryInfo";
 
-export default function Inventory() {
+const Inventory = () => {
   return (
     <>
       <InventoryHead />
       <InventoryInfo />
     </>
   );
-}
+};
+export default Inventory;

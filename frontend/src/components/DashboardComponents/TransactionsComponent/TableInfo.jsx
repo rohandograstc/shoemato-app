@@ -21,18 +21,19 @@ import { Box, Paper, Typography } from "@mui/material";
 
 import { MonthlySelect } from "../SummaryCardsComponent/TopVendors";
 import TransactionTable from "./TransactionTable";
+import { HeadingTypo } from "@/styledComponents/HeadingTypo";
 
-export default function TableInfo() {
+const TableInfo=()=> {
   const headArray = [
     {
-      name: "Transactions",
-      btnWidth: "160px",
+      name: "Brand",
+      btnWidth: "fit-content",
       btnRadius: "0px",
       mrx: "5px",
     },
     {
-      name: "Sales",
-      btnWidth: "150px",
+      name: "Vendor",
+      btnWidth: "fit-content",
       btnRadius: "0px",
       mrx: "5px",
       bgcolor: "white",
@@ -40,7 +41,7 @@ export default function TableInfo() {
     },
     {
       name: "Transactions",
-      btnWidth: "150px",
+      btnWidth: "fit-content",
       btnRadius: "0px 10px 10px 0px",
       mrx: "10px",
       bgcolor: "white",
@@ -70,14 +71,13 @@ export default function TableInfo() {
             }}
             bgcolor={headData?.bgcolor}
             tcolor={headData?.tcolor}
+            btnpad = {"7px 20px"}
           >
-            <Typography variant="h4" className={styles.tableHeaderbtnText}>
-              {headData.name}
-            </Typography>
+            <HeadingTypo variant="h4"  >{headData.name}</HeadingTypo>
           </StyledButton>
         ))}
         <MonthlySelect />
-        <Search>
+        <Search >
           <StyledInputBase
             searchwidth={"150px"}
             placeholder="Search"
@@ -108,3 +108,4 @@ export default function TableInfo() {
     </Paper>
   );
 }
+export default TableInfo

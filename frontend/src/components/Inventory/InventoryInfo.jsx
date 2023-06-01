@@ -3,7 +3,7 @@ import React from "react";
 import InventoryTableHead from "./InventoryTableHead";
 import InventoryTable from "./InventoryTable";
 
-function InventoryInfo() {
+const InventoryInfo = () => {
   return (
     <>
       <Box>
@@ -12,6 +12,6 @@ function InventoryInfo() {
       </Box>
     </>
   );
-}
+};
 
 export default InventoryInfo;

@@ -4,7 +4,7 @@ import ChartCard from "@/components/DashboardComponents/SummaryCardsComponent/Ch
 import { Grid } from "@mui/material";
 import TopVendors from "./SummaryCardsComponent/TopVendors";
 
-export default function SummaryCards() {
+const SummaryCards =()=> {
   return (
     <>
       <Grid container spacing={2} justifyContent="center">
@@ -27,3 +27,4 @@ export default function SummaryCards() {
     </>
   );
 }
+export default SummaryCards

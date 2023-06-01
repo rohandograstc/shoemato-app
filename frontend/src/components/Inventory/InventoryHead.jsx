@@ -6,7 +6,7 @@ import { StyledTypography } from "@/styledComponents/InventoryPage/StyledTypogra
 import { StyledBtns } from "@/styledComponents/InventoryPage/StyledBtns";
 import React from "react";
 
-function InventoryHead() {
+const InventoryHead = () => {
   return (
     <Box
       sx={{
@@ -54,6 +54,6 @@ function InventoryHead() {
       </StyledBtns>
     </Box>
   );
-}
+};
 
 export default InventoryHead;

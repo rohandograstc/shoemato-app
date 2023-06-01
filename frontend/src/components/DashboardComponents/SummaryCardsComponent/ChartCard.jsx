@@ -3,8 +3,10 @@ import React from "react";
 import { Chart, PieSeries } from "@devexpress/dx-react-chart-material-ui";
 import styles from "../dashboard.module.css";
 import { Palette } from "@devexpress/dx-react-chart";
+import { HeadingTypo } from "@/styledComponents/HeadingTypo";
+import { CellTypo } from "@/styledComponents/CellTypo";
 
-export default function ChartCard() {
+const ChartCard = () => {
   const data = [
     { argument: "Monday", value: 10 },
     { argument: "Tuesday", value: 40 },
@@ -43,15 +45,9 @@ export default function ChartCard() {
   ];
   return (
     <Paper className={styles.chartComponent}>
-      <Typography
-        variant="h5"
-        className={styles.cardTitle}
-        sx={{ textAlign: "center" }}
-      >
-        Sale Overview
-      </Typography>
+      <HeadingTypo variant="h5">Sale Overview</HeadingTypo>
       <Chart data={data} className={styles.chartContainer}>
-      <Palette scheme={colors} />
+        <Palette scheme={colors} />
         <PieSeries valueField="value" argumentField="argument" />
       </Chart>
       <Box className={styles.colorContainer}>
@@ -61,11 +57,12 @@ export default function ChartCard() {
               className={styles.dotColor}
               sx={{ backgroundColor: `${data.dotbgcolor}` }}
             />
-
-            <Typography variant="span">{data.name}</Typography>
+            <CellTypo variant="span">{data.name}</CellTypo>
           </Box>
         ))}
       </Box>
     </Paper>
   );
 }
+
+export default ChartCard 

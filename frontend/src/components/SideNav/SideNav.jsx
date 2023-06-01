@@ -24,14 +24,13 @@ import Link from "next/link";
 
 // Other
 
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 
-export default function SideNav() {
+const SideNav = () => {
   const open = true;
   const menuId = "primary-search-account-menu";
 
-  const {pathname} = useRouter();
-
+  const { pathname } = useRouter();
 
   const IconArray = [
     Logos.dashboard,
@@ -110,7 +109,10 @@ export default function SideNav() {
         <List sx={{ marginTop: "20px" }}>
           {sideNavArray.map((text, index) => (
             <ListItem key={text.name} disablePadding sx={{ display: "block" }}>
-              <Link href={text.link !== undefined ? `${text?.link}` : '/dashboard'} style={{textDecoration: "none"}} >
+              <Link
+                href={text.link !== undefined ? `${text?.link}` : "/dashboard"}
+                style={{ textDecoration: "none" }}
+              >
                 <ListItemButton
                   sx={{
                     minHeight: 48,
@@ -133,7 +135,11 @@ export default function SideNav() {
                     }}
                   >
                     <Image
-                      src={pathname === text?.link ? IconArray[index + 9] : IconArray[index]}
+                      src={
+                        pathname === text?.link
+                          ? IconArray[index + 9]
+                          : IconArray[index]
+                      }
                       alt="icons"
                       width="30px"
                       height="30px"
@@ -154,4 +160,5 @@ export default function SideNav() {
       </Drawer>
     </>
   );
-}
+};
+export default SideNav;

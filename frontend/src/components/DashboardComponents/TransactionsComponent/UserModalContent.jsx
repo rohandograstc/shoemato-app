@@ -9,7 +9,7 @@ import {
 import SearchIcon from "@mui/icons-material/Search";
 import UserInfoModalTable from "./UserInfoModalTable";
 
-function UserModalContent({ title }) {
+const UserModalContent=({ title })=> {
   return (
     <Box>
       <Typography

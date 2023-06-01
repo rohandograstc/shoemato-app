@@ -3,7 +3,7 @@ import SummaryCards from "@/components/DashboardComponents/SummaryCards";
 import Transactions from "@/components/DashboardComponents/Transactions";
 import React from "react";
 
-export default function DashBoard() {
+const DashBoard = () => {
   return (
     <>
       <SummaryCards />
@@ -11,4 +11,5 @@ export default function DashBoard() {
       <Transactions />
     </>
   );
-}
+};
+export default DashBoard;

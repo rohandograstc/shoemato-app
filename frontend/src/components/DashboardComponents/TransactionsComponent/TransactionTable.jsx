@@ -134,7 +134,7 @@ EnhancedTableHead.propTypes = {
   rowCount: PropTypes.number.isRequired,
 };
 
-export default function TransactionTable() {
+const TransactionTable = () => {
   const [order, setOrder] = React.useState("asc");
   const [orderBy, setOrderBy] = React.useState("calories");
   const [selected, setSelected] = React.useState([]);
@@ -275,3 +275,4 @@ export default function TransactionTable() {
     </Box>
   );
 }
+export default TransactionTable

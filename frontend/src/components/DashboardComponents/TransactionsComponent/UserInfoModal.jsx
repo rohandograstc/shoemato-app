@@ -1,4 +1,4 @@
-import { Box, Modal, Typography } from "@mui/material";
+import { Box, Modal } from "@mui/material";
 import React from "react";
 import UserModalContent from "./UserModalContent";
 
@@ -22,7 +22,7 @@ const overlayStyle = {
   backgroundColor: "rgba(13, 26, 38, 0.41)",
 };
 
-function UserInfoModal(props) {
+const UserInfoModal = (props) => {
   return (
     <Modal
       open={props.open}

@@ -2,45 +2,29 @@ import { Box, Button, Typography } from "@mui/material";
 import React from "react";
 import styles from "./dashboard.module.css";
 import { StyledSlider } from "@/styledComponents/StyledSlider";
+import { HeadingTypo } from "@/styledComponents/HeadingTypo";
+import { CellTypo } from "@/styledComponents/CellTypo";
 
-export default function DailyQueue() {
+const DailyQueue =()=> {
   return (
     <Box className={styles.dailyQueueContainer}>
-      <Typography variant="h3" className={styles.dailyQueueTitle}>
+      <HeadingTypo variant="h5" sx={{ paddingLeft: "10px" }}>
         Daily Queue
-      </Typography>
+      </HeadingTypo>
       <Box className={styles.dailyQueueOptionContainer}>
-        <Typography
-          variant="h3"
-          className={styles.dailyQueueOptions}
-          sx={{ display: "inline-block" }}
-        >
-          Total Orders
-        </Typography>
+        <CellTypo variant="h3">TOTAL ORDERS</CellTypo>
         <StyledSlider
           defaultValue={50}
           aria-label="Default"
           valueLabelDisplay="auto"
         />
-        <Typography
-          variant="h3"
-          className={styles.dailyQueueOptions}
-          sx={{ display: "inline-block" }}
-        >
-          PENDING ORDERS
-        </Typography>
+        <CellTypo variant="h3">PENDING ORDERS</CellTypo>
         <StyledSlider
           defaultValue={50}
           aria-label="Default"
           valueLabelDisplay="auto"
         />
-        <Typography
-          variant="h3"
-          className={styles.dailyQueueOptions}
-          sx={{ display: "inline-block" }}
-        >
-          COMPLETED ORDERS
-        </Typography>
+        <CellTypo variant="h3">COMPLETED ORDERS</CellTypo>
         <StyledSlider
           defaultValue={50}
           aria-label="Default"
@@ -51,16 +35,23 @@ export default function DailyQueue() {
           sx={{
             backgroundColor: "#0D1A26",
             borderRadius: "24px",
-            padding:"7px 10px",
+            padding: "7px 10px",
             "&:hover": {
               backgroundColor: "#0D1A26",
             },
           }}
         >
-          <Typography variant="p" className={styles.overDuesBtnText} >Overdues</Typography>
-          <Box className={styles.totalOverduesDiv} ><Typography className={styles.totalOverdues} variant="span" >34</Typography></Box>
+          <Typography variant="p" className={styles.overDuesBtnText}>
+            Overdues
+          </Typography>
+          <Box className={styles.totalOverduesDiv}>
+            <Typography className={styles.totalOverdues} variant="span">
+              34
+            </Typography>
+          </Box>
         </Button>
       </Box>
     </Box>
   );
 }
+export default DailyQueue

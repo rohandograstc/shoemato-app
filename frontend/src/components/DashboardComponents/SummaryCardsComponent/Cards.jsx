@@ -1,8 +1,9 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import styles from "../dashboard.module.css";
+import { HeadingTypo } from "@/styledComponents/HeadingTypo";
 
-export default function Cards() {
+const Cards = () => {
   const cardArray = [
     {
       name: "Total Turnover",
@@ -29,9 +30,7 @@ export default function Cards() {
     <Box component="div" className={styles.cardContainer}>
       {cardArray.map((data, index) => (
         <Box key={index} className={styles.cardDiv}>
-          <Typography variant="h5" className={styles.cardTitle}>
-            {data.name}
-          </Typography>
+          <HeadingTypo variant="h5">{data.name}</HeadingTypo>
           <Box>
             <Typography variant="h1" className={styles.cardValue}>
               {data.number}
@@ -45,3 +44,5 @@ export default function Cards() {
     </Box>
   );
 }
+
+export default Cards

@@ -10,7 +10,7 @@ import { StyledButton } from "@/styledComponents/StyledBtn";
 import { rows, tableHead } from "./constants";
 import { Typography } from "@mui/material";
 
-export default function InventoryTable() {
+const InventoryTable = () => {
   return (
     <TableContainer
       component={Paper}
@@ -44,7 +44,6 @@ export default function InventoryTable() {
               }}
               bgcolor={i % 2 !== 0 && "#F1F4FA"}
               style={{
-                
                 padding: "12px 12px",
               }}
             >
@@ -120,4 +119,5 @@ export default function InventoryTable() {
       </Table>
     </TableContainer>
   );
-}
+};
+export default InventoryTable;

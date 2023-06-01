@@ -5,13 +5,14 @@ import {
   MenuItem,
   Paper,
   Select,
-  Typography,
 } from "@mui/material";
 import React from "react";
 import styles from "../dashboard.module.css";
 import { BorderLinearProgress } from "@/styledComponents/BorderLinearProgress";
 
 import MyCustomIcon from "@/assets/svg/dropdownIcon";
+import { HeadingTypo } from "@/styledComponents/HeadingTypo";
+import { CellTypo } from "@/styledComponents/CellTypo";
 
 export const MonthlySelect = () => {
   return (
@@ -40,7 +41,7 @@ export const MonthlySelect = () => {
   );
 };
 
-export default function TopVendors() {
+const TopVendors = () => {
   const vendorNameArray = [
     {
       name: "Vendor",
@@ -89,9 +90,7 @@ export default function TopVendors() {
   return (
     <Paper className={styles.vendorsComponent}>
       <Box className={styles.venderHeader}>
-        <Typography variant="h3" className={styles.vendorsTitle}>
-          Turnover
-        </Typography>
+        <HeadingTypo variant="h5">Turnover</HeadingTypo>
         <MonthlySelect />
       </Box>
       <Box sx={{ height: "80%" }} className={styles.venderInfoContainer}>
@@ -105,9 +104,7 @@ export default function TopVendors() {
             key={index}
           >
             <Grid item xs={2} md={3}>
-              <Typography variant="h5" className={styles.vendorName}>
-                {vendorData.name}
-              </Typography>
+              <CellTypo variant="h5" fsize={"12.46px"} >{vendorData.name}</CellTypo>
             </Grid>
             <Grid
               item
@@ -122,9 +119,9 @@ export default function TopVendors() {
                 bg={vendorData.color}
                 sx={{ width: `${vendorData.value}%` }}
               />
-              <Typography variant="span" className={styles.vendorSales}>
+              <CellTypo variant="h5" fsize={"12.46px"} >
                 {vendorData.sales}
-              </Typography>
+              </CellTypo>
             </Grid>
           </Grid>
         ))}
@@ -132,3 +129,4 @@ export default function TopVendors() {
     </Paper>
   );
 }
+export default TopVendors

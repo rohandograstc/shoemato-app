@@ -13,7 +13,7 @@ import { StyledBtns } from "@/styledComponents/InventoryPage/StyledBtns";
 
 import AutorenewIcon from "@mui/icons-material/Autorenew";
 
-export default function InventoryTableHead() {
+const InventoryTableHead = () => {
   return (
     <Box
       sx={{
@@ -100,4 +100,5 @@ export default function InventoryTableHead() {
       </Box>
     </Box>
   );
-}
+};
+export default InventoryTableHead;

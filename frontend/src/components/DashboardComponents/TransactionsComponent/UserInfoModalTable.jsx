@@ -10,7 +10,7 @@ import Paper from "@mui/material/Paper";
 import { rows, tableHead } from "./constants";
 import { Typography } from "@mui/material";
 
-export default function UserInfoModalTable(props) {
+const UserInfoModalTable=(props)=> {
   return (
     <TableContainer
       component={Paper}
@@ -80,3 +80,4 @@ export default function UserInfoModalTable(props) {
     </TableContainer>
   );
 }
+export default UserInfoModalTable

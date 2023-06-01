@@ -3,10 +3,9 @@ import React from "react";
 
 import styles from "../dashboard.module.css";
 import ReportBtn from "./ReportBtn";
+import { HeadingTypo } from "@/styledComponents/HeadingTypo";
 
-
-
-export default function Brands() {
+const Brands=()=> {
   const brandNameArray = [
     {
       name: "International Brands",
@@ -48,9 +47,7 @@ export default function Brands() {
             className={styles.brandContainer}
             sx={{ bgcolor: text.bcolor }}
           >
-            <Typography variant="h3" className={styles.brandName}>
-              {text.name}
-            </Typography>
+            <HeadingTypo variant="h5" fsize={"16px"} >{text.name}</HeadingTypo>
             <Typography variant="h5" className={styles.brandNum}>
               {text.num}
               <Typography variant="span" className={styles.brandUnit}>
@@ -60,7 +57,8 @@ export default function Brands() {
           </Box>
         ))}
       </Box>
-      <ReportBtn/>
+      <ReportBtn />
     </Paper>
   );
 }
+export default Brands
