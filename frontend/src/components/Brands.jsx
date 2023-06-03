@@ -4,7 +4,7 @@ import React from "react";
 import styles from "./DashboardComponents/dashboard.module.css";
 import ReportBtn from "./ReportBtn";
 import { HeadingTypo } from "@/styledComponents/HeadingTypo";
-import CategoryAddButton from "./CategoryAddButton";
+import { AddButton, CategoryButton } from "./CategoryAddButton";
 
 const Brands = ({ report }) => {
   const brandNameArray = [
@@ -60,7 +60,21 @@ const Brands = ({ report }) => {
           </Box>
         ))}
       </Box>
-      {report ? <ReportBtn /> : <CategoryAddButton />}
+      {report ? (
+        <ReportBtn />
+      ) : (
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            marginTop: "20px",
+            gap: "10px",
+          }}
+        >
+          <CategoryButton />
+          <AddButton />
+        </Box>
+      )}
     </Paper>
   );
 };

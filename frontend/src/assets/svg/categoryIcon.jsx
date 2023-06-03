@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function CategoryIcon(props) {
+const CategoryIcon = (props) => {
   return (
     <svg
       width="18"
@@ -18,6 +18,6 @@ function CategoryIcon(props) {
       />
     </svg>
   );
-}
+};
 
 export default CategoryIcon;

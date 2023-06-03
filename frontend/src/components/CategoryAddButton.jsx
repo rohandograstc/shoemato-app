@@ -4,8 +4,9 @@ import { Box, Typography } from "@mui/material";
 import CategoryIcon from "@/assets/svg/categoryIcon";
 import AddIcon from "@mui/icons-material/Add";
 import styles from "./DashboardComponents/dashboard.module.css";
+import Link from "next/link";
 
-const CategoryAddButton = () => {
+const CategoryButton = () => {
   return (
     <Box
       sx={{
@@ -17,14 +18,37 @@ const CategoryAddButton = () => {
     >
       <StyledButton
         variant="contained"
-        btnwidth="50%"
+        btnwidth="150px"
         startIcon={<CategoryIcon />}
       >
-        <Typography variant="p" className={styles.reportBtnText}>
-          Category
-        </Typography>
+        <Link
+          href={"/products/category"}
+          style={{ textDecoration: "none", color: "white" }}
+        >
+          <Typography variant="p" className={styles.reportBtnText}>
+            Category
+          </Typography>
+        </Link>
       </StyledButton>
-      <StyledButton variant="contained" btnwidth="50%" startIcon={<AddIcon />}>
+    </Box>
+  );
+};
+
+const AddButton = ({ bwidth }) => {
+  return (
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "space-between",
+        marginTop: "20px",
+        gap: "10px",
+      }}
+    >
+      <StyledButton
+        variant="contained"
+        btnwidth={bwidth ? bwidth : "150px"}
+        startIcon={<AddIcon />}
+      >
         <Typography variant="p" className={styles.reportBtnText}>
           Add
         </Typography>
@@ -33,4 +57,4 @@ const CategoryAddButton = () => {
   );
 };
 
-export default CategoryAddButton;
+export { CategoryButton, AddButton };

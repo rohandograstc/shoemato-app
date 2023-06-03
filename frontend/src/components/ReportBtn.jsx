@@ -12,7 +12,7 @@ function ReportBtn() {
 
   return (
     <>
-      <Box className={styles.reportButton}>
+      <Box className={styles.reportButton} sx={{ marginTop: "20px" }}>
         <StyledButton
           variant="contained"
           onClick={handleOpen}

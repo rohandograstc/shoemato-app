@@ -34,57 +34,63 @@ const TransactionHeader = (props) => {
             borderRadius: "10px 10px 10px 0px",
           }}
         >
-          <Typography vairant="p" sx={{ fontSize : "22px"}} >TOP SELLING PRODUCT</Typography>
+          <Typography vairant="p" sx={{ fontSize: "22px" }}>
+            TOP SELLING PRODUCT
+          </Typography>
         </Box>
       ) : (
-        props.headArray.map((headData, index) => (
-          <StyledButton
-            key={index}
-            variant="contained"
-            btnwidth={headData.btnWidth}
-            btnradius={headData.btnRadius}
-            sx={{
-              marginRight: headData.mrx,
-              boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
-            }}
-            bgcolor={headData?.bgcolor}
-            tcolor={headData?.tcolor}
-            btnpad={"7px 20px"}
-          >
-            <HeadingTypo variant="h4">{headData.name}</HeadingTypo>
-          </StyledButton>
-        ))
+        <Box sx={{ display: "flex" }}>
+          {props.headArray.map((headData, index) => (
+            <StyledButton
+              key={index}
+              variant="contained"
+              btnwidth={headData.btnWidth}
+              btnradius={headData.btnRadius}
+              sx={{
+                marginRight: headData.mrx,
+                boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
+              }}
+              bgcolor={headData?.bgcolor}
+              tcolor={headData?.tcolor}
+              btnpad={"7px 20px"}
+            >
+              <HeadingTypo variant="h4">{headData.name}</HeadingTypo>
+            </StyledButton>
+          ))}
+        </Box>
       )}
-      <MonthlySelect />
-      <Search>
-        <StyledInputBase
-          searchwidth={"150px"}
-          placeholder="Search"
-          inputProps={{
-            "aria-label": "search",
-          }}
-          sx={{
-            border: "0.3px solid #ecedec",
-            boxShadow: "inset 0px 0px 1px rgba(0, 0, 0, 0.25)",
-            borderRadius: "10px",
-          }}
-        />
-        <SearchIconWrapper>
-          <SearchIcon
+      <Box sx={{ display: "flex", alignItems: "center" }}>
+        {props.calendar && <MonthlySelect text={"Calendar"} />}
+        <Search>
+          <StyledInputBase
+            searchwidth={props.searchwidth ? props.searchwidth : "150px"}
+            placeholder="Search"
+            inputProps={{
+              "aria-label": "search",
+            }}
             sx={{
-              color: "black",
+              border: "0.3px solid #ecedec",
+              boxShadow: "inset 0px 0px 1px rgba(0, 0, 0, 0.25)",
+              borderRadius: "10px",
             }}
           />
-        </SearchIconWrapper>
-      </Search>
-      <AutorenewIcon
-        sx={{
-          backgroundColor: "#0D1A26",
-          color: "white",
-          borderRadius: "100%",
-          fontSize: "30px",
-        }}
-      />
+          <SearchIconWrapper>
+            <SearchIcon
+              sx={{
+                color: "black",
+              }}
+            />
+          </SearchIconWrapper>
+        </Search>
+        <AutorenewIcon
+          sx={{
+            backgroundColor: "#0D1A26",
+            color: "white",
+            borderRadius: "100%",
+            fontSize: "30px",
+          }}
+        />
+      </Box>
     </Box>
   );
 };

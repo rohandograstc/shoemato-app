@@ -38,7 +38,7 @@ const ProdTableInfo = () => {
         boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
       }}
     >
-      <TransactionHeader headArray={headArray} prodHeader={true} />
+      <TransactionHeader headArray={headArray} prodHeader={true} calendar={true}  />
       <TransactionTable />
     </Paper>
   );

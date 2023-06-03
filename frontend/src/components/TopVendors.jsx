@@ -14,7 +14,7 @@ import MyCustomIcon from "@/assets/svg/dropdownIcon";
 import { HeadingTypo } from "@/styledComponents/HeadingTypo";
 import { CellTypo } from "@/styledComponents/CellTypo";
 
-export const MonthlySelect = () => {
+export const MonthlySelect = ({text}) => {
   return (
     <FormControl>
       <Select
@@ -33,7 +33,7 @@ export const MonthlySelect = () => {
           },
         }}
       >
-        <MenuItem value={1}>Monthly</MenuItem>
+        <MenuItem value={1}>{text ? text : "Monthly"}</MenuItem>
         <MenuItem value={2}>Yearly</MenuItem>
         <MenuItem value={3}>Days</MenuItem>
       </Select>

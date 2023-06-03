@@ -1,4 +1,3 @@
-import { StyledButton } from "@/styledComponents/StyledBtn";
 import {
   Paper,
   Table,
@@ -10,9 +9,12 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import { rows, tableHead } from "./constants";
+import { rows, tableHead } from "./constants.jsx";
+import { CellTypo } from "@/styledComponents/CellTypo.jsx";
+import EditIcon from "@/assets/svg/editIcon.jsx";
+import CrossIcon from "@/assets/svg/crossIcon.jsx";
 
-const TransactionTable = () => {
+const ProdCategoryTable = () => {
   return (
     <Paper sx={{ width: "100%", mb: 2, boxShadow: "none", padding: "0 20px" }}>
       <TableContainer
@@ -21,18 +23,18 @@ const TransactionTable = () => {
           my: "10px",
           boxShadow: "none",
           border: "10px",
-          minHeight: "60vh", // For Now for matching UI
+          minHeight: "50vh", // For Now for matching UI
         }}
       >
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead sx={{ borderBottom: 0 }}>
             <TableRow>
               <TableCell sx={{ py: "27px" }} align="center">
-                Product Name
+                <CellTypo variant="span">Category ID</CellTypo>
               </TableCell>
               {tableHead.slice(1, tableHead.length).map((cellName, i) => (
                 <TableCell key={i} sx={{ py: "27px" }} align="center">
-                  {cellName}
+                  <CellTypo variant="span">{cellName}</CellTypo>
                 </TableCell>
               ))}
             </TableRow>
@@ -59,7 +61,7 @@ const TransactionTable = () => {
                     p: "4px",
                   }}
                   style={{
-                    padding: "12px 12px",
+                    padding: "17px 12px",
                   }}
                   align="center"
                 >
@@ -71,55 +73,43 @@ const TransactionTable = () => {
                       fontWeight: "400",
                     }}
                   >
-                    {row.pName}
+                    <CellTypo variant="span" fcolor={"#788B9A"}>
+                      {row.catId}
+                    </CellTypo>
                   </Typography>
                 </TableCell>
                 {Object.values(row)
-                  .slice(1)
-                  .map((cell, index) =>
-                    index !== 2 ? (
-                      <TableCell
-                        key={index}
-                        align="center"
-                        sx={{
-                          cursor: "pointer",
-                          borderBottom: "none",
-                          p: "4px",
-                        }}
-                      >
-                        <Typography
-                          variant="h6"
-                          sx={{
-                            fontSize: "12px",
-                            lineHeight: "16px",
-                            fontWeight: "400",
-                          }}
-                        >
-                          {cell}
-                        </Typography>
-                      </TableCell>
-                    ) : (
-                      <TableCell
-                        key={index}
-                        align="center"
-                        sx={{
-                          cursor: "pointer",
-                          borderBottom: "none",
-                          p: "4px",
-                        }}
-                      >
-                        <StyledButton
-                          variant="contained"
-                          btnwidth={"80px"}
-                          btnradius={"8px"}
-                          bgcolor={"#0D1A26"}
-                          tcolor={"white"}
-                        >
-                          {row.totalAmount}
-                        </StyledButton>
-                      </TableCell>
-                    )
-                  )}
+                  .slice(1, -1)
+                  .map((cell, index) => (
+                    <TableCell
+                      key={index}
+                      align="center"
+                      sx={{
+                        cursor: "pointer",
+                        borderBottom: "none",
+                        p: "4px",
+                      }}
+                    >
+                      <CellTypo variant="span" fcolor={"#788B9A"}>
+                        {cell}
+                      </CellTypo>
+                    </TableCell>
+                  ))}
+                <TableCell
+                  align="center"
+                  sx={{
+                    cursor: "pointer",
+                    borderBottom: "none",
+                    p: "14px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "5px",
+                  }}
+                >
+                  <EditIcon />
+                  <CrossIcon />
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>
@@ -129,4 +119,4 @@ const TransactionTable = () => {
   );
 };
 
-export default TransactionTable;
+export default ProdCategoryTable;
