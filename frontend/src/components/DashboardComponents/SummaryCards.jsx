@@ -1,10 +1,32 @@
 import React from "react";
 import Cards from "@/components/DashboardComponents/SummaryCardsComponent/Cards";
-import ChartCard from "@/components/DashboardComponents/SummaryCardsComponent/ChartCard";
 import { Grid } from "@mui/material";
-import TopVendors from "./SummaryCardsComponent/TopVendors";
+import ChartCard from "../ChartCard";
+import TopVendors from "../TopVendors";
 
-const SummaryCards =()=> {
+const SummaryCards = () => {
+  const cardArray = [
+    {
+      name: "Total Turnover",
+      number: 5,
+      unit: "Units",
+    },
+    {
+      name: "Commission",
+      number: 5,
+      unit: "Units",
+    },
+    {
+      name: "Credit Limit",
+      number: 5,
+      unit: "Units",
+    },
+    {
+      name: "Total vendor",
+      number: 5,
+      unit: "Units",
+    },
+  ];
   return (
     <>
       <Grid container spacing={2} justifyContent="center">
@@ -15,7 +37,7 @@ const SummaryCards =()=> {
           xl={4}
           sx={{ height: "400px", width: "fit-content" }}
         >
-          <Cards />
+          <Cards cardArray={cardArray} />
         </Grid>
         <Grid item xs={6} md={4} xl={4} sx={{ height: "400px" }}>
           <ChartCard />
@@ -26,5 +48,5 @@ const SummaryCards =()=> {
       </Grid>
     </>
   );
-}
-export default SummaryCards
+};
+export default SummaryCards;

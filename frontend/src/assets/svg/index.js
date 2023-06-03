@@ -6,6 +6,7 @@ import inventory from "./inventory.svg"
 import inventoryDark from "./inventoryDark.svg"
 import orders from "./orders.svg"
 import products from "./products.svg"
+import productsDark from "./productsDark.svg"
 import sales from "./sales.svg"
 import settings from "./settings.svg"
 import shoeMatoLogo from "./shoeMatoLogo.svg"
@@ -23,6 +24,7 @@ export default {
     inventoryDark,
     orders,
     products,
+    productsDark,
     sales,
     settings,
     shoeMatoLogo,

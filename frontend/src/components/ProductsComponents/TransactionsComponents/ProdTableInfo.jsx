@@ -1,14 +1,10 @@
-import React from "react";
+
 import { Paper } from "@mui/material";
-
-// SubComponents
-
+import React from "react";
 import TransactionTable from "./TransactionTable";
-import TransactionHeader from "../../TransactionHeader";
+import TransactionHeader from "@/components/TransactionHeader";
 
-
-
-const TableInfo = () => {
+const ProdTableInfo = () => {
   const headArray = [
     {
       name: "Brand",
@@ -33,7 +29,6 @@ const TableInfo = () => {
       tcolor: "black",
     },
   ];
-
   return (
     <Paper
       sx={{
@@ -43,9 +38,10 @@ const TableInfo = () => {
         boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
       }}
     >
-      <TransactionHeader headArray={headArray}/>
+      <TransactionHeader headArray={headArray} prodHeader={true} />
       <TransactionTable />
     </Paper>
   );
 };
-export default TableInfo;
+
+export default ProdTableInfo;

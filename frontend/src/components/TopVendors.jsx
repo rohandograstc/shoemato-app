@@ -7,7 +7,7 @@ import {
   Select,
 } from "@mui/material";
 import React from "react";
-import styles from "../dashboard.module.css";
+import styles from "./DashboardComponents/dashboard.module.css";
 import { BorderLinearProgress } from "@/styledComponents/BorderLinearProgress";
 
 import MyCustomIcon from "@/assets/svg/dropdownIcon";

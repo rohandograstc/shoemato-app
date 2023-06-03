@@ -208,6 +208,10 @@
   padding: 5px;
   height: 460px;
   box-shadow: none;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
 }
 
 .brandSection {
@@ -265,6 +269,7 @@
   align-items: center;
   border-top-left-radius: 15px;
   overflow: hidden;
+  padding-top: 4px;
 }
 
 .tableHeaderbtnText {

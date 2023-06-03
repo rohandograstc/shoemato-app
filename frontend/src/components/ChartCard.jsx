@@ -1,7 +1,7 @@
 import { Box, Paper, Typography } from "@mui/material";
 import React from "react";
 import { Chart, PieSeries } from "@devexpress/dx-react-chart-material-ui";
-import styles from "../dashboard.module.css";
+import styles from "./DashboardComponents/dashboard.module.css";
 import { Palette } from "@devexpress/dx-react-chart";
 import { HeadingTypo } from "@/styledComponents/HeadingTypo";
 import { CellTypo } from "@/styledComponents/CellTypo";

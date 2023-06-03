@@ -44,7 +44,7 @@ const SideNav = () => {
     Logos.settings,
     Logos.dashboardDark,
     Logos.sales,
-    Logos.products,
+    Logos.productsDark,
     Logos.returnIcon,
     Logos.orders,
     Logos.vendors,
@@ -56,7 +56,7 @@ const SideNav = () => {
   const sideNavArray = [
     { name: "Dashboard", link: "/dashboard" },
     { name: "Daily Sales" },
-    { name: "Products" },
+    { name: "Products", link : "/products" },
     { name: "Return" },
     { name: "Invoice" },
     { name: "Vendors" },
