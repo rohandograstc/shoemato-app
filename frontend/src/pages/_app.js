@@ -4,13 +4,15 @@ import i18n from "../../i18n";
 import "@/styles/globals.css";
 
 import SideNav from "@/components/SideNav/SideNav";
-import { Box } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import { DrawerHeader } from "@/styledComponents/Drawer";
+import { useState } from "react";
 
 function App({ Component, pageProps }) {
+  const [enter, setEnter] = useState(false);
   return (
     <I18nextProvider i18n={i18n}>
-      <Box
+      {enter ? <Box
         sx={{
           display: "flex",
         }}
@@ -18,11 +20,11 @@ function App({ Component, pageProps }) {
         <SideNav />
         <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
           <Box>
-          <DrawerHeader />
+            <DrawerHeader />
             <Component {...pageProps} />
           </Box>
         </Box>
-      </Box>
+      </Box> : <Button onClick={() => setEnter(!enter)}>Hello</Button>}
     </I18nextProvider>
   );
 }
