@@ -68,7 +68,12 @@ const SideNav = () => {
   return (
     <>
       <CssBaseline />
-      <AppBar position="fixed" className={styles.appBar} open={open}>
+      <AppBar
+        position="fixed"
+        className={styles.appBar}
+        style={{ background: "#0d1a26" }}
+        open={open}
+      >
         <Toolbar>
           <Box sx={{ flexGrow: 0.5 }} />
           <Box sx={{ flexGrow: 0.5 }} />

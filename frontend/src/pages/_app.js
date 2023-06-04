@@ -7,6 +7,7 @@ import SideNav from "@/components/SideNav/SideNav";
 import { Box, Button } from "@mui/material";
 import { DrawerHeader } from "@/styledComponents/Drawer";
 import { useState } from "react";
+import Auth from "./authentication";
 
 function App({ Component, pageProps }) {
   const [enter, setEnter] = useState(false);
@@ -24,7 +25,7 @@ function App({ Component, pageProps }) {
             <Component {...pageProps} />
           </Box>
         </Box>
-      </Box> : <Button onClick={() => setEnter(!enter)}>Hello</Button>}
+      </Box> : <Auth setEnter={setEnter} />}
     </I18nextProvider>
   );
 }
