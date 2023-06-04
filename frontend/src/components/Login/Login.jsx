@@ -14,7 +14,7 @@ import {
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { grey } from '@mui/material/colors';
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import style from "./Login.module.css";
+import style from "../Component.module.css";
 import Image from "next/image";
 import fbIcon from "../../assets/facebook_icon.svg";
 import appleIcon from "../../assets/apple_icon.svg";
@@ -57,11 +57,8 @@ function Login() {
             color="primary"
             sx={inputBoxStyle}
           />
-          <Typography
-            className={style.desc_text}
-            style={{ fontWeight: "600", textDecoration: "underline" }}
-          >
-            <Link href="#">Forgot your password?</Link>
+          <Typography className={style.desc_text}>
+            <Link href="#" style={{textDecoration:'none', color:'black'}}>Forgot your password?</Link>
           </Typography>
           <FormGroup>
             <FormControlLabel
@@ -75,12 +72,12 @@ function Login() {
                       ["keepLogged"]: !credentials.keepLogged,
                     })
                   }
-                  sx={{ p: 0 }}
-                />
+                  sx={{ p: 0, fontSize:10}}/>
               }
-              label="Keep me logged in - applies to all log in options below. More info"
+              label="Keep me logged in - applies to all log in options below. More Info"
             />
           </FormGroup>
+          
           <Stack
             direction="row"
             spacing={3}
@@ -113,7 +110,7 @@ function Login() {
             </ThemeProvider>
           </Stack>
           <Typography className={style.desc_text} style={{ marginTop: "1rem" }}>
-            <Link href='#' style={{textDecoration:'none'}}>Terms And Conditions</Link>
+            <Link href='#' style={{textDecoration:'none', color:'black'}}>Terms And Conditions</Link>
           </Typography>
         </Stack>
       </Stack>
@@ -148,6 +145,7 @@ const inputBoxStyle = {
     fontSize: 12,
   },
 };
+
 const btn_text = {
   "& .MuiButton-root": {
     justifyContent: "flex-start",
