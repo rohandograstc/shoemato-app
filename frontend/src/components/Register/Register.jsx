@@ -18,7 +18,8 @@ import Image from "next/image";
 import MenuItem from "@mui/material/MenuItem";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { grey } from '@mui/material/colors';
+import { grey } from "@mui/material/colors";
+import Link from "next/link";
 
 const Register = () => {
   const [userData, setUserData] = useState({
@@ -55,13 +56,19 @@ const Register = () => {
             }}
           >
             <Box boxShadow={3} borderRadius="50%" className={style.card}>
-              <Image src={fbIcon} alt="FB" className={style.icons} />
+              <Link href="#">
+                <Image src={fbIcon} alt="FB" className={style.icons} />
+              </Link>
             </Box>
             <Box boxShadow={3} borderRadius="50%" className={style.card}>
-              <Image src={googleIcon} alt="Google" className={style.icons} />
+              <Link href="#">
+                <Image src={googleIcon} alt="Google" className={style.icons} />
+              </Link>
             </Box>
             <Box boxShadow={3} borderRadius="50%" className={style.card}>
-              <Image src={appleIcon} alt="Apple" className={style.icons} />
+              <Link href="#">
+                <Image src={appleIcon} alt="Apple" className={style.icons} />
+              </Link>
             </Box>
           </Stack>
 
@@ -109,7 +116,7 @@ const Register = () => {
 
             <TextField
               id="outlined-basic"
-              label="Mobile no."
+              label="Phone Number"
               className={style.phone}
               sx={inputBoxStyle}
               type="phonenumber"
@@ -139,7 +146,7 @@ const Register = () => {
             <Stack>
               <TextField
                 type="text"
-                label="Email or Mobile No"
+                label="Email"
                 variant="outlined"
                 name="email"
                 color="primary"
@@ -148,7 +155,7 @@ const Register = () => {
               />
               <TextField
                 type="password"
-                label="Password or OTP"
+                label="Password"
                 variant="outlined"
                 name="password"
                 color="primary"
@@ -192,16 +199,22 @@ const Register = () => {
               </FormGroup>
             </div>
             <Stack>
-            <ThemeProvider theme={theme}>
-              <Button
-                color="primary"
-                variant="contained"
-                endIcon={<ArrowForwardIcon style={{ fontSize: "14px" }} />}
-                sx={{ display: "flex", justifyContent: "space-between", height:40, mt:2}}>
-                REGISTER
-              </Button>
-            </ThemeProvider>
-          </Stack>
+              <ThemeProvider theme={theme}>
+                <Button
+                  color="primary"
+                  variant="contained"
+                  endIcon={<ArrowForwardIcon style={{ fontSize: "14px" }} />}
+                  sx={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    height: 40,
+                    mt: 2,
+                  }}
+                >
+                  REGISTER
+                </Button>
+              </ThemeProvider>
+            </Stack>
           </div>
         </Stack>
       </Box>
@@ -212,14 +225,18 @@ const Register = () => {
 //input box css started here
 const inputBoxStyle = {
   "& .MuiInputBase-root": {
-    textAlign: "center",
-    height: 45,
+    height: 42,
     my: 1,
     borderRadius: 2,
     fontSize: 16,
   },
+  "& .MuiOutlinedInput-root": {
+    "& fieldset": {
+      borderColor: "black",
+    },
+  },
   "& .MuiInputLabel-root": {
-    pt: 1,
+    pt: 0.3,
     fontSize: 12,
   },
 };
@@ -239,6 +256,7 @@ const code = {
     p: 0.1,
     fontSize: 14,
     overflow: "visible",
+    borderColor: "black",
   },
   "& .MuiSelect-select": {
     overflow: "inherit",
@@ -257,19 +275,19 @@ const code = {
 
 //checkbox css started here
 const check_box = {
-    gap: 1,
-    "& .MuiFormControlLabel-root": {
-      padding: 0.2,
-    },
-    "& .MuiTypography-root": {
-      fontSize: 14,
-      margin: 0.2,
-      fontWeight: 550,
-    },
-    "& .MuiSvgIcon-root": {
-      color: "#000000",
-    },
-  };
+  gap: 1,
+  "& .MuiFormControlLabel-root": {
+    padding: 0.2,
+  },
+  "& .MuiTypography-root": {
+    fontSize: 14,
+    margin: 0.2,
+    fontWeight: 550,
+  },
+  "& .MuiSvgIcon-root": {
+    color: "#000000",
+  },
+};
 //checkbox css end here
 
 const currencies = [
@@ -296,16 +314,19 @@ const country = [
     value: "+91",
     label: "+91",
   },
+  {
+    value: "+11",
+    label: "+11",
+  }
 ];
 
-
 const theme = createTheme({
-    palette: {
-      mode: "dark",
-      primary: {
-        main: grey[900],
-      },
+  palette: {
+    mode: "dark",
+    primary: {
+      main: grey[900],
     },
-  });
-  
+  },
+});
+
 export default Register;

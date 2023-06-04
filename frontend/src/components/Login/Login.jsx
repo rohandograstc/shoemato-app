@@ -89,13 +89,13 @@ function Login() {
             }}
           >
             <Box boxShadow={3} borderRadius="50%" className={style.card}>
-              <Image src={googleIcon} alt="Google" className={style.icons} />
+              <Link href='#'><Image src={googleIcon} alt="Google" className={style.icons} /></Link>
             </Box>
             <Box boxShadow={3} borderRadius="50%" className={style.card}>
-              <Image src={appleIcon} alt="Apple" className={style.icons} />
+            <Link href='#'><Image src={appleIcon} alt="Apple" className={style.icons} /></Link>
             </Box>
             <Box boxShadow={3} borderRadius="50%" className={style.card}>
-              <Image src={fbIcon} alt="FB" className={style.icons} />
+            <Link href='#'><Image src={fbIcon} alt="FB" className={style.icons} /></Link>
             </Box>
           </Stack>
           <Stack>
@@ -135,13 +135,19 @@ const check_box = {
 
 const inputBoxStyle = {
   "& .MuiInputBase-root": {
-    height: 50,
+    height: 42,
     my: 1,
     borderRadius: 2,
     fontSize: 16,
+    color:'black'
+  },
+  '& .MuiOutlinedInput-root': {
+    '& fieldset': {
+      borderColor: 'black',
+    }
   },
   "& .MuiInputLabel-root": {
-    pt: 1,
+    pt: 0.3,
     fontSize: 12,
   },
 };
