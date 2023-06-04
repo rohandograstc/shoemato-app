@@ -31,6 +31,7 @@ const SideNav = () => {
   const menuId = "primary-search-account-menu";
 
   const { pathname } = useRouter();
+  const firstPath = pathname.split("/")[1];
 
   const IconArray = [
     Logos.dashboard,
@@ -56,7 +57,7 @@ const SideNav = () => {
   const sideNavArray = [
     { name: "Dashboard", link: "/dashboard" },
     { name: "Daily Sales" },
-    { name: "Products", link : "/products" },
+    { name: "Products", link: "/products" },
     { name: "Return" },
     { name: "Invoice" },
     { name: "Vendors" },
@@ -118,10 +119,15 @@ const SideNav = () => {
                     minHeight: 48,
                     justifyContent: open ? "initial" : "center",
                     px: 2.5,
-                    backgroundColor: pathname === text?.link && "white",
-                    color: pathname === text?.link ? "black" : "white",
+                    backgroundColor:
+                      firstPath === text?.link?.substring(1) && "white",
+                    color:
+                      firstPath === text?.link?.substring(1)
+                        ? "black"
+                        : "white",
                     "&:hover": {
-                      backgroundColor: pathname === text?.link && "white",
+                      backgroundColor:
+                        firstPath === text?.link?.substring(1) && "white",
                     },
                     borderTopRightRadius: "5px",
                     borderBottomRightRadius: "5px",
@@ -136,7 +142,7 @@ const SideNav = () => {
                   >
                     <Image
                       src={
-                        pathname === text?.link
+                        firstPath === text?.link?.substring(1)
                           ? IconArray[index + 9]
                           : IconArray[index]
                       }

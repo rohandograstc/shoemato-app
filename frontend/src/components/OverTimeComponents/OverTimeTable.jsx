@@ -10,7 +10,7 @@ import { StyledButton } from "@/styledComponents/StyledBtn";
 import { rows, tableHead } from "./constants";
 import { Typography } from "@mui/material";
 
-const InventoryTable = () => {
+const OverTimeTable = () => {
   return (
     <TableContainer
       component={Paper}
@@ -118,6 +118,8 @@ const InventoryTable = () => {
         </TableBody>
       </Table>
     </TableContainer>
+
   );
+  
 };
-export default InventoryTable;
+export default OverTimeTable;

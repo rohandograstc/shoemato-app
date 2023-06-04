@@ -8,12 +8,12 @@ import {
 } from "@/styledComponents/SearchStyles";
 import SearchIcon from "@mui/icons-material/Search";
 
-import { StyledTypography } from "@/styledComponents/InventoryPage/StyledTypography";
-import { StyledBtns } from "@/styledComponents/InventoryPage/StyledBtns";
+import { StyledTypography } from "@/styledComponents/OverTimePage/StyledTypography";
+import { StyledBtns } from "@/styledComponents/OverTimePage/StyledBtns";
 
 import AutorenewIcon from "@mui/icons-material/Autorenew";
 
-const InventoryTableHead = () => {
+const OverTimeTableHead = () => {
   return (
     <Box
       sx={{
@@ -99,6 +99,8 @@ const InventoryTableHead = () => {
         />
       </Box>
     </Box>
+
   );
+
 };
-export default InventoryTableHead;
+export default OverTimeTableHead;

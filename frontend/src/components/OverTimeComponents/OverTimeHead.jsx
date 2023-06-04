@@ -2,11 +2,11 @@ import { Box } from "@mui/material";
 import DoneIcon from "@mui/icons-material/Done";
 
 //Styled Components
-import { StyledTypography } from "@/styledComponents/InventoryPage/StyledTypography";
-import { StyledBtns } from "@/styledComponents/InventoryPage/StyledBtns";
+import { StyledTypography } from "@/styledComponents/OverTimePage/StyledTypography";
+import { StyledBtns } from "@/styledComponents/OverTimePage/StyledBtns";
 import React from "react";
 
-const InventoryHead = () => {
+const OverTimeHead = () => {
   return (
     <Box
       sx={{
@@ -53,7 +53,9 @@ const InventoryHead = () => {
         <StyledTypography variant="h4">Wholesaler to Retailer</StyledTypography>
       </StyledBtns>
     </Box>
+
   );
+
 };
 
-export default InventoryHead;
+export default OverTimeHead;

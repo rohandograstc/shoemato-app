@@ -48,7 +48,12 @@ const TransactionHeader = (props) => {
               btnradius={headData.btnRadius}
               sx={{
                 marginRight: headData.mrx,
-                boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
+                boxShadow: headData.btnshadow
+                  ? headData.btnshadow
+                  : "0px 4px 12px rgba(0, 0, 0, 0.1)",
+                "&:hover": {
+                  boxShadow: headData.btnshadow && headData.btnshadow,
+                },
               }}
               bgcolor={headData?.bgcolor}
               tcolor={headData?.tcolor}
@@ -84,8 +89,8 @@ const TransactionHeader = (props) => {
         </Search>
         <AutorenewIcon
           sx={{
-            backgroundColor: "#0D1A26",
-            color: "white",
+            backgroundColor: props.renewwhite ? "white" : "#0D1A26",
+            color: props.renewwhite ? "black" : "white",
             borderRadius: "100%",
             fontSize: "30px",
           }}
