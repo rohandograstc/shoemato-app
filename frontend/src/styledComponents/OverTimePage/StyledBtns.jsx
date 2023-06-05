@@ -11,5 +11,6 @@ export const StyledBtns = styled(Button)(({ theme, btncolor, btnradius, btnborde
   },
   display: "flex",
   alignItems: "center",
-  justifyContent: "space-between",
+  justifyContent: "center",
+  textAlign : "cetner"
 }));

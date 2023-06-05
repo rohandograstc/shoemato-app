@@ -22,6 +22,7 @@ import { Box, Typography } from "@mui/material";
 import { MonthlySelect } from "./TopVendors";
 
 import { HeadingTypo } from "@/styledComponents/HeadingTypo";
+import Link from "next/link";
 
 const TransactionHeader = (props) => {
   return (
@@ -35,7 +36,7 @@ const TransactionHeader = (props) => {
           }}
         >
           <Typography vairant="p" sx={{ fontSize: "22px" }}>
-            TOP SELLING PRODUCT
+            {props?.headertext ? props?.headertext : "TOP SELLING PRODUCT"}
           </Typography>
         </Box>
       ) : (
@@ -59,7 +60,16 @@ const TransactionHeader = (props) => {
               tcolor={headData?.tcolor}
               btnpad={"7px 20px"}
             >
-              <HeadingTypo variant="h4">{headData.name}</HeadingTypo>
+              {props.links ? (
+                <Link
+                  href={`${headData.path}`}
+                  style={{ textDecoration: "none", color : "inherit"}}
+                >
+                  <HeadingTypo variant="h4">{headData.name}</HeadingTypo>
+                </Link>
+              ) : (
+                <HeadingTypo variant="h4">{headData.name}</HeadingTypo>
+              )}
             </StyledButton>
           ))}
         </Box>

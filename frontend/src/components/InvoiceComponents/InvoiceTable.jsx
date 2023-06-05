@@ -11,11 +11,10 @@ import {
 import React from "react";
 import { rows, tableHead } from "./constants.jsx";
 import { CellTypo } from "@/styledComponents/CellTypo.jsx";
-import { StyledButton } from "@/styledComponents/StyledBtn.jsx";
 
-const InventoryTable = () => {
+const InvoiceTable = () => {
   return (
-    <Paper sx={{ width: "100%", mb: 2, boxShadow: "none", padding: "0 20px" }}>
+    <Paper sx={{ width: "100%", mb: 2, boxShadow: "none", padding: "0" }}>
       <TableContainer
         component={Paper}
         sx={{
@@ -26,20 +25,20 @@ const InventoryTable = () => {
         }}
       >
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
-          <TableHead sx={{ borderBottom: 0 }}>
+          <TableHead sx={{ borderBottom: "5px solid gray" }}>
             <TableRow>
-              <TableCell sx={{ py: "27px" }} align="center">
-                <CellTypo variant="span">Inventory ID</CellTypo>
+              <TableCell sx={{ py: "7px" }} align="center">
+                <CellTypo variant="span">Invoice ID</CellTypo>
               </TableCell>
               {tableHead.slice(1, tableHead.length).map((cellName, i) => (
-                <TableCell key={i} sx={{ py: "27px" }} align="center">
+                <TableCell key={i} sx={{ py: "7px" }} align="center">
                   <CellTypo variant="span">{cellName}</CellTypo>
                 </TableCell>
               ))}
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows?.map((row, i) => (
+            {rows.map((row, i) => (
               <TableRow
                 key={i}
                 sx={{
@@ -60,16 +59,16 @@ const InventoryTable = () => {
                     p: "4px",
                   }}
                   style={{
-                    padding: "17px 12px",
+                    padding: "10px",
                   }}
                   align="center"
                 >
                     <CellTypo variant="span" fcolor={"#788B9A"}>
-                      {row?.invId}
+                      {row.inId}
                     </CellTypo>
                 </TableCell>
                 {Object?.values(row)
-                  .slice(1, -1)
+                  ?.slice(1)
                   ?.map((cell, index) => (
                     <TableCell
                       key={index}
@@ -85,23 +84,6 @@ const InventoryTable = () => {
                       </CellTypo>
                     </TableCell>
                   ))}
-                <TableCell
-                  align="right"
-                  sx={{
-                    borderBottom: "none",
-                    boxShadow: "none",
-                    textAlign: "center",
-                  }}
-                >
-                  <StyledButton
-                    variant="contained"
-                    btnwidth={"80px"}
-                    btnradius={"8px"}
-                    bgcolor={"#0D1A26"}
-                  >
-                    <CellTypo variant="span" fcolor={"white"}  >{row?.totalCredit}</CellTypo>
-                  </StyledButton>
-                </TableCell>
               </TableRow>
             ))}
           </TableBody>
@@ -111,4 +93,4 @@ const InventoryTable = () => {
   );
 };
 
-export default InventoryTable;
+export default InvoiceTable;

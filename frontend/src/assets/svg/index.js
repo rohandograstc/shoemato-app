@@ -13,6 +13,7 @@ import shoeMatoLogo from "./shoeMatoLogo.svg"
 import transactions from "./transactions.svg"
 import users from "./users.svg"
 import vendors from "./vendors.svg"
+import vendorsDark from "./vendorsDark.svg"
 import returnIcon from "./return.svg"
 
 export default {
@@ -31,5 +32,6 @@ export default {
     transactions,
     users,
     vendors,
+    vendorsDark,
     returnIcon
 }
