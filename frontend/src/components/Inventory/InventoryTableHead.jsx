@@ -1,6 +1,5 @@
-import { Box } from "@mui/material";
+import { Box} from "@mui/material";
 import React from "react";
-
 import {
   Search,
   SearchIconWrapper,
@@ -88,6 +87,7 @@ const InventoryTableHead = () => {
             </StyledTypography>
           </StyledBtns>
         </Box>
+
         <AutorenewIcon
           sx={{
             backgroundColor: "#fff",

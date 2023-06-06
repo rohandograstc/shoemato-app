@@ -55,7 +55,7 @@ const SideNav = () => {
 
   const sideNavArray = [
     { name: "Dashboard", link: "/dashboard" },
-    { name: "Daily Sales" },
+    { name: "Daily Sales", link: "/dailysales"},
     { name: "Products" },
     { name: "Return" },
     { name: "Invoice" },
