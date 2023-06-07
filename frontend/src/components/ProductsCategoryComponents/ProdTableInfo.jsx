@@ -1,8 +1,8 @@
 import React from "react";
 import TransactionHeader from "../TransactionHeader";
-import { Box, Paper } from "@mui/material";
+import { Box, Paper, Typography } from "@mui/material";
 import ProdCategoryTable from "./ProdCategoryTable";
-import { AddButton } from "../CategoryAddButton";
+import AddCategoryBtn from "./AddCategoryBtn";
 
 const ProdTableInfo = () => {
   const headArray = [
@@ -18,7 +18,7 @@ const ProdTableInfo = () => {
       sx={{
         padding: "0 100px 0 60px",
         position: "relative",
-        minHeight : '80vh'
+        minHeight: "80vh",
       }}
     >
       <Paper
@@ -29,19 +29,14 @@ const ProdTableInfo = () => {
           boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
         }}
       >
-        <TransactionHeader headArray={headArray} searchwidth={"320px"} calendar={false} />
+        <TransactionHeader
+          headArray={headArray}
+          searchwidth={"320px"}
+          calendar={false}
+        />
         <ProdCategoryTable />
       </Paper>
-      <Box
-      sx={{
-        position : "absolute",
-        right : 0,
-        bottom : 0,
-
-      }}
-      >
-        <AddButton bwidth={"90px"} />
-      </Box>
+      <AddCategoryBtn />
     </Box>
   );
 };

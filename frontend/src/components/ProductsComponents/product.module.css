@@ -23,4 +23,11 @@
   position: absolute;
   top: 3px;
   left: 14px;
+  cursor: pointer;
+}
+
+.modalContentLeft {
+  display: flex;
+  align-items: center;
+  gap : 10px;
 }

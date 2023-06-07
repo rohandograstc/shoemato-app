@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import styles from "./DashboardComponents/dashboard.module.css";
 import UserInfoModal from "./DashboardComponents/TransactionsComponent/UserInfoModal";
 
-function ReportBtn() {
+const ReportBtn = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);

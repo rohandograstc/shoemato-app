@@ -47,7 +47,7 @@ const SideNav = () => {
     Logos.sales,
     Logos.productsDark,
     Logos.returnIcon,
-    Logos.orders,
+    Logos.ordersDark,
     Logos.vendorsDark,
     Logos.inventoryDark,
     Logos.complaints,

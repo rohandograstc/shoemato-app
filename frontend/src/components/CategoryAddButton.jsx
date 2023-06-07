@@ -18,7 +18,7 @@ const CategoryButton = () => {
     >
       <StyledButton
         variant="contained"
-        btnwidth="150px"
+        btnwidth="130px"
         startIcon={<CategoryIcon />}
       >
         <Link
@@ -44,15 +44,18 @@ const AddButton = ({ bwidth }) => {
         gap: "10px",
       }}
     >
-      <StyledButton
-        variant="contained"
-        btnwidth={bwidth ? bwidth : "150px"}
-        startIcon={<AddIcon />}
-      >
-        <Typography variant="p" className={styles.reportBtnText}>
-          Add
-        </Typography>
-      </StyledButton>
+      <Link href={"/products/addProducts"}>
+        <StyledButton
+          variant="contained"
+          btnwidth={bwidth ? bwidth : "130px"}
+          startIcon={<AddIcon />}
+          btnpad={"10px"}
+        >
+          <Typography variant="p" className={styles.reportBtnText}>
+            Add
+          </Typography>
+        </StyledButton>
+      </Link>
     </Box>
   );
 };

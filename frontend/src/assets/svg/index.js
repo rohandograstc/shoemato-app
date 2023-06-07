@@ -5,6 +5,7 @@ import employees from "./employees.svg"
 import inventory from "./inventory.svg"
 import inventoryDark from "./inventoryDark.svg"
 import orders from "./orders.svg"
+import ordersDark from "./invoiceDark.svg"
 import products from "./products.svg"
 import productsDark from "./productsDark.svg"
 import sales from "./sales.svg"
@@ -33,5 +34,6 @@ export default {
     users,
     vendors,
     vendorsDark,
-    returnIcon
+    returnIcon,
+    ordersDark
 }
