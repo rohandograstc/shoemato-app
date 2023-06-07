@@ -10,7 +10,7 @@ import { StyledButton } from "@/styledComponents/StyledBtn";
 import { rows, tableHead } from "./constants";
 import { Typography } from "@mui/material";
 
-const InventoryTable = () => {
+const InventoryTable = ({ setDetails }) => {
   return (
     <TableContainer
       component={Paper}
@@ -50,10 +50,7 @@ const InventoryTable = () => {
                 sx={{
                   cursor: "pointer",
                   borderBottom: "none",
-                  p: "4px",
-                }}
-                style={{
-                  padding: "12px 12px",
+                  p: "20px",
                 }}
                 align="center"
               >
@@ -64,6 +61,7 @@ const InventoryTable = () => {
                     lineHeight: "16px",
                     fontWeight: "400",
                   }}
+                  onClick={() => setDetails({orderId:row.mId, show:false})}
                 >
                   {row.mId}
                 </Typography>

@@ -43,9 +43,9 @@ const SideNav = () => {
     Logos.complaints,
     Logos.settings,
     Logos.dashboardDark,
-    Logos.sales,
+    Logos.salesDark,
     Logos.products,
-    Logos.returnIcon,
+    Logos.returnDark,
     Logos.orders,
     Logos.vendors,
     Logos.inventoryDark,
@@ -57,7 +57,7 @@ const SideNav = () => {
     { name: "Dashboard", link: "/dashboard" },
     { name: "Daily Sales", link: "/dailysales"},
     { name: "Products" },
-    { name: "Return" },
+    { name: "Return", link: "/return"  },
     { name: "Invoice" },
     { name: "Vendors" },
     { name: "Inventory", link: "/inventory" },
@@ -115,7 +115,7 @@ const SideNav = () => {
           {sideNavArray.map((text, index) => (
             <ListItem key={text.name} disablePadding sx={{ display: "block" }}>
               <Link
-                href={text.link !== undefined ? `${text?.link}` : "/dashboard"}
+                href={text.link !== undefined ? `${text.link}` : "/dashboard"}
                 style={{ textDecoration: "none" }}
               >
                 <ListItemButton
@@ -123,10 +123,10 @@ const SideNav = () => {
                     minHeight: 48,
                     justifyContent: open ? "initial" : "center",
                     px: 2.5,
-                    backgroundColor: pathname === text?.link && "white",
-                    color: pathname === text?.link ? "black" : "white",
+                    backgroundColor: pathname === text.link && "white",
+                    color: pathname === text.link ? "black" : "white",
                     "&:hover": {
-                      backgroundColor: pathname === text?.link && "white",
+                      backgroundColor: pathname === text.link && "white",
                     },
                     borderTopRightRadius: "5px",
                     borderBottomRightRadius: "5px",
@@ -141,7 +141,7 @@ const SideNav = () => {
                   >
                     <Image
                       src={
-                        pathname === text?.link
+                        pathname === text.link
                           ? IconArray[index + 9]
                           : IconArray[index]
                       }
