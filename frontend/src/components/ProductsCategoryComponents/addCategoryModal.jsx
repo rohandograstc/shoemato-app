@@ -34,15 +34,6 @@ const style = {
   textAlign: "center",
 };
 
-const crossIconStyle = {
-  position: "absolute",
-  right: "2px",
-  top: "5px",
-  fontSize: "30px",
-  color: "#0F172A",
-  fontWeight: 200,
-};
-
 const overlayStyle = {
   backdropFilter: "blur(9px)",
   backgroundColor: "rgba(13, 26, 38, 0.41)",
@@ -53,7 +44,7 @@ const AddCategoryModal = (props) => {
     <div>
       <Modal
         open={props.open}
-        // onClose={props.handleClose}
+        onClose={props.handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
         sx={{

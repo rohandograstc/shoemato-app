@@ -8,7 +8,6 @@ import styles from "./addproducts.module.css";
 import dragIcon from "../../assets/svg/dragIcon.svg";
 import shoeCarouselimg from "../../assets/svg/shoeCarouselimg.svg";
 import ShoeImg from "../../assets/svg/img.jpeg"
-import vendorsDark from "../../assets/svg/vendorsDark.svg";
 
 import { CellTypo } from "@/styledComponents/CellTypo";
 import ProductsView from "./ProductsView";
@@ -28,12 +27,7 @@ const ProductsSection = () => {
       <Box className={styles.carouseCon}>
         <ImageSlider slides={slides} />
       </Box>
-      <Box className={styles.colorDiv}>
-        <Box className={`${styles.divDot} ${styles.redcol}`} />
-        <Box className={`${styles.divDot} ${styles.yellowcol}`} />
-        <Box className={`${styles.divDot} ${styles.graycol}`} />
-        <Box className={`${styles.divDot} ${styles.blackcol}`} />
-      </Box>
+      
       <Box className={styles.dragDropDiv}>
         <Image height="71px" width="71px" alt="dragnDropIcon" src={dragIcon} />
         <CellTypo variant="span" fheight={"140%"} fsize={"23px"}>

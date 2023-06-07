@@ -4,33 +4,9 @@ import { useState } from "react";
 
 import LeftArrowKeyIcon from "@/assets/svg/leftArrowKey";
 import RightArrowKeyIcon from "@/assets/svg/rightArrowKey";
-import expandImage from "../../../assets/svg/expandImage.svg";
 
 import styles from "../addproducts.module.css";
-
-const expandStyles = {
-  position: "absolute",
-  top: "22px",
-  right: "26px",
-  zIndex: 1,
-  cursor: "pointer",
-};
-
-const rightArrowStyles = {
-  position: "absolute",
-  bottom: "28px",
-  right: "35%",
-  zIndex: 1,
-  cursor: "pointer",
-};
-
-const leftArrowStyles = {
-  position: "absolute",
-  bottom: "28px",
-  right: "60%",
-  zIndex: 1,
-  cursor: "pointer",
-};
+import ExpandButton from "./ExpandButton";
 
 const sliderStyles = {
   position: "relative",
@@ -38,7 +14,7 @@ const sliderStyles = {
   width: "100%",
 };
 
-const ImageSlider = ({ slides }) => {
+const ImageSlider = ({ slides, modalOpen }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
@@ -50,27 +26,50 @@ const ImageSlider = ({ slides }) => {
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
+  const goToSlide = (slideIndex) => {
+    setCurrentIndex(slideIndex);
+  };
 
   return (
     <Box sx={sliderStyles}>
-      <Box>
-        <Box onClick={goToPrevious} sx={leftArrowStyles}>
-          <LeftArrowKeyIcon />
-        </Box>
-        <Box onClick={goToNext} sx={rightArrowStyles}>
-          <RightArrowKeyIcon />
-        </Box>
-      </Box>
-      <Box sx={expandStyles}>
-        <Image src={expandImage} alt="expand" />
-      </Box>
+     {!modalOpen && <ExpandButton /> } 
       <Box className={styles.carouseCon}>
         <Image
           alt="image"
           src={slides[currentIndex].url}
-          className={styles.carouselImage}
+          className={
+            modalOpen ? `${styles.carouselModalImage}` : `${styles.carouselImage}`
+          }
         />
       </Box>
+      <Box sx={{ display: "flex", justifyContent: "center", gap: "40px" }}>
+        <Box onClick={goToPrevious}>
+          <LeftArrowKeyIcon />
+        </Box>
+        <Box onClick={goToNext}>
+          <RightArrowKeyIcon />
+        </Box>
+      </Box>
+      {!modalOpen && (
+        <Box className={styles.colorDiv}>
+          <Box
+            className={`${styles.divDot} ${styles.redcol}`}
+            onClick={() => goToSlide(0)}
+          />
+          <Box
+            className={`${styles.divDot} ${styles.yellowcol}`}
+            onClick={() => goToSlide(1)}
+          />
+          <Box
+            className={`${styles.divDot} ${styles.graycol}`}
+            onClick={() => goToSlide(2)}
+          />
+          <Box
+            className={`${styles.divDot} ${styles.blackcol}`}
+            onClick={() => goToSlide(3)}
+          />
+        </Box>
+      )}
     </Box>
   );
 };
