@@ -48,12 +48,12 @@ export default function ({ details, setDetails }) {
           <Carousel />
           <Typography
             variant="p"
-            sx={{ width: "375px", textAlign: "center", mt: "10%" }}
+            sx={{ width: "375px", textAlign: "center", mt: "10%", fontFamily: 'Montserrat',}}
           >
-            Agent Detail
+            Agent Details
           </Typography>
-          <Typography variant="p" sx={{ width: "375px", textAlign: "center" }}>
-            Seller Detail
+          <Typography variant="p" sx={{ width: "375px", textAlign: "center", fontFamily: 'Montserrat' }}>
+            Seller Details
           </Typography>
         </Box>
         <Box sx={{ width: "50%" }}>
@@ -119,7 +119,7 @@ export default function ({ details, setDetails }) {
             >
               {steps.map((label) => (
                 <Step key={label} sx={{"& .Mui-completed, & .Mui-active":{ "& .MuiSvgIcon-root":{color:'#1BCFB4'}}}}>
-                  <StepLabel>{label}</StepLabel>
+                  <StepLabel sx={{fontFamily: 'Montserrat', fontWeight:'100'}}>{label}</StepLabel>
                 </Step>
               ))}
             </Stepper>

@@ -9,7 +9,7 @@ const SummaryCards = () => {
   return (
     <>
       <Grid container spacing={2} justifyContent="center">
-        <Grid item xs={6} md={4} xl={4} sx={{ height: "400px" }}>
+        <Grid item xs={6} md={4} xl={4} sx={{ height: "300px" }}>
           <HeadingTypo variant="h5" className={classes.heading}> Today's Sales </HeadingTypo>
           <Cards />
         </Grid>
@@ -18,12 +18,12 @@ const SummaryCards = () => {
           xs={6}
           md={4}
           xl={4}
-          sx={{ height: "400px", width: "fit-content" }}
+          sx={{ height: "300px", width: "fit-content" }}
         >
           <HeadingTypo variant="h5" className={classes.heading}> Today's Orders </HeadingTypo>
           <Cards />
         </Grid>
-        <Grid item xs={6} md={4} xl={4} sx={{ height: "400px" }}>
+        <Grid item xs={6} md={4} xl={4} sx={{ height: "300px" }}>
         <HeadingTypo variant="h5" className={classes.heading}> Product Dispatched </HeadingTypo>
           <DispatchCard />
         </Grid>

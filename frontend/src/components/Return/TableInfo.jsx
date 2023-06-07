@@ -8,7 +8,7 @@ import Paper from "@mui/material/Paper";
 import { rows, tableHead } from "./constants";
 import { Typography } from "@mui/material";
 
-const InventoryTable = ({ setDetails }) => {
+export default function() {
   return (
     <TableContainer
       component={Paper}
@@ -61,7 +61,7 @@ const InventoryTable = ({ setDetails }) => {
                   }}
                   onClick={() => setDetails({orderId:row.mId, show:false})}
                 >
-                  {row.mId}
+                  {row.tId}
                 </Typography>
               </TableCell>
               {Object.values(row)
@@ -95,4 +95,4 @@ const InventoryTable = ({ setDetails }) => {
     </TableContainer>
   );
 };
-export default InventoryTable;
+

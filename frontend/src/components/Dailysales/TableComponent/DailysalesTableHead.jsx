@@ -5,9 +5,6 @@ import {
 } from "@/styledComponents/SearchStyles";
 import SearchIcon from "@mui/icons-material/Search";
 import AutorenewIcon from "@mui/icons-material/Autorenew";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { Stack, Box, Select, MenuItem } from "@mui/material";
 import { StyledButton } from "@/styledComponents/StyledBtn";
 import { HeadingTypo } from "@/styledComponents/HeadingTypo";
