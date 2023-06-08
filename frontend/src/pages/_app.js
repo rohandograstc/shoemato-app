@@ -21,7 +21,7 @@ function App({ Component, pageProps }) {
           }}
         >
           <SideNav />
-          <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+          <Box component="main" sx={{ flexGrow: 1, p: 2 }}>
             <Box>
               <DrawerHeader />
               <Component {...pageProps} />
