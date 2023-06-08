@@ -3,11 +3,10 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import ImageSlider from "./ImageSlider";
 
-import shoeCarouselimg from "../../../assets/svg/shoeCarouselimg.svg";
-import ShoeImg from "../../../assets/svg/img.jpeg";
-import shrinkIcon from "../../../assets/svg/shrinkIcon.svg";
+import shoeCarouselimg from "../../../../assets/svg/shoeCarouselimg.svg";
+import ShoeImg from "../../../../assets/svg/img.jpeg";
+import shrinkIcon from "../../../../assets/svg/shrinkIcon.svg";
 import Image from "next/image";
-import { expandStyles } from "./ExpandButton";
 
 const style = {
   position: "absolute",

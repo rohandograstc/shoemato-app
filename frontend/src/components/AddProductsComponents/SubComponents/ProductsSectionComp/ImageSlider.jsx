@@ -5,8 +5,8 @@ import { useState } from "react";
 import LeftArrowKeyIcon from "@/assets/svg/leftArrowKey";
 import RightArrowKeyIcon from "@/assets/svg/rightArrowKey";
 
-import styles from "../addproducts.module.css";
-import ExpandButton from "./ExpandButton";
+import styles from "../../addproducts.module.css";
+import ExpandButton from "../ProductFormComp/ExpandButton";
 
 const sliderStyles = {
   position: "relative",
@@ -32,21 +32,23 @@ const ImageSlider = ({ slides, modalOpen }) => {
 
   return (
     <Box sx={sliderStyles}>
-     {!modalOpen && <ExpandButton /> } 
+      {!modalOpen && <ExpandButton />}
       <Box className={styles.carouseCon}>
         <Image
           alt="image"
           src={slides[currentIndex].url}
           className={
-            modalOpen ? `${styles.carouselModalImage}` : `${styles.carouselImage}`
+            modalOpen
+              ? `${styles.carouselModalImage}`
+              : `${styles.carouselImage}`
           }
         />
       </Box>
       <Box sx={{ display: "flex", justifyContent: "center", gap: "40px" }}>
-        <Box onClick={goToPrevious}>
+        <Box onClick={goToPrevious} sx={{ cursor: "pointer" }}>
           <LeftArrowKeyIcon />
         </Box>
-        <Box onClick={goToNext}>
+        <Box onClick={goToNext} sx={{ cursor: "pointer" }}>
           <RightArrowKeyIcon />
         </Box>
       </Box>

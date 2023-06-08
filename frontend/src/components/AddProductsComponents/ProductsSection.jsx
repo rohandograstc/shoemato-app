@@ -10,8 +10,8 @@ import shoeCarouselimg from "../../assets/svg/shoeCarouselimg.svg";
 import ShoeImg from "../../assets/svg/img.jpeg"
 
 import { CellTypo } from "@/styledComponents/CellTypo";
-import ProductsView from "./ProductsView";
-import ImageSlider from "./SubComponents/ImageSlider";
+import ProductsView from "./SubComponents/ProductsSectionComp/ProductsView";
+import ImageSlider from "./SubComponents/ProductsSectionComp/ImageSlider";
 
 const ProductsSection = () => {
   const slides = [

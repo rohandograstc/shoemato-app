@@ -1,8 +1,8 @@
 import { Box } from "@mui/material";
 import React from "react";
 import InputField from "./InputField";
-import AutoCompleteComponent from "../AutoCompleteComponent";
-import styles from "../addproducts.module.css"
+import AutoCompleteComponent from "./AutoCompleteComponent";
+import styles from "../../addproducts.module.css";
 
 const PricesSection = () => {
   return (
@@ -15,7 +15,7 @@ const PricesSection = () => {
       </Box>
 
       <Box className={styles.inputFieldCon}>
-        <InputField placeHolder={"MRP"} />
+        <InputField placeHolder={"MRP"} center={false} small={false} />
         <AutoCompleteComponent />
       </Box>
     </>

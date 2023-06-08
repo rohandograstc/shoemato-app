@@ -2,8 +2,8 @@ import { Box, OutlinedInput } from "@mui/material";
 import React from "react";
 import InputField from "./InputField";
 
-import styles from "../addproducts.module.css";
-import { placeHolderStyle } from "../ProductsForm";
+import styles from "../../addproducts.module.css";
+import { placeHolderStyle } from "../../ProductsForm";
 
 const ProdInput = () => {
   return (
@@ -21,11 +21,14 @@ const ProdInput = () => {
         <InputField placeHolder={"Sub Category"} />
       </Box>
       <OutlinedInput
+        classes={{
+          notchedOutline: styles.notchedOutline,
+        }}
         id="filled-multiline-static"
         multiline
         rows={4}
         placeholder="Description"
-        sx={placeHolderStyle}
+        sx={{ ...placeHolderStyle,}}
       />
     </>
   );

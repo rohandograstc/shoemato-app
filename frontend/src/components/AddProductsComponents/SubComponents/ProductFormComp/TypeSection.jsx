@@ -10,8 +10,8 @@ import {
 import AddIcon from "@mui/icons-material/Add";
 import React from "react";
 import InputField from "./InputField";
-import styles from "../addproducts.module.css";
-import { placeHolderStyle } from "../ProductsForm";
+import styles from "../../addproducts.module.css";
+import { placeHolderStyle } from "../../ProductsForm";
 
 const TypeSection = () => {
   const numArr = [11, 10, 9, 8, 7];
@@ -44,6 +44,9 @@ const TypeSection = () => {
             <MenuItem value={3}>Medium</MenuItem>
           </Select>
           <OutlinedInput
+            classes={{
+              notchedOutline: styles.notchedOutline,
+            }}
             className={`${styles.inputQuanStyle}`}
             id="outlined-adornment-name"
             placeholder={"Quantity"}
@@ -55,8 +58,8 @@ const TypeSection = () => {
           />
         </Box>
         <Box className={styles.inputFieldCon}>
-          <InputField placeHolder={"Highest %"} />
-          <InputField placeHolder={"Lowest %"} />
+          <InputField placeHolder={"Highest %"} center={true} />
+          <InputField placeHolder={"Lowest %"} center={true} />
         </Box>
       </Box>
       <Box className={styles.numBtnCon}>

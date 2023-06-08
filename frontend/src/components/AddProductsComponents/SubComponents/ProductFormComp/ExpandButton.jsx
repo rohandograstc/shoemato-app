@@ -3,8 +3,8 @@ import Image from "next/image";
 
 import { Box } from "@mui/material";
 
-import expandImage from "../../../assets/svg/expandImage.svg";
-import ImageSliderModal from "./ImageSliderModal";
+import expandImage from "../../../../assets/svg/expandImage.svg";
+import ImageSliderModal from "../ProductsSectionComp/ImageSliderModal";
 
 const expandStyles = {
   position: "absolute",

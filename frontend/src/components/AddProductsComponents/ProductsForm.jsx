@@ -6,11 +6,12 @@ import { Box, FormControlLabel } from "@mui/material";
 import { HeadingTypo } from "@/styledComponents/HeadingTypo";
 import { IOSSwitch } from "@/styledComponents/SwitchStyled";
 import { StyledButton } from "@/styledComponents/StyledBtn";
-import ProdInput from "./SubComponents/ProdInput";
-import TypeSection from "./SubComponents/TypeSection";
-import PricesSection from "./SubComponents/PricesSection";
+import ProdInput from "./SubComponents/ProductFormComp/ProdInput";
+import TypeSection from "./SubComponents/ProductFormComp/TypeSection";
+import PricesSection from "./SubComponents/ProductFormComp/PricesSection";
 
 export const placeHolderStyle = {
+  outline: "none",
   "& .MuiInputBase-input": {
     "::placeholder": {
       fontFamily: "Montserrat",
@@ -26,6 +27,7 @@ export const smallplaceHolderStyle = {
   "& ..MuiOutlinedInput-root": {
     padding: 0,
   },
+  outline: "none",
   "& .MuiInputBase-input": {
     "::placeholder": {
       fontFamily: "Montserrat",

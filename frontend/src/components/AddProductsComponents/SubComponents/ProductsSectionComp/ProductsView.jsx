@@ -7,10 +7,10 @@ import LinearProgress, {
   linearProgressClasses,
 } from "@mui/material/LinearProgress";
 
-import styles from "./addproducts.module.css";
+import styles from "../../addproducts.module.css";
 
-import shoeIcon from "../../assets/svg/shoeIcon.svg";
-import minusIcon from "../../assets/svg/minusIcon.svg";
+import shoeIcon from "../../../../assets/svg/shoeIcon.svg";
+import minusIcon from "../../../../assets/svg/minusIcon.svg";
 
 const ProductsView = ({ viewName }) => {
   return (
