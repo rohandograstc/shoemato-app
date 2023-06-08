@@ -56,12 +56,12 @@ const Register = ({ setEnter }) => {
             }}
           >
             <Box boxShadow={3} borderRadius="50%" className={style.card}>
-              <Link href="#">
-                <Image src={fbIcon} alt="FB" className={style.icons} />
+              <Link href="#" className={style.icons}>
+                <Image src={fbIcon} alt="FB"  className={style.icons}/>
               </Link>
             </Box>
             <Box boxShadow={3} borderRadius="50%" className={style.card}>
-              <Link href="#">
+              <Link href="#" className={style.icons}>
                 <Image src={googleIcon} alt="Google" className={style.icons} />
               </Link>
             </Box>

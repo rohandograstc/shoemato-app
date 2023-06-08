@@ -89,13 +89,13 @@ function Login({ setEnter }) {
             }}
           >
             <Box boxShadow={3} borderRadius="50%" className={style.card}>
-              <Link href='#'><Image src={googleIcon} alt="Google" className={style.icons} /></Link>
+              <Link href='#' className={style.icons}><Image src={googleIcon} alt="Google" className={style.icons} /></Link>
             </Box>
             <Box boxShadow={3} borderRadius="50%" className={style.card}>
-            <Link href='#'><Image src={appleIcon} alt="Apple" className={style.icons} /></Link>
+            <Link href='#' ><Image src={appleIcon} alt="Apple" className={style.icons} /></Link>
             </Box>
             <Box boxShadow={3} borderRadius="50%" className={style.card}>
-            <Link href='#'><Image src={fbIcon} alt="FB" className={style.icons} /></Link>
+            <Link href='#' className={style.icons}><Image src={fbIcon} alt="FB" className={style.icons} /></Link>
             </Box>
           </Stack>
           <Stack>
