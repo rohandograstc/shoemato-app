@@ -9,31 +9,16 @@ import Link from "next/link";
 import { HeadingTypo } from "@/styledComponents/HeadingTypo";
 import style from "@/components/Dailysales/Dailysales.module.css";
 import Carousel from "@/components/Dailysales/OrderStatusComponents/Carousel";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-
-const muiTheme = createTheme({
-  overrides: {
-    MuiStepIcon: {
-      root: {
-        color: "#000000", // or 'rgba(0, 0, 0, 1)'
-
-        "&$completed": {
-          color: "green",
-        },
-      },
-    },
-  },
-});
 
 const steps = ["Confirmed", "Processed", "Dispatched", "Delivery", "Delivered"];
-
-export default function ({ details, setDetails }) {
+const orderId = '#876365'
+export default function () {
   const [edit, setEdit] = useState(true);
 
   return (
     <Stack direction="column" sx={{ py: 0.5, px: 2 }}>
       <HeadingTypo variant="h5" style={{ paddingLeft: "48px" }}>
-        Order {details.orderId}
+        Order {orderId}
       </HeadingTypo>
       <Stack direction="row">
         <Box
@@ -106,7 +91,7 @@ export default function ({ details, setDetails }) {
           <HeadingTypo variant="h6" style={{ marginTop: "30px" }}>
             Status
           </HeadingTypo>
-          <ThemeProvider theme={muiTheme}>
+          
             <Stepper
               activeStep={2}
               alternativeLabel
@@ -123,7 +108,7 @@ export default function ({ details, setDetails }) {
                 </Step>
               ))}
             </Stepper>
-          </ThemeProvider>
+          
           <HeadingTypo
             variant="h1"
             style={{
@@ -148,9 +133,7 @@ export default function ({ details, setDetails }) {
           </HeadingTypo>
         </Box>
       </Stack>
-      <Link href="" style={link} onClick={() => setDetails({ show: true })}>
-        Back
-      </Link>
+
       <Button
         startIcon={<EditOutlinedIcon />}
         variant="contained"

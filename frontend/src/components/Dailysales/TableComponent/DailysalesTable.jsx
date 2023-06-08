@@ -7,8 +7,11 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { rows, tableHead } from "./constants";
 import { Typography } from "@mui/material";
+import { useRouter } from 'next/navigation'
 
-const InventoryTable = ({ setDetails }) => {
+const InventoryTable = () => {
+  const router = useRouter()
+  
   return (
     <TableContainer
       component={Paper}
@@ -59,7 +62,7 @@ const InventoryTable = ({ setDetails }) => {
                     lineHeight: "16px",
                     fontWeight: "400",
                   }}
-                  onClick={() => setDetails({orderId:row.mId, show:false})}
+                  onClick={() => router.push('/dailysales/order-status')}
                 >
                   {row.mId}
                 </Typography>
