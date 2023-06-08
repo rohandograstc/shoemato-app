@@ -17,6 +17,7 @@
   align-items: center;
   height: 60px;
   position: relative;
+  cursor: pointer;
 }
 
 .uploadIcon {

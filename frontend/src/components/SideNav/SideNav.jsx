@@ -58,14 +58,14 @@ const SideNav = () => {
     { name: "Dashboard", link: "/dashboard" },
     { name: "Daily Sales", link: "/dailysales", link2: "/dailysales/order-status"},
     // { name: "Products" },
-    { name: "Return", link: "/return"  },
+    { name: "Products", link: "/products" },
+    { name: "Return", link: "/return" },
     // { name: "Invoice" },
     // { name: "Vendors" },
     // { name: "Daily Sales" },
-    { name: "Products", link: "/products" },
     // { name: "Return" },
-    { name: "Invoice", link : "/invoice" },
-    { name: "Vendors", link:"/vendors" },
+    { name: "Invoice", link: "/invoice" },
+    { name: "Vendors", link: "/vendors" },
     { name: "Inventory", link: "/inventory" },
     { name: "Complaints" },
     { name: "Settings" },
@@ -74,12 +74,7 @@ const SideNav = () => {
   return (
     <>
       <CssBaseline />
-      <AppBar
-        position="fixed"
-        className={styles.appBar}
-        style={{ background: "#0d1a26" }}
-        open={open}
-      >
+      <AppBar position="fixed" className={styles.appBar} open={open}>
         <Toolbar>
           <Box sx={{ flexGrow: 0.5 }} />
           <Box sx={{ flexGrow: 0.5 }} />
@@ -121,7 +116,7 @@ const SideNav = () => {
           {sideNavArray.map((text, index) => (
             <ListItem key={text.name} disablePadding sx={{ display: "block" }}>
               <Link
-                href={text.link !== undefined ? `${text.link}` : "/dashboard"}
+                href={text.link !== undefined ? `${text?.link}` : "/dashboard"}
                 style={{ textDecoration: "none" }}
               >
                 <ListItemButton

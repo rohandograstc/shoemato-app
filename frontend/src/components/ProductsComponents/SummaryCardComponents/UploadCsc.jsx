@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { HeadingTypo } from "@/styledComponents/HeadingTypo";
 import styles from "../product.module.css";
 import uploadCSVIcon from "../../../assets/svg/uploadCSVIcon.svg";
@@ -12,13 +12,12 @@ const UploadCsc = () => {
   const handleClose = () => setOpen(false);
   return (
     <>
-      <Box className={styles.uploadDiv}>
+      <Box className={styles.uploadDiv} onClick={handleOpen}>
         <HeadingTypo variant="h5">Upload CSV</HeadingTypo>
         <Image
           src={uploadCSVIcon}
           alt="uploadCSVIcon"
           className={styles.uploadIcon}
-          onClick={handleOpen}
         />
       </Box>
       <UploadCsvModal open={open} handleClose={handleClose} />

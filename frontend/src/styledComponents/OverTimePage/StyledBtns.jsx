@@ -12,5 +12,6 @@ export const StyledBtns = styled(Button)(({ theme, btncolor, btnradius, btnborde
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  textAlign : "cetner"
+  textAlign : "cetner",
+  gap : "10px",
 }));
