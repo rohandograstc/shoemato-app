@@ -3,12 +3,12 @@ import Button from "@mui/material/Button";
 import ReportIcon from "@mui/icons-material/Report";
 
 export const StyledButton = styled(Button)(
-    ({ btnwidth, btnradius, bgcolor, tcolor, btnpad, boxShdw}) => ({
+    ({ btnwidth, btnradius, bgcolor, tcolor, btnpad, boxShdw,btnmrb}) => ({
       backgroundColor: bgcolor ? bgcolor : "#0D1A26",
       borderRadius: btnradius ? btnradius : "24px",
       padding: btnpad ? btnpad : "7px 10px",
       width: btnwidth ? btnwidth : "100%",
-      marginBottom: "4px",
+      marginBottom: btnmrb ? btnmrb : "4px",
       textTransform: "none",
       "&:hover": {
         backgroundColor: bgcolor ? bgcolor : "#0D1A26",

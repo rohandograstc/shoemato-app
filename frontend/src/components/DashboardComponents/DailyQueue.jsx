@@ -4,8 +4,9 @@ import styles from "./dashboard.module.css";
 import { StyledSlider } from "@/styledComponents/StyledSlider";
 import { HeadingTypo } from "@/styledComponents/HeadingTypo";
 import { CellTypo } from "@/styledComponents/CellTypo";
+import Link from "next/link";
 
-const DailyQueue =()=> {
+const DailyQueue = () => {
   return (
     <Box className={styles.dailyQueueContainer}>
       <HeadingTypo variant="h5" sx={{ paddingLeft: "10px" }}>
@@ -41,9 +42,14 @@ const DailyQueue =()=> {
             },
           }}
         >
-          <Typography variant="p" className={styles.overDuesBtnText}>
-            Overdues
-          </Typography>
+          <Link
+            href={"/dashboard/overtime"}
+            style={{ textDecoration: "none", color: "white" }}
+          >
+            <Typography variant="p" className={styles.overDuesBtnText}>
+              Overdues
+            </Typography>
+          </Link>
           <Box className={styles.totalOverduesDiv}>
             <Typography className={styles.totalOverdues} variant="span">
               34
@@ -53,5 +59,5 @@ const DailyQueue =()=> {
       </Box>
     </Box>
   );
-}
-export default DailyQueue
+};
+export default DailyQueue;
