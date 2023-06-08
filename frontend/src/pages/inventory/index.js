@@ -1,11 +1,11 @@
-import InventoryHead from "@/components/Inventory/InventoryHead";
-import InventoryInfo from "@/components/Inventory/InventoryInfo";
+import InventoryCard from "@/components/InventoryComponents/InventoryCard";
+import InventoryTableInfo from "@/components/InventoryComponents/InventoryTableInfo";
 
 const Inventory = () => {
   return (
     <>
-      <InventoryHead />
-      <InventoryInfo />
+      <InventoryCard />
+      <InventoryTableInfo />
     </>
   );
 };

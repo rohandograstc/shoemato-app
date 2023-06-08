@@ -1,6 +1,6 @@
 import { Grid } from '@mui/material'
 import React from 'react'
-import Brands from './TransactionsComponent/Brands'
+import Brands from '../Brands'
 import TableInfo from './TransactionsComponent/TableInfo'
 
 
@@ -11,7 +11,7 @@ const Transactions = () => {
             <TableInfo/>
         </Grid>
         <Grid item xs={5} md={3.3} xl={3}>
-          <Brands/>
+          <Brands report={true}/>
         </Grid>
     </Grid>
   )

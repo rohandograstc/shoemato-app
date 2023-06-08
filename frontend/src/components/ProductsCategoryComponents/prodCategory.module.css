@@ -1,0 +1,58 @@
+.cardDiv {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: 170px;
+  background: #ffffff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding-top: 10px;
+  padding: 10px;
+  position: relative;
+}
+
+.cardValue {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 87px;
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.cardValueUnit {
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 140%;
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+}
+
+.innerDivStyle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.inputStyle {
+  border: 1px solid #232321;
+  border-radius: 8px;
+  width: 300px;
+}
+
+.imageDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+.crossIconStyle {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}

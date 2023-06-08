@@ -2,47 +2,24 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import styles from "../dashboard.module.css";
 import { HeadingTypo } from "@/styledComponents/HeadingTypo";
+import { CardDiv, NumberTypo, UnitTypo } from "@/styledComponents/Card";
 
-const Cards = () => {
-  const cardArray = [
-    {
-      name: "Total Turnover",
-      number: 5,
-      unit: "Units",
-    },
-    {
-      name: "Commission",
-      number: 5,
-      unit: "Units",
-    },
-    {
-      name: "Credit Limit",
-      number: 5,
-      unit: "Units",
-    },
-    {
-      name: "Total vendor",
-      number: 5,
-      unit: "Units",
-    },
-  ];
+const Cards = ({ cardArray }) => {
   return (
     <Box component="div" className={styles.cardContainer}>
-      {cardArray.map((data, index) => (
-        <Box key={index} className={styles.cardDiv}>
-          <HeadingTypo variant="h5">{data.name}</HeadingTypo>
+      {cardArray?.map((data, index) => (
+        <CardDiv key={index} boxmrx={index % 2 === 0 && "10px"} >
+          <HeadingTypo variant="h5" >
+            {data.name}
+          </HeadingTypo>
           <Box>
-            <Typography variant="h1" className={styles.cardValue}>
-              {data.number}
-            </Typography>
-            <Typography variant="span" className={styles.cardValueUnit}>
-              {data.unit}
-            </Typography>
+            <NumberTypo variant="h1">{data.number}</NumberTypo>
+            <UnitTypo variant="span">{data.unit}</UnitTypo>
           </Box>
-        </Box>
+        </CardDiv>
       ))}
     </Box>
   );
-}
+};
 
-export default Cards
+export default Cards;

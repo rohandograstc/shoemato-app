@@ -274,5 +274,5 @@ const TransactionTable = () => {
       </Paper>
     </Box>
   );
-}
-export default TransactionTable
+};
+export default TransactionTable;
