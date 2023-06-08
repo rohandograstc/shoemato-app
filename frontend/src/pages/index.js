@@ -13,15 +13,7 @@ const Index = (props) => {
 
   return (
     <>
-      <Page title={title} linkTo="/other" />
-      <div>
-        <button onClick={() => i18n.changeLanguage("fr")}>
-          Change Lang fr
-        </button>
-        <button onClick={() => i18n.changeLanguage("en")}>
-          Change Lang en
-        </button>
-      </div>
+     
     </>
   );
 };
