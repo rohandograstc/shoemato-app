@@ -59,7 +59,6 @@ export default function() {
                     lineHeight: "16px",
                     fontWeight: "400",
                   }}
-                  onClick={() => setDetails({orderId:row.mId, show:false})}
                 >
                   {row.tId}
                 </Typography>
