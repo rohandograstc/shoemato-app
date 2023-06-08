@@ -7,12 +7,15 @@ import inventoryDark from "./inventoryDark.svg"
 import orders from "./orders.svg"
 import products from "./products.svg"
 import sales from "./sales.svg"
+import salesDark from "./salesDark.svg"
 import settings from "./settings.svg"
+import settingsDark from "./settingsDark.svg"
 import shoeMatoLogo from "./shoeMatoLogo.svg"
 import transactions from "./transactions.svg"
 import users from "./users.svg"
 import vendors from "./vendors.svg"
 import returnIcon from "./return.svg"
+import returnDark from "./returnDark.svg"
 
 export default {
     complaints,
@@ -24,10 +27,12 @@ export default {
     orders,
     products,
     sales,
+    salesDark,
     settings,
     shoeMatoLogo,
     transactions,
     users,
     vendors,
-    returnIcon
+    returnIcon,
+    returnDark
 }

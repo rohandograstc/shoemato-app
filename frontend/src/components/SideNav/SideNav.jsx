@@ -43,9 +43,9 @@ const SideNav = () => {
     Logos.complaints,
     Logos.settings,
     Logos.dashboardDark,
-    Logos.sales,
+    Logos.salesDark,
     Logos.products,
-    Logos.returnIcon,
+    Logos.returnDark,
     Logos.orders,
     Logos.vendors,
     Logos.inventoryDark,
@@ -55,9 +55,9 @@ const SideNav = () => {
 
   const sideNavArray = [
     { name: "Dashboard", link: "/dashboard" },
-    { name: "Daily Sales" },
+    { name: "Daily Sales", link: "/dailysales"},
     { name: "Products" },
-    { name: "Return" },
+    { name: "Return", link: "/return"  },
     { name: "Invoice" },
     { name: "Vendors" },
     { name: "Inventory", link: "/inventory" },
@@ -68,7 +68,12 @@ const SideNav = () => {
   return (
     <>
       <CssBaseline />
-      <AppBar position="fixed" className={styles.appBar} open={open}>
+      <AppBar
+        position="fixed"
+        className={styles.appBar}
+        style={{ background: "#0d1a26" }}
+        open={open}
+      >
         <Toolbar>
           <Box sx={{ flexGrow: 0.5 }} />
           <Box sx={{ flexGrow: 0.5 }} />
@@ -110,7 +115,7 @@ const SideNav = () => {
           {sideNavArray.map((text, index) => (
             <ListItem key={text.name} disablePadding sx={{ display: "block" }}>
               <Link
-                href={text.link !== undefined ? `${text?.link}` : "/dashboard"}
+                href={text.link !== undefined ? `${text.link}` : "/dashboard"}
                 style={{ textDecoration: "none" }}
               >
                 <ListItemButton
@@ -118,10 +123,10 @@ const SideNav = () => {
                     minHeight: 48,
                     justifyContent: open ? "initial" : "center",
                     px: 2.5,
-                    backgroundColor: pathname === text?.link && "white",
-                    color: pathname === text?.link ? "black" : "white",
+                    backgroundColor: pathname === text.link && "white",
+                    color: pathname === text.link ? "black" : "white",
                     "&:hover": {
-                      backgroundColor: pathname === text?.link && "white",
+                      backgroundColor: pathname === text.link && "white",
                     },
                     borderTopRightRadius: "5px",
                     borderBottomRightRadius: "5px",
@@ -136,7 +141,7 @@ const SideNav = () => {
                   >
                     <Image
                       src={
-                        pathname === text?.link
+                        pathname === text.link
                           ? IconArray[index + 9]
                           : IconArray[index]
                       }

@@ -13,8 +13,8 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  width: 48%;
-  height: 180px;
+  width: 47%;
+  height: 170px;
   background: #ffffff;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -46,7 +46,7 @@
 
 .cardValueUnit {
   font-weight: 400;
-  font-size: 27px;
+  font-size: 20px;
   line-height: 140%;
   position: absolute;
   right: 10px;
