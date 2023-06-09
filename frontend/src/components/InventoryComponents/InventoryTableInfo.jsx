@@ -53,15 +53,7 @@ const InventoryTableInfo = () => {
         />
         <InventoryTable />
       </Paper>
-      <Box
-        sx={{
-          position: "absolute",
-          right: 0,
-          bottom: 0,
-        }}
-      >
-        <AddButton bwidth={"90px"} />
-      </Box>
+
     </Box>
   );
 };

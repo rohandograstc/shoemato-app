@@ -27,11 +27,18 @@ const TransactionTable = () => {
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead sx={{ borderBottom: 0 }}>
             <TableRow>
-              <TableCell sx={{ py: "27px" }} align="center">
+              <TableCell
+                sx={{ borderBottom: "none", py: "27px" }}
+                align="center"
+              >
                 Product Name
               </TableCell>
               {tableHead.slice(1, tableHead.length).map((cellName, i) => (
-                <TableCell key={i} sx={{ py: "27px" }} align="center">
+                <TableCell
+                  key={i}
+                  sx={{ borderBottom: "none", py: "27px" }}
+                  align="center"
+                >
                   {cellName}
                 </TableCell>
               ))}
@@ -69,6 +76,7 @@ const TransactionTable = () => {
                       fontSize: "12px",
                       lineHeight: "16px",
                       fontWeight: "400",
+                      color: "#788B9A",
                     }}
                   >
                     {row.pName}
@@ -93,6 +101,7 @@ const TransactionTable = () => {
                             fontSize: "12px",
                             lineHeight: "16px",
                             fontWeight: "400",
+                            color: "#788B9A",
                           }}
                         >
                           {cell}

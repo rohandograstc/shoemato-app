@@ -63,22 +63,26 @@ const TypeSection = () => {
         </Box>
       </Box>
       <Box className={styles.numBtnCon}>
-        {numArr.map((num, i) => (
-          <Button key={i} className={styles.typeBtn}>
-            <Typography variant="span" className={styles.typeBtnText}>
-              {num}
-            </Typography>
-          </Button>
-        ))}
-        <AddIcon
-          sx={{
-            fontSize: "35px",
-            fontWeight: 200,
-            backgroundColor: "#0D1A26",
-            color: "white",
-            borderRadius: "50%",
-          }}
-        />
+        <Box className={styles.numbInnerCont}>
+          {numArr.map((num, i) => (
+            <Button key={i} className={styles.typeBtn}>
+              <Typography variant="span" className={styles.typeBtnText}>
+                {num}
+              </Typography>
+            </Button>
+          ))}
+          <Box sx={{ width: "30%" }}>
+            <AddIcon
+              sx={{
+                fontSize: "35px",
+                fontWeight: 200,
+                backgroundColor: "#0D1A26",
+                color: "white",
+                borderRadius: "50%",
+              }}
+            />
+          </Box>
+        </Box>
       </Box>
     </Box>
   );

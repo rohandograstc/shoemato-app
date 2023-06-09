@@ -29,11 +29,18 @@ const ProdCategoryTable = () => {
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead sx={{ borderBottom: 0 }}>
             <TableRow>
-              <TableCell sx={{ py: "27px" }} align="center">
+              <TableCell
+                sx={{ borderBottom: "none", py: "27px" }}
+                align="center"
+              >
                 <CellTypo variant="span">Category ID</CellTypo>
               </TableCell>
               {tableHead.slice(1, tableHead.length).map((cellName, i) => (
-                <TableCell key={i} sx={{ py: "27px" }} align="center">
+                <TableCell
+                  key={i}
+                  sx={{ borderBottom: "none", py: "27px" }}
+                  align="center"
+                >
                   <CellTypo variant="span">{cellName}</CellTypo>
                 </TableCell>
               ))}

@@ -16,9 +16,10 @@ export const placeHolderStyle = {
     "::placeholder": {
       fontFamily: "Montserrat",
       fontWeight: 600,
-      fontSize: "20px",
+      fontSize: "16px",
       lineHeight: "160%",
       color: "#79777d",
+      paddingLeft: "8px"
     },
   },
 };
@@ -52,7 +53,7 @@ const ProductsForm = () => {
 
         <Box className={styles.inputFieldCon}>
           <HeadingTypo variant="span" style={{ color: "#79767C" }}>
-            In Stock
+            In-Stock
           </HeadingTypo>
           <FormControlLabel
             control={<IOSSwitch sx={{ m: 1 }} defaultChecked />}

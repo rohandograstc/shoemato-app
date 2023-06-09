@@ -9,7 +9,7 @@ const ProdTableInfo = () => {
     {
       name: "Categories",
       btnWidth: "fit-content",
-      btnRadius: "0px",
+      btnRadius: "0px 0px 10px 0px",
       mrx: "5px",
     },
   ];

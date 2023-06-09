@@ -56,7 +56,7 @@ const SideNav = () => {
 
   const sideNavArray = [
     { name: "Dashboard", link: "/dashboard" },
-    { name: "Daily Sales", link: "/dailysales", link2: "/dailysales/order-status"},
+    { name: "Daily Sales", link: "/dailysales" },
     // { name: "Products" },
     { name: "Products", link: "/products" },
     { name: "Return", link: "/return" },
@@ -124,10 +124,15 @@ const SideNav = () => {
                     minHeight: 48,
                     justifyContent: open ? "initial" : "center",
                     px: 2.5,
-                    backgroundColor: (pathname === text.link || pathname === text.link2) && "white",
-                    color: (pathname === text.link || pathname === text.link2) ? "black" : "white",
+                    backgroundColor:
+                      firstPath === text?.link?.substring(1) && "white",
+                    color:
+                      firstPath === text?.link?.substring(1)
+                        ? "black"
+                        : "white",
                     "&:hover": {
-                      backgroundColor: (pathname === text.link || pathname === text.link2) && "white",
+                      backgroundColor:
+                        firstPath === text?.link?.substring(1) && "white",
                     },
                     borderTopRightRadius: "5px",
                     borderBottomRightRadius: "5px",

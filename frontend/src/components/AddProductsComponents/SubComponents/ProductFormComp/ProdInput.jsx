@@ -28,7 +28,16 @@ const ProdInput = () => {
         multiline
         rows={4}
         placeholder="Description"
-        sx={{ ...placeHolderStyle,}}
+        sx={{
+          ...placeHolderStyle,
+          "& .MuiInputBase-input": {
+            "::placeholder": {
+              ...placeHolderStyle["& .MuiInputBase-input"]["::placeholder"],
+              paddingTop : "10px",
+            },
+          },
+          borderRadius : "10px"
+        }}
       />
     </>
   );
