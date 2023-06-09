@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
-import Image from "next/image";
 import { useState } from "react";
+import shoeCarouselimg from "../../../../assets/svg/shoeCarouselimg.svg";
+import ShoeImg from "../../../../assets/svg/img.jpeg";
 
 import LeftArrowKeyIcon from "@/assets/svg/leftArrowKey";
 import RightArrowKeyIcon from "@/assets/svg/rightArrowKey";
@@ -30,21 +31,27 @@ const ImageSlider = ({ slides, modalOpen }) => {
     setCurrentIndex(slideIndex);
   };
 
+  const carouselConStyle = {
+    backgroundImage: `url(${slides[currentIndex].url})`,
+    backgroundPosition: "center",
+    borderRadius: modalOpen ? "10px 10px 0 0" : "10px",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    padding: "5px",
+  };
+
   return (
     <Box sx={sliderStyles}>
       {!modalOpen && <ExpandButton />}
-      <Box className={styles.carouseCon}>
-        <Image
-          alt="image"
-          src={slides[currentIndex].url}
-          className={
-            modalOpen
-              ? `${styles.carouselModalImage}`
-              : `${styles.carouselImage}`
-          }
-        />
-      </Box>
-      <Box sx={{ display: "flex", justifyContent: "center", gap: "40px" }}>
+      <Box className={styles.carouselCon} style={carouselConStyle} />
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "40px",
+          marginTop: "10px",
+        }}
+      >
         <Box onClick={goToPrevious} sx={{ cursor: "pointer" }}>
           <LeftArrowKeyIcon />
         </Box>

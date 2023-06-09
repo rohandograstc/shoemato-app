@@ -28,6 +28,7 @@ const AutoCompleteComponent = () => {
         displayEmpty
         inputProps={{ "aria-label": "Without label" }}
         sx={{
+          borderRadius: "10px 0 0 10px",
           "& .MuiSelect-select": {
             padding: "0",
             paddingRight: "0 !important",
@@ -73,6 +74,7 @@ const AutoCompleteComponent = () => {
           "&::-webkit-scrollbar": {
             display: "none",
           },
+          borderRadius: "0px 10px 10px 0px",
         }}
       >
         {age?.map((name, i) => (

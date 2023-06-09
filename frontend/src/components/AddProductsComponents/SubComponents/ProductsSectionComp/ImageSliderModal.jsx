@@ -2,9 +2,6 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import ImageSlider from "./ImageSlider";
-
-import shoeCarouselimg from "../../../../assets/svg/shoeCarouselimg.svg";
-import ShoeImg from "../../../../assets/svg/img.jpeg";
 import shrinkIcon from "../../../../assets/svg/shrinkIcon.svg";
 import Image from "next/image";
 
@@ -13,10 +10,10 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 500,
+  width: 400,
   bgcolor: "background.paper",
   boxShadow: 24,
-  p: "10px",
+  // p: "10px",
   outline: "none",
   borderRadius: "10px",
 };
@@ -28,19 +25,30 @@ const overlayStyle = {
 
 const shrinkStyles = {
   position: "absolute",
-  top: "35px",
-  right: "35px",
+  top: "20px",
+  right: "20px",
   zIndex: 1,
   cursor: "pointer",
 };
 
 const ImageSliderModal = (props) => {
   const slides = [
-    { url: shoeCarouselimg, title: "beach" },
-    { url: ShoeImg, title: "boat" },
-    { url: shoeCarouselimg, title: "forest" },
-    { url: ShoeImg, title: "city" },
-    { url: shoeCarouselimg, title: "italy" },
+    {
+      url: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+      title: "beach",
+    },
+    {
+      url: "https://images.pexels.com/photos/19090/pexels-photo.jpg?cs=srgb&dl=pexels-web-donut-19090.jpg&fm=jpg",
+      title: "boat",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+      title: "forest",
+    },
+    {
+      url: "https://images.pexels.com/photos/19090/pexels-photo.jpg?cs=srgb&dl=pexels-web-donut-19090.jpg&fm=jpg",
+      title: "city",
+    },
   ];
   return (
     <div>
@@ -56,7 +64,12 @@ const ImageSliderModal = (props) => {
         <Box sx={style}>
           <ImageSlider slides={slides} modalOpen={true} />
           <Box sx={shrinkStyles}>
-            <Image src={shrinkIcon} width="50px" alt="expand" onClick={props.handleClose} />
+            <Image
+              src={shrinkIcon}
+              style={{ width: "17px", height: "17px" }}
+              alt="shrink"
+              onClick={props.handleClose}
+            />
           </Box>
         </Box>
       </Modal>
