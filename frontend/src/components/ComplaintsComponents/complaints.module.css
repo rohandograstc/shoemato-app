@@ -1,0 +1,43 @@
+.actionCell {
+  display: flex;
+  padding: 2px 10px;
+  justify-content: center;
+  gap: 20px;
+}
+
+.complaintDiv {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.pendingDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.tableCon {
+  display: flex;
+  width: 100%;
+
+}
+
+.tableCardCon {
+  padding: 5px 18px 10px;
+}
+
+.headingCon {
+  display: flex;
+}
+
+.tableCardBtnsCon {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  width: 100%;
+}
+
+.tableRow{
+  width: 100%;
+  display: flex;
+}

@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import React from "react";
 import styles from "../dashboard.module.css";
 import { HeadingTypo } from "@/styledComponents/HeadingTypo";

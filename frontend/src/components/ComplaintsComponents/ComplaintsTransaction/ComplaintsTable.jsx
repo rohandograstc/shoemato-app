@@ -1,4 +1,5 @@
 import {
+  Box,
   Paper,
   Table,
   TableBody,
@@ -10,8 +11,12 @@ import {
 import React from "react";
 import { rows, tableHead } from "./constants.jsx";
 import { CellTypo } from "@/styledComponents/CellTypo.jsx";
+import editIcon from "../../../assets/svg/editIcon.svg";
+import deleteIcon from "../../../assets/svg/deleteIcon.svg";
+import Image from "next/image.js";
+import styles from "../complaints.module.css";
 
-const InvoiceTable = () => {
+const ComplaintsTable = () => {
   return (
     <Paper sx={{ width: "100%", mb: 2, boxShadow: "none", padding: "0" }}>
       <TableContainer
@@ -24,7 +29,7 @@ const InvoiceTable = () => {
         }}
       >
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
-          <TableHead sx={{ borderBottom: "5px solid gray" }}>
+          <TableHead sx={{ borderBottom: "5px solid #D9D9D9" }}>
             <TableRow>
               <TableCell sx={{ py: "7px" }} align="center">
                 <CellTypo variant="span">Invoice ID</CellTypo>
@@ -55,16 +60,16 @@ const InvoiceTable = () => {
                   sx={{
                     cursor: "pointer",
                     borderBottom: "none",
-                    p: "4px",
+                    p: "10px",
                   }}
                   style={{
                     padding: "10px",
                   }}
                   align="center"
                 >
-                    <CellTypo variant="span" fcolor={"#788B9A"}>
-                      {row.inId}
-                    </CellTypo>
+                  <CellTypo variant="span" fcolor={"#788B9A"}>
+                    {row.inId}
+                  </CellTypo>
                 </TableCell>
                 {Object?.values(row)
                   ?.slice(1)
@@ -75,7 +80,7 @@ const InvoiceTable = () => {
                       sx={{
                         cursor: "pointer",
                         borderBottom: "none",
-                        p: "4px",
+                        p: "10px",
                       }}
                     >
                       <CellTypo variant="span" fcolor={"#788B9A"}>
@@ -83,6 +88,18 @@ const InvoiceTable = () => {
                       </CellTypo>
                     </TableCell>
                   ))}
+                <TableCell
+                  sx={{
+                    cursor: "pointer",
+                    borderBottom: "none",
+                    p: "10px",
+                  }}
+                >
+                  <Box className={styles.actionCell}>
+                    <Image src={editIcon} alt="editIcon" />
+                    <Image src={deleteIcon} alt="deleteIcon" />
+                  </Box>
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>
@@ -92,4 +109,4 @@ const InvoiceTable = () => {
   );
 };
 
-export default InvoiceTable;
+export default ComplaintsTable;
