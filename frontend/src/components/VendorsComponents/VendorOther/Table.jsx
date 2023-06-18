@@ -7,13 +7,14 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-  Typography,
 } from "@mui/material";
 import React from "react";
 import { rows, tableHead } from "./constants";
 import { CellTypo } from "@/styledComponents/CellTypo";
+import Link from "next/link";
 
-const TransactionTable = () => {
+const TransactionTable = ({pathId}) => {
+  console.log("PathId :", pathId);
   return (
     <Paper sx={{ width: "100%", mb: 2, boxShadow: "none", padding: "0 20px" }}>
       <TableContainer
@@ -64,9 +65,14 @@ const TransactionTable = () => {
                   }}
                   align="center"
                 >
-                  <CellTypo variant="span" fcolor={"#788B9A"}>
-                    {row?.mId}
-                  </CellTypo>
+                  <Link
+                    style={{ textDecoration: "none" }}
+                    href={ pathId ? `/vendors/${pathId}/${row?.mId}` : `/vendors/manufacturer/${row?.mId}`}
+                  >
+                    <CellTypo variant="span" fcolor={"#788B9A"}>
+                      #{row?.mId}
+                    </CellTypo>
+                  </Link>
                 </TableCell>
                 {Object.values(row)
                   .slice(1)

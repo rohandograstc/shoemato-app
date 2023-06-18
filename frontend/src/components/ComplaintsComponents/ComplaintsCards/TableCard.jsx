@@ -37,7 +37,7 @@ const TableCard = ({ headArray }) => {
                 <Box sx={{ width: "32%" }}>
                   <StyledButton
                     variant="contained"
-                    btnwidth={headData.btnWidth}
+                    btnwidth="100%"
                     btnradius={headData.btnRadius}
                     sx={{
                       boxShadow: headData.btnshadow
@@ -49,9 +49,11 @@ const TableCard = ({ headArray }) => {
                     }}
                     bgcolor={headData?.bgcolor}
                     tcolor={headData?.tcolor}
-                    btnpad={"7px 20px"}
+                    btnpad={"7px 25px"}
                   >
-                    <HeadingTypo variant="h4">{headData.name}</HeadingTypo>
+                    <HeadingTypo variant="h4" ffamily={"Open Sans"}>
+                      {headData.name}
+                    </HeadingTypo>
                   </StyledButton>
                 </Box>
                 <Typography

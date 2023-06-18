@@ -6,7 +6,7 @@ import { Palette } from "@devexpress/dx-react-chart";
 import { HeadingTypo } from "@/styledComponents/HeadingTypo";
 import { CellTypo } from "@/styledComponents/CellTypo";
 
-const ChartCard = () => {
+const ChartCard = ({ smallChart }) => {
   const data = [
     { argument: "Monday", value: 10 },
     { argument: "Tuesday", value: 40 },
@@ -46,7 +46,12 @@ const ChartCard = () => {
   return (
     <Paper className={styles.chartComponent}>
       <HeadingTypo variant="h5">Sale Overview</HeadingTypo>
-      <Chart data={data} className={styles.chartContainer}>
+      <Chart
+        data={data}
+        className={
+          smallChart ? styles.smallChartContainer : styles.chartContainer
+        }
+      >
         <Palette scheme={colors} />
         <PieSeries valueField="value" argumentField="argument" />
       </Chart>
@@ -63,6 +68,6 @@ const ChartCard = () => {
       </Box>
     </Paper>
   );
-}
+};
 
-export default ChartCard 
+export default ChartCard;

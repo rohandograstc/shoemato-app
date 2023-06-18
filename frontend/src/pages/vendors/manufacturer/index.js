@@ -26,10 +26,11 @@ const Manufacturer = () => {
   ];
 
   const headerTitle = "List of Manufacturers";
+  const pathId = "manufacturer"
   return (
     <Box sx={{ display: "flex", flexDirection: "column", gap: "60px" }}>
       <ManufacturerHead headArray={headArray} nameIndex={0} />
-      <ManufacturerInfo headerTitle={headerTitle} />
+      <ManufacturerInfo headerTitle={headerTitle} pathId={pathId} />
     </Box>
   );
 };
