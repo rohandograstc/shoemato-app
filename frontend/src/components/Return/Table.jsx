@@ -1,6 +1,6 @@
 import TableHead from "./TableHead";
 import TableInfo from "./TableInfo";
-export default function () {
+const Table = () => {
   return (
     <>
       <TableHead />
@@ -8,3 +8,5 @@ export default function () {
     </>
   );
 }
+
+export default Table;

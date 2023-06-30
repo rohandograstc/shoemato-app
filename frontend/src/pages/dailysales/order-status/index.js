@@ -1,9 +1,10 @@
 import OrderStatus from '@/components/Dailysales/OrderStatusComponents/OrderStatus';
 
-export default function () {
+const Orderstatus = () => {
     return (
         <>
             <OrderStatus />
         </>
     )
 }
+export default Orderstatus;

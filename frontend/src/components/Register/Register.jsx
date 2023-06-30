@@ -40,7 +40,7 @@ const Register = ({ setEnter }) => {
     <>
       <Box className={style.container}>
         <Stack className={style.box}>
-          <Typography className={style.title}>Register</Typography>
+          <Typography variant="h4" className={style.title}>Register</Typography>
 
           <Typography className={style.title_signup}>Sign up with</Typography>
 
@@ -130,7 +130,7 @@ const Register = ({ setEnter }) => {
               id="outlined-basic"
               variant="outlined"
               select
-              label="ROLE"
+              label="Role"
               onChange={handleChange}
               name="role"
             >

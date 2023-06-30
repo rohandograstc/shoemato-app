@@ -86,9 +86,7 @@
     margin: .5rem 0rem;
 }
 .title{
-    
     font-family: var(--Rubik-fontstyle);
-    font-size: var(--title-fontsize);
     font-weight:bold;
     margin: .5rem 0rem;
 }

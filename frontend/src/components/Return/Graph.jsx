@@ -5,6 +5,7 @@ import { BorderLinearProgress } from "@/styledComponents/BorderLinearProgress";
 import MyCustomIcon from "@/assets/svg/dropdownIcon";
 import { HeadingTypo } from "@/styledComponents/HeadingTypo";
 import { CellTypo } from "@/styledComponents/CellTypo";
+
 const MonthlySelect = () => {
   return (
     <Select
@@ -40,7 +41,7 @@ export default function () {
     },
     {
       name: "B",
-      value: 30,
+      value: 40,
       color: "#4BCBEB",
       sales: "15,00",
     },

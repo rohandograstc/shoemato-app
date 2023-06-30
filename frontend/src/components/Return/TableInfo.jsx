@@ -8,7 +8,7 @@ import Paper from "@mui/material/Paper";
 import { rows, tableHead } from "./constants";
 import { Typography } from "@mui/material";
 
-export default function() {
+const Tableinfo = () => {
   return (
     <TableContainer
       component={Paper}
@@ -95,3 +95,4 @@ export default function() {
   );
 };
 
+export default Tableinfo;

@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import SummaryCards from "@/components/Dailysales/SummaryCards";
 import DailysalesTable from '@/components/Dailysales/TableComponent/DailysalesTable'
 import DailysalesTableHead from '@/components/Dailysales/TableComponent/DailysalesTableHead'
+import OrderStatus from '@/components/Dailysales/OrderStatusComponents/OrderStatus';
 
 
-export default function () {
+const Dailysales = () => {
     const [details, setDetails] = useState({
         orderId: '', show: true
     })
@@ -17,3 +18,4 @@ export default function () {
         </>
     );
 }
+export default Dailysales;

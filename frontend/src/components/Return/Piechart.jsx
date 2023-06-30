@@ -6,7 +6,7 @@ import { Palette } from "@devexpress/dx-react-chart";
 import { HeadingTypo } from "@/styledComponents/HeadingTypo";
 import { CellTypo } from "@/styledComponents/CellTypo";
 
-export default function () {
+const Piechart = () => {
   const data = [
     { argument: "", value: 10 },
     { argument: "", value: 40 },
@@ -69,3 +69,4 @@ export default function () {
   );
 }
 
+export default Piechart;

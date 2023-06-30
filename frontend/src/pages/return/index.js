@@ -1,7 +1,7 @@
 import Stats from '@/components/Return/Stats';
 import Table from '@/components/Return/Table';
 
-export default function () {
+const Return = () => {
     return (
         <>
             <Stats total_return={10000} returned={5} pending={5}/>
@@ -9,3 +9,4 @@ export default function () {
         </>
     )
 }
+export default Return;

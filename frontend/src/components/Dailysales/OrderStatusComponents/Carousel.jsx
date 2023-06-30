@@ -5,12 +5,19 @@ import ShoeImg1 from "@/assets/shoes_1.svg";
 import nextIcon from "@/assets/next.svg";
 import prevIcon from "@/assets/prev.svg";
 import Link from "next/link";
+import ZoomOutMapOutlinedIcon from '@mui/icons-material/ZoomOutMapOutlined';
 
 const img_arr = [ShoeImg1];
-export default function () {
+const Carousel = () => {
   const [imgID, setImgID] = useState(0);
   return (
     <Stack sx={{height:'50vh', display:'flex', flexDirection:'column', alignItems:'center'}}>
+      <Link
+        href="#"
+        style={{marginTop:'40px',marginBottom:'-55px', marginRight:'-290px', zIndex:1}}
+      >
+        <ZoomOutMapOutlinedIcon style={{color:'black'}}/>
+      </Link>
       <Image src={img_arr[imgID]}></Image>
       <Stack direction='row'>
       <Link
@@ -32,3 +39,4 @@ export default function () {
   );
 }
 
+export default Carousel;

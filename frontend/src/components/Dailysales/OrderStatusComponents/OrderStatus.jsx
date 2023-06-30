@@ -12,7 +12,7 @@ import Carousel from "@/components/Dailysales/OrderStatusComponents/Carousel";
 
 const steps = ["Confirmed", "Processed", "Dispatched", "Delivery", "Delivered"];
 const orderId = '#876365'
-export default function () {
+const OrderStatus = () => {
   const [edit, setEdit] = useState(true);
 
   return (
@@ -190,3 +190,5 @@ const inputBoxStyle = {
     fontFamily: "Montserrat",
   },
 };
+
+export default OrderStatus;

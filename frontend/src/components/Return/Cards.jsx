@@ -2,7 +2,7 @@ import { Box, Grid, Typography } from "@mui/material";
 import style from "@/components/Return/Return.module.css";
 import { HeadingTypo } from "@/styledComponents/HeadingTypo";
 
-export default function ({ total_return, returned, pending }) {
+const Cards = ({ total_return, returned, pending }) => {
   return (
     <Grid container md={4} spacing={2} justifyContent="space-between">
       <Grid item md={12}>
@@ -48,3 +48,4 @@ export default function ({ total_return, returned, pending }) {
   );
 }
 
+export default Cards;
