@@ -1,0 +1,44 @@
+.addVendorSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.addVendorForm {
+  width: 60%;
+}
+
+.addVendorTitle {
+  font-family: "Montserrat";
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 46px;
+  text-align: center;
+  color: #79767c;
+  margin-bottom: 80px;
+}
+
+.inputFieldCon {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.selectField {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.selectFieldText {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 160%;
+  color: rgba(128, 128, 128, 0.689);
+}
+
+.notchedOutline {
+  border-color: initial !important;
+}

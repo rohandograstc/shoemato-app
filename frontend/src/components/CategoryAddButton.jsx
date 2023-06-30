@@ -34,7 +34,7 @@ const CategoryButton = () => {
   );
 };
 
-const AddButton = ({ bwidth }) => {
+const AddButton = ({ bwidth, path }) => {
   return (
     <Box
       sx={{
@@ -44,7 +44,7 @@ const AddButton = ({ bwidth }) => {
         gap: "10px",
       }}
     >
-      <Link href={"/products/addProducts"}>
+      <Link href={path ? path : "/products/addProducts"}>
         <StyledButton
           variant="contained"
           btnwidth={bwidth ? bwidth : "130px"}

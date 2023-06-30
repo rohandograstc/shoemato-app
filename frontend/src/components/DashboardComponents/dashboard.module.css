@@ -21,7 +21,8 @@
   padding-top: 10px;
   position: relative;
 }
-.cardDiv:nth-child(1), .cardDiv:nth-child(3) {
+.cardDiv:nth-child(1),
+.cardDiv:nth-child(3) {
   margin-right: 13px;
 }
 .cardTitle,
@@ -70,7 +71,18 @@
   height: 280px !important;
   width: 280px !important;
 }
+.smallChartContainer {
+  height: 250px !important;
+  width: 250px !important;
+}
 
+/* .colorContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  width: 100%;
+} */
 .colorContainer {
   display: flex;
   align-items: center;

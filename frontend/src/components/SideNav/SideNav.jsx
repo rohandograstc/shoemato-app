@@ -50,7 +50,7 @@ const SideNav = () => {
     Logos.ordersDark,
     Logos.vendorsDark,
     Logos.inventoryDark,
-    Logos.complaints,
+    Logos.complaintsDark,
     Logos.settings,
   ];
 
@@ -67,7 +67,7 @@ const SideNav = () => {
     { name: "Invoice", link: "/invoice" },
     { name: "Vendors", link: "/vendors" },
     { name: "Inventory", link: "/inventory" },
-    { name: "Complaints" },
+    { name: "Complaints", link:"/complaints" },
     { name: "Settings" },
   ];
 

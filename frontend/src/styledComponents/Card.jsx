@@ -16,12 +16,14 @@ export const CardDiv = styled(Box)(({ boxmrx, boxheight, boxwidth }) => ({
 }));
 
 export const NumberTypo = styled(Typography)(({ fsize, fWeight, fheight }) => ({
+  fontFamily: "Open Sans",
   fontWeight: fWeight ? fWeight : "700",
   fontSize: fsize ? fsize : "64px",
   lineHeight: fheight ? fheight : "87px",
   display: "inline-block",
   marginRight: "10px",
   marginTop: "10px",
+  color: "#000000",
 }));
 
 export const UnitTypo = styled(Typography)(({ fweight, fsize, fheight }) => ({

@@ -14,12 +14,11 @@ export const placeHolderStyle = {
   outline: "none",
   "& .MuiInputBase-input": {
     "::placeholder": {
-      fontFamily: "Montserrat",
+      fontFamily: "Open Sans",
       fontWeight: 600,
       fontSize: "16px",
       lineHeight: "160%",
-      color: "#79777d",
-      paddingLeft: "8px"
+      color: "#232321",
     },
   },
 };
@@ -31,12 +30,12 @@ export const smallplaceHolderStyle = {
   outline: "none",
   "& .MuiInputBase-input": {
     "::placeholder": {
-      fontFamily: "Montserrat",
+      fontFamily: "Open Sans",
       fontWeight: 600,
       fontSize: "16px",
       textAlign: "center",
       lineHeight: "160%",
-      color: "#79777d",
+      color: "#232321",
     },
   },
 };

@@ -63,7 +63,7 @@ const TransactionHeader = (props) => {
               {props.links ? (
                 <Link
                   href={`${headData.path}`}
-                  style={{ textDecoration: "none", color : "inherit"}}
+                  style={{ textDecoration: "none", color: "inherit" }}
                 >
                   <HeadingTypo variant="h4">{headData.name}</HeadingTypo>
                 </Link>
@@ -76,35 +76,41 @@ const TransactionHeader = (props) => {
       )}
       <Box sx={{ display: "flex", alignItems: "center" }}>
         {props.calendar && <MonthlySelect text={"Calendar"} />}
-        <Search>
-          <StyledInputBase
-            searchwidth={props.searchwidth ? props.searchwidth : "150px"}
-            placeholder="Search"
-            inputProps={{
-              "aria-label": "search",
-            }}
-            sx={{
-              border: "0.3px solid #ecedec",
-              boxShadow: "inset 0px 0px 1px rgba(0, 0, 0, 0.25)",
-              borderRadius: "10px",
-            }}
-          />
-          <SearchIconWrapper>
-            <SearchIcon
+        {props.searchIcon ? (
+          <>
+            <Search>
+              <StyledInputBase
+                searchwidth={props.searchwidth ? props.searchwidth : "150px"}
+                placeholder="Search"
+                inputProps={{
+                  "aria-label": "search",
+                }}
+                sx={{
+                  border: "0.3px solid #ecedec",
+                  boxShadow: "inset 0px 0px 1px rgba(0, 0, 0, 0.25)",
+                  borderRadius: "10px",
+                }}
+              />
+              <SearchIconWrapper>
+                <SearchIcon
+                  sx={{
+                    color: "black",
+                  }}
+                />
+              </SearchIconWrapper>
+            </Search>
+            <AutorenewIcon
               sx={{
-                color: "black",
+                backgroundColor: props.renewwhite ? "white" : "#0D1A26",
+                color: props.renewwhite ? "black" : "white",
+                borderRadius: "100%",
+                fontSize: "30px",
               }}
             />
-          </SearchIconWrapper>
-        </Search>
-        <AutorenewIcon
-          sx={{
-            backgroundColor: props.renewwhite ? "white" : "#0D1A26",
-            color: props.renewwhite ? "black" : "white",
-            borderRadius: "100%",
-            fontSize: "30px",
-          }}
-        />
+          </>
+        ) : (
+          <Box></Box>
+        )}
       </Box>
     </Box>
   );

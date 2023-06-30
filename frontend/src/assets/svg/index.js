@@ -1,4 +1,5 @@
 import complaints from "./complaints.svg"
+import complaintsDark from "./complaintsDark.svg"
 import dashboard from "./dashboard.svg"
 import dashboardDark from "./dashboardDark.svg"
 import employees from "./employees.svg"
@@ -22,6 +23,7 @@ import returnDark from "./returnDark.svg"
 
 export default {
     complaints,
+    complaintsDark,
     dashboardDark,
     dashboard,
     employees,
