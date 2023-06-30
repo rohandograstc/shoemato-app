@@ -127,6 +127,12 @@
   gap: 20px;
 }
 
+.inputBigStyle {
+  /* border: 1px solid #232321; */
+  border-radius: 10px;
+  width: 100%;
+}
+
 .inputStyle {
   /* border: 1px solid #232321; */
   border-radius: 10px;

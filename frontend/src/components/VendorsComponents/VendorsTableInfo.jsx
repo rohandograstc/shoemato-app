@@ -64,7 +64,7 @@ const VendorsTableInfo = () => {
           bottom: 0,
         }}
       >
-        <AddButton bwidth={"100px"} />
+        <AddButton path={"vendors/addVendor"} bwidth={"100px"} />
       </Box>
     </Box>
   );

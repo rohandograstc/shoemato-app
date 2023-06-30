@@ -33,10 +33,11 @@ const ProdInput = () => {
           "& .MuiInputBase-input": {
             "::placeholder": {
               ...placeHolderStyle["& .MuiInputBase-input"]["::placeholder"],
-              paddingTop : "10px",
+              // paddingTop: "10px",
             },
           },
-          borderRadius : "10px"
+          paddingTop: "20px",
+          borderRadius: "10px",
         }}
       />
     </>
