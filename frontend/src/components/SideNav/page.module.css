@@ -13,3 +13,11 @@
   font-size: 20px;
   font-family: "Montserrat" !important;
 }
+
+.listCon{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}

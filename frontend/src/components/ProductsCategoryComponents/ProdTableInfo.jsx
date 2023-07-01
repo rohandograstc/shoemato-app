@@ -33,6 +33,7 @@ const ProdTableInfo = () => {
           headArray={headArray}
           searchwidth={"320px"}
           calendar={false}
+          searchIcon={true}
         />
         <ProdCategoryTable />
       </Paper>

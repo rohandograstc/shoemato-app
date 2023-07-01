@@ -13,10 +13,17 @@ import { rows, tableHead } from "./constants";
 import { CellTypo } from "@/styledComponents/CellTypo";
 import Link from "next/link";
 
-const TransactionTable = ({pathId}) => {
+const TransactionTable = ({ pathId }) => {
   console.log("PathId :", pathId);
   return (
-    <Paper sx={{ width: "100%", mb: 2, boxShadow: "none", padding: "0 20px" }}>
+    <Paper
+      sx={{
+        width: "100%",
+        mb: 2,
+        boxShadow: "none",
+        padding: "0 20px",
+      }}
+    >
       <TableContainer
         component={Paper}
         sx={{
@@ -26,7 +33,10 @@ const TransactionTable = ({pathId}) => {
           minHeight: "60vh", // For Now for matching UI
         }}
       >
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <Table
+          sx={{ minWidth: 650, borderTopLeftRadius: "8x" }}
+          aria-label="simple table"
+        >
           <TableHead sx={{ borderBottom: 0 }}>
             <TableRow>
               <TableCell sx={{ py: "27px" }} align="center">
@@ -67,7 +77,11 @@ const TransactionTable = ({pathId}) => {
                 >
                   <Link
                     style={{ textDecoration: "none" }}
-                    href={ pathId ? `/vendors/${pathId}/${row?.mId}` : `/vendors/manufacturer/${row?.mId}`}
+                    href={
+                      pathId
+                        ? `/vendors/${pathId}/${row?.mId}`
+                        : `/vendors/manufacturer/${row?.mId}`
+                    }
                   >
                     <CellTypo variant="span" fcolor={"#788B9A"}>
                       #{row?.mId}

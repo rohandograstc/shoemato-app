@@ -24,7 +24,7 @@ const style = {
 const innerDivStyle = {
   border: "3px dashed #0D1A26",
   borderRadius: "10px",
-  padding: " 30px 40px",
+  padding: " 60px 40px",
   display: "flex",
   alignItems: "center",
   gap: "25px",

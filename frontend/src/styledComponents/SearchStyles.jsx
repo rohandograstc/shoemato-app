@@ -50,6 +50,7 @@ export const StyledInputBase = styled(InputBase)(({ theme, searchwidth }) => ({
       fontWeight: 400,
       fontSize: "20px",
       lineHeight: "160%",
+      color: "#080a0d"
     },
   },
 }));

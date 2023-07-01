@@ -54,6 +54,7 @@ const VendorsTableInfo = () => {
           calendar={false}
           renewwhite={true}
           links={true}
+          searchIcon={true}
         />
         <InventoryTable />
       </Paper>

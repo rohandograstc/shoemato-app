@@ -1,4 +1,4 @@
-function createData(inId, name, tag, date, email, status) {
+const createData = (inId, name, tag, date, email, status) => {
   return {
     inId,
     name,

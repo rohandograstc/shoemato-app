@@ -1,21 +1,16 @@
 import { StyledButton, StyledReportIcon } from "@/styledComponents/StyledBtn";
 import { Box, Typography } from "@mui/material";
-import React, { useState } from "react";
+import React from "react";
 
 import styles from "../dashboard.module.css";
-import UserInfoModal from "./UserInfoModal";
 
-function ReportBtn() {
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+const ReportBtn = () => {
 
   return (
     <>
       <Box className={styles.reportButton}>
         <StyledButton
           variant="contained"
-          onClick={handleOpen}
           startIcon={<StyledReportIcon />}
         >
           <Typography variant="p" className={styles.reportBtnText}>
@@ -23,7 +18,6 @@ function ReportBtn() {
           </Typography>
         </StyledButton>
       </Box>
-      <UserInfoModal open={open} handleClose={handleClose} />
     </>
   );
 }

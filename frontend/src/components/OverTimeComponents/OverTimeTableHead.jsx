@@ -53,7 +53,8 @@ const OverTimeTableHead = () => {
             disableElevation
             btnradius={"100px"}
             btncolor={"#0D1A261A"}
-            sx={{ width: "150px" }}
+            typogap={"30px"}
+            sx={{ width: "180px" }}
           >
             <StyledTypography variant="h4">On Time </StyledTypography>
             <StyledTypography variant="h4">12,900</StyledTypography>
@@ -63,7 +64,8 @@ const OverTimeTableHead = () => {
             disableElevation
             btnradius={"100px"}
             btncolor={"#0D1A26"}
-            sx={{ width: "130px" }}
+            typogap={"70px"}
+            sx={{ width: "180px" }}
           >
             <StyledTypography tcolor={"white"} variant="h4">
               Delay
@@ -77,7 +79,8 @@ const OverTimeTableHead = () => {
             disableElevation
             btnradius={"100px"}
             btncolor={"#0D1A26"}
-            sx={{ width: "130px" }}
+            typogap={"55px"}
+            sx={{ width: "180px" }}
           >
             <StyledTypography tcolor={"white"} variant="h4">
               Overtime

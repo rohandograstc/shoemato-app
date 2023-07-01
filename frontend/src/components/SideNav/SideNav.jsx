@@ -25,6 +25,7 @@ import Link from "next/link";
 // Other
 
 import { useRouter } from "next/router";
+import ReportBtn from "../ReportBtn";
 
 const SideNav = () => {
   const open = true;
@@ -67,7 +68,7 @@ const SideNav = () => {
     { name: "Invoice", link: "/invoice" },
     { name: "Vendors", link: "/vendors" },
     { name: "Inventory", link: "/inventory" },
-    { name: "Complaints", link:"/complaints" },
+    { name: "Complaints", link: "/complaints" },
     { name: "Settings" },
   ];
 
@@ -112,62 +113,71 @@ const SideNav = () => {
             className={styles.logo}
           />
         </DrawerHeader>
-        <List sx={{ marginTop: "20px" }}>
-          {sideNavArray.map((text, index) => (
-            <ListItem key={text.name} disablePadding sx={{ display: "block" }}>
-              <Link
-                href={text.link !== undefined ? `${text?.link}` : "/dashboard"}
-                style={{ textDecoration: "none" }}
+        <Box className={styles.listCon} >
+          <List sx={{ marginTop: "20px" }}>
+            {sideNavArray.map((text, index) => (
+              <ListItem
+                key={text.name}
+                disablePadding
+                sx={{ display: "block" }}
               >
-                <ListItemButton
-                  sx={{
-                    minHeight: 48,
-                    justifyContent: open ? "initial" : "center",
-                    px: 2.5,
-                    backgroundColor:
-                      firstPath === text?.link?.substring(1) && "white",
-                    color:
-                      firstPath === text?.link?.substring(1)
-                        ? "black"
-                        : "white",
-                    "&:hover": {
+                <Link
+                  href={
+                    text.link !== undefined ? `${text?.link}` : "/dashboard"
+                  }
+                  style={{ textDecoration: "none" }}
+                >
+                  <ListItemButton
+                    sx={{
+                      minHeight: 48,
+                      justifyContent: open ? "initial" : "center",
+                      px: 2.5,
                       backgroundColor:
                         firstPath === text?.link?.substring(1) && "white",
-                    },
-                    borderTopRightRadius: "5px",
-                    borderBottomRightRadius: "5px",
-                  }}
-                >
-                  <ListItemIcon
-                    sx={{
-                      minWidth: 0,
-                      mr: open ? 3 : "auto",
-                      justifyContent: "center",
+                      color:
+                        firstPath === text?.link?.substring(1)
+                          ? "black"
+                          : "white",
+                      "&:hover": {
+                        backgroundColor:
+                          firstPath === text?.link?.substring(1) && "white",
+                      },
+                      borderTopRightRadius: "5px",
+                      borderBottomRightRadius: "5px",
                     }}
                   >
-                    <Image
-                      src={
-                        firstPath === text?.link?.substring(1)
-                          ? IconArray[index + 9]
-                          : IconArray[index]
-                      }
-                      alt="icons"
-                      width="30px"
-                      height="30px"
+                    <ListItemIcon
+                      sx={{
+                        minWidth: 0,
+                        mr: open ? 3 : "auto",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <Image
+                        src={
+                          firstPath === text?.link?.substring(1)
+                            ? IconArray[index + 9]
+                            : IconArray[index]
+                        }
+                        alt="icons"
+                        width="30px"
+                        height="30px"
+                      />
+                    </ListItemIcon>
+                    <ListItemText
+                      primary={text.name}
+                      sx={{
+                        opacity: open ? 1 : 0,
+                        fontFamily: "Montserrat",
+                      }}
                     />
-                  </ListItemIcon>
-                  <ListItemText
-                    primary={text.name}
-                    sx={{
-                      opacity: open ? 1 : 0,
-                      fontFamily: "Montserrat",
-                    }}
-                  />
-                </ListItemButton>
-              </Link>
-            </ListItem>
-          ))}
-        </List>
+                  </ListItemButton>
+                </Link>
+              </ListItem>
+            ))}
+          </List>
+          <ReportBtn />
+        </Box>
       </Drawer>
     </>
   );

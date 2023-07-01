@@ -1,4 +1,4 @@
-function createData(mId, name, stock) {
+const createData = (mId, name, stock) => {
   return {
     mId,
     name,

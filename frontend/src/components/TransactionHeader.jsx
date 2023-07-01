@@ -26,18 +26,31 @@ import Link from "next/link";
 
 const TransactionHeader = (props) => {
   return (
-    <Box className={styles.transactionTableHeader}>
+    <Box
+      className={styles.transactionTableHeader}
+      style={{ paddingTop: props?.headertext && "0px", overflow: !props?.headertext && 'hidden' }}
+    >
       {props.prodHeader === true ? (
         <Box
           sx={{
             width: "50%",
             textAlign: "center",
             borderRadius: "10px 10px 10px 0px",
+            display: "flex",
+            justifyContent: "space-between",
+            padding: "20px",
+            paddingLeft: "10%",
+            borderRadius: "0px 10px 10px 0px",
+            boxShadow:
+              "-10px -6px 5px 0px rgba(255,255,255,1),  inset -4px -2px 5px 0px rgba(217,217,217,0.5)",
           }}
         >
           <Typography vairant="p" sx={{ fontSize: "22px" }}>
             {props?.headertext ? props?.headertext : "TOP SELLING PRODUCT"}
           </Typography>
+          <MonthlySelect
+            text={props.calendarText ? props.calendarText : "Monthly"}
+          />
         </Box>
       ) : (
         <Box sx={{ display: "flex" }}>

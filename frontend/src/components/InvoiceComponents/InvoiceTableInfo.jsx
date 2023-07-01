@@ -30,8 +30,9 @@ const InvoiceTableInfo = () => {
       >
         <TransactionHeader
           headArray={headArray}
-          searchwidth={"320px"}
+          searchwidth={"120px"}
           calendar={true}
+          searchIcon={true}
         />
         <InvoiceTable />
       </Paper>

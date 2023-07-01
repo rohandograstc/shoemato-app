@@ -1,4 +1,4 @@
-function createData(pName, price, totalOrder, totalAmount, profit, commision) {
+const createData = (pName, price, totalOrder, totalAmount, profit, commision) => {
   return {
     pName,
     price,

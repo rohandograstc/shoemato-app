@@ -29,10 +29,11 @@ const InventoryCard = () => {
         alignItems: "center",
         width: "60%",
         margin: "0 auto",
+        justifyContent: "center"
       }}
     >
       {cardArray?.map((data, index) => (
-        <CardDiv key={index}  boxmrx={"10px"}>
+        <CardDiv key={index}  boxmrx={"10px"} boxwidth={"24%"}>
           <HeadingTypo variant="h5">{data?.name}</HeadingTypo>
           <Box>
             <NumberTypo variant="h1">{data?.number}</NumberTypo>

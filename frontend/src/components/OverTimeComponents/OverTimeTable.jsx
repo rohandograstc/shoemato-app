@@ -25,7 +25,7 @@ const OverTimeTable = () => {
         <TableHead sx={{ borderBottom: "5px solid #D9D9D9" }}>
           <TableRow>
             <TableCell sx={{ py: "7px" }} align="center">
-              Product ID
+              Vendor ID
             </TableCell>
             {tableHead.slice(1, tableHead.length).map((cellName, i) => (
               <TableCell key={i} sx={{ py: "7px" }} align="center">

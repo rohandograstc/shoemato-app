@@ -60,9 +60,7 @@ const Brands = ({ report }) => {
           </Box>
         ))}
       </Box>
-      {report ? (
-        <ReportBtn />
-      ) : (
+      {!report && (
         <Box
           sx={{
             display: "flex",

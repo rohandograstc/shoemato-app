@@ -43,7 +43,7 @@ const TableInfo = () => {
         boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
       }}
     >
-      <TransactionHeader headArray={headArray} calendar={true} />
+      <TransactionHeader headArray={headArray} calendar={true} searchIcon={true} />
       <TransactionTable />
     </Paper>
   );
