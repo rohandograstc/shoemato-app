@@ -4,6 +4,7 @@ import { Box, Button, MenuItem, Select, Typography } from "@mui/material";
 
 import styles from "../../addproducts.module.css";
 import { StyledButton } from "@/styledComponents/StyledBtn";
+import { inputStyle } from "@/globalStyles/typoStyles";
 
 const AutoCompleteComponent = () => {
   const tagOptions = [
@@ -47,7 +48,7 @@ const AutoCompleteComponent = () => {
             btnwidth={"120px"}
             btnmrb={"0"}
           >
-            <Typography variant="p" className={styles.tagTypo}>
+            <Typography variant="p" sx={{ ...inputStyle, color: "#ffffff" }}>
               Tags
             </Typography>
           </StyledButton>

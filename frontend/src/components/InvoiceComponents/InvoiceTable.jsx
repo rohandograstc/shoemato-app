@@ -6,10 +6,11 @@ import {
   TableContainer,
   TableHead,
   TableRow,
+  Typography,
 } from "@mui/material";
 import React from "react";
 import { rows, tableHead } from "./constants.jsx";
-import { CellTypo } from "@/styledComponents/CellTypo.jsx";
+import { paraStyle } from "@/globalStyles/typoStyles.jsx";
 
 const InvoiceTable = () => {
   return (
@@ -26,12 +27,11 @@ const InvoiceTable = () => {
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead sx={{ borderBottom: "5px solid gray" }}>
             <TableRow>
-              <TableCell sx={{ py: "7px" }} align="center">
-                <CellTypo variant="span">Invoice ID</CellTypo>
-              </TableCell>
-              {tableHead.slice(1, tableHead.length).map((cellName, i) => (
+              {tableHead?.map((cellName, i) => (
                 <TableCell key={i} sx={{ py: "7px" }} align="center">
-                  <CellTypo variant="span">{cellName}</CellTypo>
+                  <Typography variant="span" sx={paraStyle}>
+                    {cellName}
+                  </Typography>
                 </TableCell>
               ))}
             </TableRow>
@@ -55,16 +55,16 @@ const InvoiceTable = () => {
                   sx={{
                     cursor: "pointer",
                     borderBottom: "none",
-                    p: "4px",
-                  }}
-                  style={{
                     padding: "10px",
                   }}
                   align="center"
                 >
-                    <CellTypo variant="span" fcolor={"#788B9A"}>
-                      {row.inId}
-                    </CellTypo>
+                  <Typography
+                    variant="span"
+                    sx={{ ...paraStyle, color: "#788B9A" }}
+                  >
+                    {row.inId}
+                  </Typography>
                 </TableCell>
                 {Object?.values(row)
                   ?.slice(1)
@@ -75,12 +75,15 @@ const InvoiceTable = () => {
                       sx={{
                         cursor: "pointer",
                         borderBottom: "none",
-                        p: "4px",
+                        padding: "10px",
                       }}
                     >
-                      <CellTypo variant="span" fcolor={"#788B9A"}>
+                      <Typography
+                        variant="span"
+                        sx={{ ...paraStyle, color: "#788B9A" }}
+                      >
                         {cell}
-                      </CellTypo>
+                      </Typography>
                     </TableCell>
                   ))}
               </TableRow>

@@ -1,4 +1,4 @@
-function createData(
+const createData = (
   catId,
   catName,
   totalProducts,
@@ -8,7 +8,7 @@ function createData(
   wholeSalers,
   loc,
   actions
-) {
+) => {
   return {
     catId,
     catName,

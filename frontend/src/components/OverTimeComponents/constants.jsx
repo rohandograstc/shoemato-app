@@ -1,4 +1,4 @@
-function createData(
+const createData = (
   pId,
   category,
   location,
@@ -8,7 +8,7 @@ function createData(
   wholesalers,
   wLocation,
   mrp
-) {
+) => {
   return {
     pId,
     category,

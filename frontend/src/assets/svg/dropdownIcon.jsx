@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function MyCustomIcon(props) {
+const MyCustomIcon = (props) => {
   return (
     <svg
       width="18"

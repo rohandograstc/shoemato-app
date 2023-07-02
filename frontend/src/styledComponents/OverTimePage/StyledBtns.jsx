@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-export const StyledBtns = styled(Button)(({ theme, btncolor, btnradius, btnborder }) => ({
+export const StyledBtns = styled(Button)(({ theme, btncolor, btnradius, btnborder, typogap }) => ({
   backgroundColor: btncolor ? btncolor : "#0D1A261A",
   border: btnborder ? btnborder : "1px solid #0D1A26",
   borderRadius: btnradius ? btnradius : "100px 0px 0px 100px",
@@ -13,5 +13,5 @@ export const StyledBtns = styled(Button)(({ theme, btncolor, btnradius, btnborde
   alignItems: "center",
   justifyContent: "center",
   textAlign : "cetner",
-  gap : "10px",
+  gap : typogap ? typogap : "10px",
 }));

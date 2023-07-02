@@ -3,8 +3,7 @@ import React from "react";
 import { Chart, PieSeries } from "@devexpress/dx-react-chart-material-ui";
 import styles from "./DashboardComponents/dashboard.module.css";
 import { Palette } from "@devexpress/dx-react-chart";
-import { HeadingTypo } from "@/styledComponents/HeadingTypo";
-import { CellTypo } from "@/styledComponents/CellTypo";
+import { headingStyle, paraStyle } from "@/globalStyles/typoStyles";
 
 const ChartCard = ({ smallChart }) => {
   const data = [
@@ -45,7 +44,9 @@ const ChartCard = ({ smallChart }) => {
   ];
   return (
     <Paper className={styles.chartComponent}>
-      <HeadingTypo variant="h5">Sale Overview</HeadingTypo>
+      <Typography variant="h5" sx={headingStyle}>
+        Sale Overview
+      </Typography>
       <Chart
         data={data}
         className={
@@ -62,7 +63,9 @@ const ChartCard = ({ smallChart }) => {
               className={styles.dotColor}
               sx={{ backgroundColor: `${data.dotbgcolor}` }}
             />
-            <CellTypo variant="span">{data.name}</CellTypo>
+            <Typography variant="span" sx={paraStyle}>
+              {data.name}
+            </Typography>
           </Box>
         ))}
       </Box>

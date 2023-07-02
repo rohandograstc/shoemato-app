@@ -2,30 +2,32 @@ import { Box, Button, Typography } from "@mui/material";
 import React from "react";
 import styles from "./dashboard.module.css";
 import { StyledSlider } from "@/styledComponents/StyledSlider";
-import { HeadingTypo } from "@/styledComponents/HeadingTypo";
-import { CellTypo } from "@/styledComponents/CellTypo";
 import Link from "next/link";
+import { headingStyle, paraStyle, subHeadingStyle } from "@/globalStyles/typoStyles";
 
 const DailyQueue = () => {
   return (
     <Box className={styles.dailyQueueContainer}>
-      <HeadingTypo variant="h5" sx={{ paddingLeft: "10px" }}>
+      <Typography
+        variant="h5"
+        sx={{ paddingLeft: "10px", marginBottom: "10px", ...headingStyle }}
+      >
         Daily Queue
-      </HeadingTypo>
+      </Typography>
       <Box className={styles.dailyQueueOptionContainer}>
-        <CellTypo variant="h3">TOTAL ORDERS</CellTypo>
+        <Typography variant="h3" sx={paraStyle} >TOTAL ORDERS</Typography>
         <StyledSlider
           defaultValue={50}
           aria-label="Default"
           valueLabelDisplay="auto"
         />
-        <CellTypo variant="h3">PENDING ORDERS</CellTypo>
+        <Typography variant="h3" sx={paraStyle}>PENDING ORDERS</Typography>
         <StyledSlider
           defaultValue={50}
           aria-label="Default"
           valueLabelDisplay="auto"
         />
-        <CellTypo variant="h3">COMPLETED ORDERS</CellTypo>
+        <Typography variant="h3" sx={paraStyle}>COMPLETED ORDERS</Typography>
         <StyledSlider
           defaultValue={50}
           aria-label="Default"
@@ -46,7 +48,7 @@ const DailyQueue = () => {
             href={"/dashboard/overtime"}
             style={{ textDecoration: "none", color: "white" }}
           >
-            <Typography variant="p" className={styles.overDuesBtnText}>
+            <Typography variant="p" sx={{margin:"0 10px", ...subHeadingStyle, fontFamily:"Montserrat"}} >
               Overdues
             </Typography>
           </Link>

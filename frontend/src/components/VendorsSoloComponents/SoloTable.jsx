@@ -6,10 +6,11 @@ import {
   TableContainer,
   TableHead,
   TableRow,
+  Typography,
 } from "@mui/material";
 import React from "react";
 // import { rows, tableHead } from "./constants.jsx";
-import { CellTypo } from "@/styledComponents/CellTypo.jsx";
+import { paraStyle } from "@/globalStyles/typoStyles";
 
 const SoloTable = ({ tablesizeFixed, rows, tableHead, twidth }) => {
   return (
@@ -74,9 +75,12 @@ const SoloTable = ({ tablesizeFixed, rows, tableHead, twidth }) => {
                       width: twidth,
                     }}
                   >
-                    <CellTypo fcolor={"#788B9A"} variant="h6">
+                    <Typography
+                      sx={{ ...paraStyle, color: "#788B9A" }}
+                      variant="h6"
+                    >
                       {cell}
-                    </CellTypo>
+                    </Typography>
                   </TableCell>
                 ))}
               </TableRow>

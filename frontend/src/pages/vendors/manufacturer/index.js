@@ -30,7 +30,7 @@ const Manufacturer = () => {
   return (
     <Box sx={{ display: "flex", flexDirection: "column", gap: "60px" }}>
       <ManufacturerHead headArray={headArray} nameIndex={0} />
-      <ManufacturerInfo headerTitle={headerTitle} pathId={pathId} />
+      <ManufacturerInfo headerTitle={headerTitle} pathId={pathId} calendarText={"Calendar"}  />
     </Box>
   );
 };

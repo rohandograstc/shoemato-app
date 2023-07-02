@@ -21,23 +21,41 @@ import { Box, Typography } from "@mui/material";
 
 import { MonthlySelect } from "./TopVendors";
 
-import { HeadingTypo } from "@/styledComponents/HeadingTypo";
 import Link from "next/link";
+import { headingStyle } from "@/globalStyles/typoStyles";
 
 const TransactionHeader = (props) => {
   return (
-    <Box className={styles.transactionTableHeader}>
+    <Box
+      className={styles.transactionTableHeader}
+      style={{
+        paddingTop: props?.headertext && "0px",
+        overflow: !props?.headertext && "hidden",
+      }}
+    >
       {props.prodHeader === true ? (
         <Box
           sx={{
             width: "50%",
             textAlign: "center",
             borderRadius: "10px 10px 10px 0px",
+            display: "flex",
+            justifyContent: "space-between",
+            padding: "20px",
+            paddingLeft: "10%",
+            borderRadius: "0px 10px 10px 0px",
+            boxShadow:
+              "-10px -6px 5px 0px rgba(255,255,255,1),  inset -4px -2px 5px 0px rgba(217,217,217,0.5)",
           }}
         >
           <Typography vairant="p" sx={{ fontSize: "22px" }}>
             {props?.headertext ? props?.headertext : "TOP SELLING PRODUCT"}
           </Typography>
+          {props?.headertext && (
+            <MonthlySelect
+              text={props.calendarText ? props.calendarText : "Monthly"}
+            />
+          )}
         </Box>
       ) : (
         <Box sx={{ display: "flex" }}>
@@ -65,10 +83,14 @@ const TransactionHeader = (props) => {
                   href={`${headData.path}`}
                   style={{ textDecoration: "none", color: "inherit" }}
                 >
-                  <HeadingTypo variant="h4">{headData.name}</HeadingTypo>
+                  <Typography variant="h4" sx={headingStyle}>
+                    {headData.name}
+                  </Typography>
                 </Link>
               ) : (
-                <HeadingTypo variant="h4">{headData.name}</HeadingTypo>
+                <Typography variant="h4" sx={headingStyle}>
+                  {headData.name}
+                </Typography>
               )}
             </StyledButton>
           ))}

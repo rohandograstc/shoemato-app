@@ -1,30 +1,25 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import List from "@mui/material/List";
 import CssBaseline from "@mui/material/CssBaseline";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import IconButton from "@mui/material/IconButton";
-import AccountCircle from "@mui/icons-material/AccountCircle";
-import { Typography } from "@mui/material";
 
-import { DrawerHeader, AppBar, Drawer } from "@/styledComponents/Drawer";
+import { DrawerHeader, Drawer } from "@/styledComponents/Drawer";
 import Image from "next/image";
+
+// CSS
+import styles from "./page.module.css";
 
 // Image / Logo
 
 import Logos from "../../assets/svg";
 
-// CSS
-import styles from "./page.module.css";
-import Link from "next/link";
-
 // Other
 
 import { useRouter } from "next/router";
+import ReportBtn from "../ReportBtn";
+import TopBar from "./TopBar";
+import SideNavList from "./SideNavList";
+
+
 
 const SideNav = () => {
   const open = true;
@@ -33,75 +28,10 @@ const SideNav = () => {
   const { pathname } = useRouter();
   const firstPath = pathname.split("/")[1];
 
-  const IconArray = [
-    Logos.dashboard,
-    Logos.sales,
-    Logos.products,
-    Logos.returnIcon,
-    Logos.orders,
-    Logos.vendors,
-    Logos.inventory,
-    Logos.complaints,
-    Logos.settings,
-    Logos.dashboardDark,
-    Logos.salesDark,
-    Logos.productsDark,
-    Logos.returnDark,
-    Logos.ordersDark,
-    Logos.vendorsDark,
-    Logos.inventoryDark,
-    Logos.complaintsDark,
-    Logos.settings,
-  ];
-
-  const sideNavArray = [
-    { name: "Dashboard", link: "/dashboard" },
-    { name: "Daily Sales", link: "/dailysales" },
-    // { name: "Products" },
-    { name: "Products", link: "/products" },
-    { name: "Return", link: "/return" },
-    // { name: "Invoice" },
-    // { name: "Vendors" },
-    // { name: "Daily Sales" },
-    // { name: "Return" },
-    { name: "Invoice", link: "/invoice" },
-    { name: "Vendors", link: "/vendors" },
-    { name: "Inventory", link: "/inventory" },
-    { name: "Complaints", link:"/complaints" },
-    { name: "Settings" },
-  ];
-
   return (
     <>
       <CssBaseline />
-      <AppBar position="fixed" className={styles.appBar} open={open}>
-        <Toolbar>
-          <Box sx={{ flexGrow: 0.5 }} />
-          <Box sx={{ flexGrow: 0.5 }} />
-          <Box sx={{ display: { xs: "none", md: "flex" }, gap: "30px" }}>
-            <Box sx={{ display: "flex", alignItems: "center" }}>
-              <Typography variant="h6" className={styles.appbarTexts} noWrap>
-                Admin ID
-              </Typography>
-            </Box>
-            <Box sx={{ display: "flex", alignItems: "center" }}>
-              <Typography variant="h6" className={styles.appbarTexts} noWrap>
-                Greko
-              </Typography>
-              <IconButton
-                size="large"
-                edge="end"
-                aria-label="account of current user"
-                aria-controls={menuId}
-                aria-haspopup="true"
-                color="inherit"
-              >
-                <AccountCircle sx={{ fontSize: "35px" }} />
-              </IconButton>
-            </Box>
-          </Box>
-        </Toolbar>
-      </AppBar>
+      <TopBar open={open} menuId={menuId} />
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
           <Image
@@ -112,62 +42,10 @@ const SideNav = () => {
             className={styles.logo}
           />
         </DrawerHeader>
-        <List sx={{ marginTop: "20px" }}>
-          {sideNavArray.map((text, index) => (
-            <ListItem key={text.name} disablePadding sx={{ display: "block" }}>
-              <Link
-                href={text.link !== undefined ? `${text?.link}` : "/dashboard"}
-                style={{ textDecoration: "none" }}
-              >
-                <ListItemButton
-                  sx={{
-                    minHeight: 48,
-                    justifyContent: open ? "initial" : "center",
-                    px: 2.5,
-                    backgroundColor:
-                      firstPath === text?.link?.substring(1) && "white",
-                    color:
-                      firstPath === text?.link?.substring(1)
-                        ? "black"
-                        : "white",
-                    "&:hover": {
-                      backgroundColor:
-                        firstPath === text?.link?.substring(1) && "white",
-                    },
-                    borderTopRightRadius: "5px",
-                    borderBottomRightRadius: "5px",
-                  }}
-                >
-                  <ListItemIcon
-                    sx={{
-                      minWidth: 0,
-                      mr: open ? 3 : "auto",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <Image
-                      src={
-                        firstPath === text?.link?.substring(1)
-                          ? IconArray[index + 9]
-                          : IconArray[index]
-                      }
-                      alt="icons"
-                      width="30px"
-                      height="30px"
-                    />
-                  </ListItemIcon>
-                  <ListItemText
-                    primary={text.name}
-                    sx={{
-                      opacity: open ? 1 : 0,
-                      fontFamily: "Montserrat",
-                    }}
-                  />
-                </ListItemButton>
-              </Link>
-            </ListItem>
-          ))}
-        </List>
+        <Box className={styles.listCon}>
+          <SideNavList open={open} firstPath={firstPath} />
+          <ReportBtn />
+        </Box>
       </Drawer>
     </>
   );

@@ -1,8 +1,8 @@
-import { CardDiv, NumberTypo } from "@/styledComponents/Card";
-import { HeadingTypo } from "@/styledComponents/HeadingTypo";
-import { Box } from "@mui/material";
+import { CardDiv } from "@/styledComponents/Card";
+import { Box, Typography } from "@mui/material";
 import React from "react";
 import styles from "../complaints.module.css";
+import { bigNumberStyle, headingStyle } from "@/globalStyles/typoStyles";
 
 const ComplaintsCards = ({ cardArray, cwidth, start, end }) => {
   return (
@@ -14,11 +14,16 @@ const ComplaintsCards = ({ cardArray, cwidth, start, end }) => {
       >
         {cardArray.slice(start, end).map((data, index) => (
           <Box key={index} sx={{ width: { cwidth }, textAlign: "center" }}>
-            <HeadingTypo fweight={"700"} variant="h5">
+            <Typography
+              sx={{ ...headingStyle, fontWeight: "700" }}
+              variant="h5"
+            >
               {data.name}
-            </HeadingTypo>
+            </Typography>
             <Box sx={{ height: "30px" }} />
-            <NumberTypo variant="h1">{data.number}</NumberTypo>
+            <Typography variant="h1" sx={bigNumberStyle}>
+              {data.number}
+            </Typography>
           </Box>
         ))}
       </Box>

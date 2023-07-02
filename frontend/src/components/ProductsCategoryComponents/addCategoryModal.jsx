@@ -4,12 +4,10 @@ import Image from "next/image";
 //MUI Imports
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
-import { CellTypo } from "@/styledComponents/CellTypo";
 import CloseIcon from "@mui/icons-material/Close";
-import { InputAdornment, OutlinedInput } from "@mui/material";
+import { InputAdornment, OutlinedInput, Typography } from "@mui/material";
 
 // Styled Components
-import { HeadingTypo } from "@/styledComponents/HeadingTypo";
 import { StyledButton } from "@/styledComponents/StyledBtn";
 
 // Assets
@@ -18,6 +16,11 @@ import RightArrow from "@/assets/svg/rightArrow";
 import crossIconModal from "../../assets/svg/crossIconModal.svg";
 
 import styles from "./prodCategory.module.css";
+import {
+  headingStyle,
+  paraStyle,
+  subHeadingStyle,
+} from "@/globalStyles/typoStyles";
 
 const style = {
   position: "absolute",
@@ -52,15 +55,17 @@ const AddCategoryModal = (props) => {
         }}
       >
         <Box sx={style}>
-          <CellTypo
-            fsize={"27px"}
-            fheight={"140%"}
-            fcolor={"#525252"}
+          <Typography
             variant="h5"
-            sx={{ marginBottom: "20px" }}
+            sx={{
+              marginBottom: "20px",
+              ...paraStyle,
+              fontSize: "27px",
+              color: "#525252",
+            }}
           >
             Category Details
-          </CellTypo>
+          </Typography>
           <Box className={styles.innerDivStyle}>
             <OutlinedInput
               className={styles.inputStyle}
@@ -116,7 +121,9 @@ const AddCategoryModal = (props) => {
             />
           </Box>
           <Box className={styles.imageDiv}>
-            <HeadingTypo variant="h6">Image : </HeadingTypo>
+            <Typography variant="h6" sx={headingStyle}>
+              Image :{" "}
+            </Typography>
             <StyledButton
               variant="contained"
               btnwidth={"150px"}
@@ -124,15 +131,7 @@ const AddCategoryModal = (props) => {
               btnradius={"10px"}
               startIcon={<BrowseIcon />}
             >
-              <CellTypo
-                variant="p"
-                fheight={"20px"}
-                fsize={"14px"}
-                fweight={"600"}
-                fcolor="white"
-              >
-                Browse
-              </CellTypo>
+              <Typography sx={subHeadingStyle}>Browse</Typography>
             </StyledButton>
           </Box>
           <StyledButton
@@ -148,15 +147,9 @@ const AddCategoryModal = (props) => {
               },
             }}
           >
-            <CellTypo
-              variant="p"
-              fheight={"20px"}
-              fsize={"14px"}
-              fweight={"600"}
-              fcolor="white"
-            >
+            <Typography variant="p" sx={subHeadingStyle}>
               ADD
-            </CellTypo>
+            </Typography>
           </StyledButton>
 
           <Image

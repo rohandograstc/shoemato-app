@@ -5,16 +5,16 @@ import {
   MenuItem,
   Paper,
   Select,
+  Typography,
 } from "@mui/material";
 import React from "react";
 import styles from "./DashboardComponents/dashboard.module.css";
 import { BorderLinearProgress } from "@/styledComponents/BorderLinearProgress";
 
 import MyCustomIcon from "@/assets/svg/dropdownIcon";
-import { HeadingTypo } from "@/styledComponents/HeadingTypo";
-import { CellTypo } from "@/styledComponents/CellTypo";
+import { headingStyle, paraStyle } from "@/globalStyles/typoStyles";
 
-export const MonthlySelect = ({text}) => {
+export const MonthlySelect = ({ text }) => {
   return (
     <FormControl>
       <Select
@@ -90,7 +90,9 @@ const TopVendors = () => {
   return (
     <Paper className={styles.vendorsComponent}>
       <Box className={styles.venderHeader}>
-        <HeadingTypo variant="h5">Turnover</HeadingTypo>
+        <Typography variant="h5" sx={headingStyle}>
+          Turnover
+        </Typography>
         <MonthlySelect />
       </Box>
       <Box sx={{ height: "80%" }} className={styles.venderInfoContainer}>
@@ -104,7 +106,9 @@ const TopVendors = () => {
             key={index}
           >
             <Grid item xs={2} md={3}>
-              <CellTypo variant="h5" fsize={"12.46px"} >{vendorData.name}</CellTypo>
+              <Typography variant="h5" sx={paraStyle}>
+                {vendorData.name}
+              </Typography>
             </Grid>
             <Grid
               item
@@ -119,14 +123,14 @@ const TopVendors = () => {
                 bg={vendorData.color}
                 sx={{ width: `${vendorData.value}%` }}
               />
-              <CellTypo variant="h5" fsize={"12.46px"} >
+              <Typography variant="h5" sx={paraStyle}>
                 {vendorData.sales}
-              </CellTypo>
+              </Typography>
             </Grid>
           </Grid>
         ))}
       </Box>
     </Paper>
   );
-}
-export default TopVendors
+};
+export default TopVendors;

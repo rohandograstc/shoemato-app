@@ -2,9 +2,8 @@ import { Box, Paper, Typography } from "@mui/material";
 import React from "react";
 
 import styles from "./DashboardComponents/dashboard.module.css";
-import ReportBtn from "./ReportBtn";
-import { HeadingTypo } from "@/styledComponents/HeadingTypo";
 import { AddButton, CategoryButton } from "./CategoryAddButton";
+import { headingStyle } from "@/globalStyles/typoStyles";
 
 const Brands = ({ report }) => {
   const brandNameArray = [
@@ -48,9 +47,9 @@ const Brands = ({ report }) => {
             className={styles.brandContainer}
             sx={{ bgcolor: text.bcolor }}
           >
-            <HeadingTypo variant="h5" fsize={"16px"}>
+            <Typography variant="h5" sx={headingStyle}>
               {text.name}
-            </HeadingTypo>
+            </Typography>
             <Typography variant="h5" className={styles.brandNum}>
               {text.num}
               <Typography variant="span" className={styles.brandUnit}>
@@ -60,9 +59,7 @@ const Brands = ({ report }) => {
           </Box>
         ))}
       </Box>
-      {report ? (
-        <ReportBtn />
-      ) : (
+      {!report && (
         <Box
           sx={{
             display: "flex",
