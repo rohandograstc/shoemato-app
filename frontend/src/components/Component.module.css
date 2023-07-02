@@ -15,7 +15,7 @@
 .box{
     text-align: center;
     margin: 5rem;
-    max-width: 25rem;
+    max-width: 26rem;
 }
 .input{
     border-color: black;
@@ -25,14 +25,14 @@
 .login_title{
     margin-bottom: 1rem;
     font-weight: 600;
-    font-family: var(--Rubik-fontstyle);
+    font-family: 'Rubik', sans-serif;
     font-style: normal;
 }
 .desc_text{
     text-align: start;
     font-size: 14px;
     margin: .6rem 0rem;
-    font-family: var(--OpenSans-fontstyle);
+    font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     
 

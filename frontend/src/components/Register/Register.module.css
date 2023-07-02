@@ -25,7 +25,7 @@
 .title_signup{
      width:-webkit-fill-available ;
     text-align: center;
-    font-family: var(--OpenSans-fontstyle);
+    font-family: 'Open Sans', sans-serif;
     font-size: var(--subtitle-fontsize);
     font-weight: 600;
 }
@@ -58,7 +58,7 @@
     text-align: justify;
     height: 35px;
     font-weight:500 ;
-    font-family: var(--OpenSans-fontstyle);
+    font-family: 'Open Sans', sans-serif;
     
 }
 
@@ -80,13 +80,13 @@
 .title2{
     width:-webkit-fill-available ;
     text-align: start;
-    font-family: var(--Rubik-fontstyle);
+    font-family: 'Rubik', sans-serif;
     font-size: var(--title2-fontsize);
     font-weight: 600;
     margin: .5rem 0rem;
 }
 .title{
-    font-family: var(--Rubik-fontstyle);
+    font-family: 'Rubik', sans-serif;
     font-weight:bold;
     margin: .5rem 0rem;
 }

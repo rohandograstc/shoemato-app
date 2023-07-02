@@ -2,6 +2,7 @@ import { wrapper } from "@/Redux/store";
 import { I18nextProvider } from "react-i18next";
 import i18n from "../../i18n";
 import "@/styles/globals.css";
+import "./Global.module.css"
 import SideNav from "@/components/SideNav/SideNav";
 import { Box, Button } from "@mui/material";
 import { DrawerHeader } from "@/styledComponents/Drawer";

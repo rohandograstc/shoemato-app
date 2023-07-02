@@ -5,7 +5,6 @@ import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import { Typography, Stack, TextField, Button } from "@mui/material";
-import Link from "next/link";
 import { HeadingTypo } from "@/styledComponents/HeadingTypo";
 import style from "@/components/Dailysales/Dailysales.module.css";
 import Carousel from "@/components/Dailysales/OrderStatusComponents/Carousel";
@@ -111,6 +110,7 @@ const OrderStatus = () => {
           
           <HeadingTypo
             variant="h1"
+            className={style.headingStyle}
             style={{
               textAlign: "center",
               marginTop: "40px",
@@ -122,6 +122,7 @@ const OrderStatus = () => {
           </HeadingTypo>
           <HeadingTypo
             variant="h1"
+            className={style.headingStyle}
             style={{
               textAlign: "center",
               marginTop: "5px",
@@ -187,7 +188,7 @@ const inputBoxStyle = {
     pt: 0,
     fontSize: 16,
     fontWeight: "700",
-    fontFamily: "Montserrat",
+    fontFamily: "Open Sans",
   },
 };
 

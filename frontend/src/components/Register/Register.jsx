@@ -237,11 +237,11 @@ const inputBoxStyle = {
     },
   },
   "& .MuiInputLabel-root": {
-    pt: 0.3,
+    pt: 0.4,
     fontSize: 12,
   },
 };
-// inputbox css end here
+
 
 //mobile country code dorpdown css started here
 const code = {
@@ -253,11 +253,13 @@ const code = {
   "& MuiSelect-icon": {
     overflow: "visible",
   },
+  "& fieldset": {
+    borderColor: "black",
+  },
   "& .MuiInputBase-input": {
     p: 0.1,
     fontSize: 14,
     overflow: "visible",
-    borderColor: "black",
   },
   "& .MuiSelect-select": {
     overflow: "inherit",
