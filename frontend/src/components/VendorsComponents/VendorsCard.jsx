@@ -1,6 +1,6 @@
-import { CardDiv, NumberTypo, UnitTypo } from "@/styledComponents/Card";
-import { HeadingTypo } from "@/styledComponents/HeadingTypo";
-import { Box } from "@mui/material";
+import { bigNumberStyle, headingStyle } from "@/globalStyles/typoStyles";
+import { CardDiv, UnitTypo } from "@/styledComponents/Card";
+import { Box, Typography } from "@mui/material";
 import React from "react";
 
 const VendorsCard = () => {
@@ -30,9 +30,9 @@ const VendorsCard = () => {
     >
       {cardArray?.map((data, index) => (
         <CardDiv key={index} boxmrx={"10px"} boxwidth={"33%"}>
-          <HeadingTypo variant="h5">{data?.name}</HeadingTypo>
+          <Typography variant="h5" sx={headingStyle} >{data?.name}</Typography>
           <Box>
-            <NumberTypo variant="h1">{data?.number}</NumberTypo>
+            <Typography variant="h1" sx={bigNumberStyle} >{data?.number}</Typography>
             <UnitTypo variant="span">{data?.unit}</UnitTypo>
           </Box>
         </CardDiv>

@@ -1,9 +1,9 @@
-import { Box} from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React from "react";
 import styles from "../product.module.css";
-import { HeadingTypo } from "@/styledComponents/HeadingTypo";
 import UploadCsc from "./UploadCsc";
-import { CardDiv, NumberTypo, UnitTypo } from "@/styledComponents/Card";
+import { CardDiv, UnitTypo } from "@/styledComponents/Card";
+import { bigNumberStyle, headingStyle } from "@/globalStyles/typoStyles";
 
 const ProdCards = ({ cardArray, uploadCSV }) => {
   return (
@@ -11,18 +11,23 @@ const ProdCards = ({ cardArray, uploadCSV }) => {
       {cardArray?.map((data, index) => (
         <CardDiv
           key={index}
-          boxwidth = {"99%"}
-          boxheight = { uploadCSV === false ? "165px" : "130px"}
+          boxwidth={"99%"}
+          boxheight={uploadCSV === false ? "165px" : "130px"}
         >
-          <HeadingTypo variant="h5">{data.name}</HeadingTypo>
+          <Typography variant="h5" sx={headingStyle}>
+            {data.name}
+          </Typography>
           <Box>
-            <NumberTypo
+            <Typography
               variant="h1"
-              fsize={ uploadCSV === true && "50px"}
-              fheight={ uploadCSV === true && "68px"}
+              sx={{
+                ...bigNumberStyle,
+                fontSize: uploadCSV === true && "50px",
+                lineHeight: uploadCSV === true && "68px",
+              }}
             >
               {data.number}
-            </NumberTypo>
+            </Typography>
             <UnitTypo
               variant="span"
               fweight={uploadCSV === true && index === 1 && "700"}

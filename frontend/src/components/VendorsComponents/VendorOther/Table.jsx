@@ -7,11 +7,13 @@ import {
   TableContainer,
   TableHead,
   TableRow,
+  Typography,
 } from "@mui/material";
 import React from "react";
 import { rows, tableHead } from "./constants";
 import { CellTypo } from "@/styledComponents/CellTypo";
 import Link from "next/link";
+import { paraStyle } from "@/globalStyles/typoStyles";
 
 const TransactionTable = ({ pathId }) => {
   console.log("PathId :", pathId);
@@ -40,7 +42,9 @@ const TransactionTable = ({ pathId }) => {
           <TableHead sx={{ borderBottom: 0 }}>
             <TableRow>
               <TableCell sx={{ py: "27px" }} align="center">
-                <CellTypo variant="span">Manufacturer ID</CellTypo>
+                <Typography variant="span" sx={paraStyle}>
+                  Manufacturer ID
+                </Typography>
               </TableCell>
               {tableHead.slice(1, tableHead.length).map((cellName, i) => (
                 <TableCell key={i} sx={{ py: "27px" }} align="center">
@@ -83,9 +87,12 @@ const TransactionTable = ({ pathId }) => {
                         : `/vendors/manufacturer/${row?.mId}`
                     }
                   >
-                    <CellTypo variant="span" fcolor={"#788B9A"}>
+                    <Typography
+                      variant="span"
+                      sx={{ ...paraStyle, color: "#788B9A" }}
+                    >
                       #{row?.mId}
-                    </CellTypo>
+                    </Typography>
                   </Link>
                 </TableCell>
                 {Object.values(row)
@@ -101,9 +108,12 @@ const TransactionTable = ({ pathId }) => {
                           p: "4px",
                         }}
                       >
-                        <CellTypo variant="span" fcolor={"#788B9A"}>
+                        <Typography
+                          variant="span"
+                          sx={{ ...paraStyle, color: "#788B9A" }}
+                        >
                           {cell}
-                        </CellTypo>
+                        </Typography>
                       </TableCell>
                     ) : (
                       <TableCell

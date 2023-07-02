@@ -2,24 +2,23 @@ import React from "react";
 
 import styles from "./addproducts.module.css";
 
-import { Box, FormControlLabel } from "@mui/material";
+import { Box, FormControlLabel, Typography } from "@mui/material";
 import { HeadingTypo } from "@/styledComponents/HeadingTypo";
 import { IOSSwitch } from "@/styledComponents/SwitchStyled";
 import { StyledButton } from "@/styledComponents/StyledBtn";
 import ProdInput from "./SubComponents/ProductFormComp/ProdInput";
 import TypeSection from "./SubComponents/ProductFormComp/TypeSection";
 import PricesSection from "./SubComponents/ProductFormComp/PricesSection";
+import {
+  headingStyle,
+  inputStyle,
+  subHeadingStyle,
+} from "@/globalStyles/typoStyles";
 
 export const placeHolderStyle = {
   outline: "none",
   "& .MuiInputBase-input": {
-    "::placeholder": {
-      fontFamily: "Open Sans",
-      fontWeight: 600,
-      fontSize: "16px",
-      lineHeight: "160%",
-      color: "#232321",
-    },
+    "::placeholder": { ...inputStyle, color: "#232321" },
   },
 };
 export const smallplaceHolderStyle = {
@@ -30,11 +29,8 @@ export const smallplaceHolderStyle = {
   outline: "none",
   "& .MuiInputBase-input": {
     "::placeholder": {
-      fontFamily: "Open Sans",
-      fontWeight: 600,
-      fontSize: "16px",
+      ...inputStyle,
       textAlign: "center",
-      lineHeight: "160%",
       color: "#232321",
     },
   },
@@ -51,9 +47,9 @@ const ProductsForm = () => {
         {/* In Stock Button  */}
 
         <Box className={styles.inputFieldCon}>
-          <HeadingTypo variant="span" style={{ color: "#79767C" }}>
+          <Typography variant="span" sx={{ ...headingStyle, color: "#79767C" }}>
             In-Stock
-          </HeadingTypo>
+          </Typography>
           <FormControlLabel
             control={<IOSSwitch sx={{ m: 1 }} defaultChecked />}
           />
@@ -69,9 +65,9 @@ const ProductsForm = () => {
           btnwidth={"200px"}
           btnpad={"10px"}
         >
-          <HeadingTypo variant="p" fsize={"14px"}>
+          <Typography variant="p" sx={subHeadingStyle}>
             SAVE
-          </HeadingTypo>
+          </Typography>
         </StyledButton>
         <StyledButton
           btnradius={"10px"}
@@ -82,9 +78,9 @@ const ProductsForm = () => {
           tcolor={"black"}
           style={{ border: "1px solid black", boxShadow: "none" }}
         >
-          <HeadingTypo variant="p" fsize={"14px"}>
+          <Typography variant="p" sx={subHeadingStyle}>
             Discard
-          </HeadingTypo>
+          </Typography>
         </StyledButton>
       </Box>
     </Box>

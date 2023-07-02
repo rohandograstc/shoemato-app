@@ -1,9 +1,9 @@
-import { HeadingTypo } from "@/styledComponents/HeadingTypo";
 import { StyledButton } from "@/styledComponents/StyledBtn";
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import styles from "../complaints.module.css";
 import { CardDiv } from "@/styledComponents/Card";
+import { headingStyle } from "@/globalStyles/typoStyles";
 
 const TableCard = ({ headArray }) => {
   return (
@@ -14,20 +14,18 @@ const TableCard = ({ headArray }) => {
     >
       <Box className={styles.headingCon}>
         <Box sx={{ width: "32%" }} />
-        <HeadingTypo
+        <Typography
           variant="h4"
-          ffamily={"Open Sans"}
-          sx={{ width: "32%", textAlign: "center" }}
+          sx={{ ...headingStyle, width: "32%", textAlign: "center" }}
         >
           Resolved
-        </HeadingTypo>
-        <HeadingTypo
+        </Typography>
+        <Typography
           variant="h4"
-          ffamily={"Open Sans"}
-          sx={{ width: "32%", textAlign: "center" }}
+          sx={{ ...headingStyle, width: "32%", textAlign: "center" }}
         >
           Pending
-        </HeadingTypo>
+        </Typography>
       </Box>
       <Box className={styles.tableCon}>
         <Box className={styles.tableCardBtnsCon}>
@@ -51,9 +49,9 @@ const TableCard = ({ headArray }) => {
                     tcolor={headData?.tcolor}
                     btnpad={"7px 25px"}
                   >
-                    <HeadingTypo variant="h4" ffamily={"Open Sans"}>
+                    <Typography variant="h4" sx={{...headingStyle, fontWeight: "700"}}>
                       {headData.name}
-                    </HeadingTypo>
+                    </Typography>
                   </StyledButton>
                 </Box>
                 <Typography

@@ -50,6 +50,7 @@ const InventoryTableInfo = () => {
           searchwidth={"320px"}
           calendar={false}
           renewwhite={true}
+          searchIcon={true}
         />
         <InventoryTable />
       </Paper>

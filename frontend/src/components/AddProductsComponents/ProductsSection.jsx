@@ -1,17 +1,15 @@
 import React from "react";
 import Image from "next/image";
 
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 import styles from "./addproducts.module.css";
 
 import dragIcon from "../../assets/svg/dragIcon.svg";
-import shoeCarouselimg from "../../assets/svg/shoeCarouselimg.svg";
-import ShoeImg from "../../assets/svg/img.jpeg";
 
-import { CellTypo } from "@/styledComponents/CellTypo";
 import ProductsView from "./SubComponents/ProductsSectionComp/ProductsView";
 import ImageSlider from "./SubComponents/ProductsSectionComp/ImageSlider";
+import { paraStyle } from "@/globalStyles/typoStyles";
 
 const ProductsSection = () => {
   const slides = [
@@ -41,9 +39,12 @@ const ProductsSection = () => {
 
       <Box className={styles.dragDropDiv}>
         <Image height="71px" width="71px" alt="dragnDropIcon" src={dragIcon} />
-        <CellTypo variant="span" fheight={"140%"} fsize={"23px"}>
+        <Typography
+          variant="span"
+          sx={{ ...paraStyle, fontSize: "23px" }}
+        >
           Drag & Drop
-        </CellTypo>
+        </Typography>
       </Box>
       <Box className={styles.productViewSection}>
         <ProductsView viewName={"Side"} />

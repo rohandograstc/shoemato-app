@@ -32,10 +32,7 @@ const TypeSection = () => {
               padding: "5px",
               paddingRight: "10px",
               "#demo-simple-select": {
-                paddingRight: "10px",
-                paddingLeft: "10px",
-                paddingTop: "5px",
-                paddingBottom: "5px",
+                padding: "5px 10px"
               },
             }}
           >

@@ -14,7 +14,7 @@ const ProdTableInfo = () => {
         boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
       }}
     >
-      <TransactionHeader prodHeader={true} calendar={true} headertext={"TOP SELLING PRODUCT"}  />
+      <TransactionHeader prodHeader={true} calendar={true} searchIcon={true}  />
       <TransactionTable />
     </Paper>
   );

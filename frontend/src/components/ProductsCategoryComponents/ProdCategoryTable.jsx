@@ -13,6 +13,7 @@ import { rows, tableHead } from "./constants.jsx";
 import { CellTypo } from "@/styledComponents/CellTypo.jsx";
 import EditIcon from "@/assets/svg/editIcon.jsx";
 import CrossIcon from "@/assets/svg/crossIcon.jsx";
+import { paraStyle } from "@/globalStyles/typoStyles.jsx";
 
 const ProdCategoryTable = () => {
   return (
@@ -29,19 +30,15 @@ const ProdCategoryTable = () => {
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead sx={{ borderBottom: 0 }}>
             <TableRow>
-              <TableCell
-                sx={{ borderBottom: "none", py: "27px" }}
-                align="center"
-              >
-                <CellTypo variant="span">Category ID</CellTypo>
-              </TableCell>
-              {tableHead.slice(1, tableHead.length).map((cellName, i) => (
+              {tableHead?.map((cellName, i) => (
                 <TableCell
                   key={i}
                   sx={{ borderBottom: "none", py: "27px" }}
                   align="center"
                 >
-                  <CellTypo variant="span">{cellName}</CellTypo>
+                  <Typography variant="span" sx={paraStyle}>
+                    {cellName}
+                  </Typography>
                 </TableCell>
               ))}
             </TableRow>
@@ -80,9 +77,12 @@ const ProdCategoryTable = () => {
                       fontWeight: "400",
                     }}
                   >
-                    <CellTypo variant="span" fcolor={"#788B9A"}>
+                    <Typography
+                      variant="span"
+                      sx={{ ...paraStyle, color: "#788B9A" }}
+                    >
                       {row.catId}
-                    </CellTypo>
+                    </Typography>
                   </Typography>
                 </TableCell>
                 {Object.values(row)
@@ -97,9 +97,12 @@ const ProdCategoryTable = () => {
                         p: "4px",
                       }}
                     >
-                      <CellTypo variant="span" fcolor={"#788B9A"}>
+                      <Typography
+                        variant="span"
+                        sx={{ ...paraStyle, color: "#788B9A" }}
+                      >
                         {cell}
-                      </CellTypo>
+                      </Typography>
                     </TableCell>
                   ))}
                 <TableCell

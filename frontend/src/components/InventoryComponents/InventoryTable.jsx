@@ -10,8 +10,8 @@ import {
 } from "@mui/material";
 import React from "react";
 import { rows, tableHead } from "./constants.jsx";
-import { CellTypo } from "@/styledComponents/CellTypo.jsx";
 import { StyledButton } from "@/styledComponents/StyledBtn.jsx";
+import { paraStyle } from "@/globalStyles/typoStyles.jsx";
 
 const InventoryTable = () => {
   return (
@@ -28,12 +28,11 @@ const InventoryTable = () => {
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead sx={{ borderBottom: 0 }}>
             <TableRow>
-              <TableCell sx={{ py: "27px" }} align="center">
-                <CellTypo variant="span">Inventory ID</CellTypo>
-              </TableCell>
-              {tableHead.slice(1, tableHead.length).map((cellName, i) => (
+              {tableHead?.map((cellName, i) => (
                 <TableCell key={i} sx={{ py: "27px" }} align="center">
-                  <CellTypo variant="span">{cellName}</CellTypo>
+                  <Typography variant="span" sx={paraStyle}>
+                    {cellName}
+                  </Typography>
                 </TableCell>
               ))}
             </TableRow>
@@ -64,12 +63,15 @@ const InventoryTable = () => {
                   }}
                   align="center"
                 >
-                    <CellTypo variant="span" fcolor={"#788B9A"}>
-                      {row?.invId}
-                    </CellTypo>
+                  <Typography
+                    variant="span"
+                    sx={{ ...paraStyle, color: "#788B9A" }}
+                  >
+                    {row?.invId}
+                  </Typography>
                 </TableCell>
                 {Object?.values(row)
-                  .slice(1, -1)
+                  ?.slice(1, -1)
                   ?.map((cell, index) => (
                     <TableCell
                       key={index}
@@ -80,9 +82,12 @@ const InventoryTable = () => {
                         p: "4px",
                       }}
                     >
-                      <CellTypo variant="span" fcolor={"#788B9A"}>
+                      <Typography
+                        variant="span"
+                        sx={{ ...paraStyle, color: "#788B9A" }}
+                      >
                         {cell}
-                      </CellTypo>
+                      </Typography>
                     </TableCell>
                   ))}
                 <TableCell
@@ -99,7 +104,12 @@ const InventoryTable = () => {
                     btnradius={"8px"}
                     bgcolor={"#0D1A26"}
                   >
-                    <CellTypo variant="span" fcolor={"white"}  >{row?.totalCredit}</CellTypo>
+                    <Typography
+                      variant="span"
+                      sx={{ ...paraStyle, color: "white" }}
+                    >
+                      {row?.totalCredit}
+                    </Typography>
                   </StyledButton>
                 </TableCell>
               </TableRow>

@@ -21,14 +21,17 @@ import { Box, Typography } from "@mui/material";
 
 import { MonthlySelect } from "./TopVendors";
 
-import { HeadingTypo } from "@/styledComponents/HeadingTypo";
 import Link from "next/link";
+import { headingStyle } from "@/globalStyles/typoStyles";
 
 const TransactionHeader = (props) => {
   return (
     <Box
       className={styles.transactionTableHeader}
-      style={{ paddingTop: props?.headertext && "0px", overflow: !props?.headertext && 'hidden' }}
+      style={{
+        paddingTop: props?.headertext && "0px",
+        overflow: !props?.headertext && "hidden",
+      }}
     >
       {props.prodHeader === true ? (
         <Box
@@ -48,9 +51,11 @@ const TransactionHeader = (props) => {
           <Typography vairant="p" sx={{ fontSize: "22px" }}>
             {props?.headertext ? props?.headertext : "TOP SELLING PRODUCT"}
           </Typography>
-          <MonthlySelect
-            text={props.calendarText ? props.calendarText : "Monthly"}
-          />
+          {props?.headertext && (
+            <MonthlySelect
+              text={props.calendarText ? props.calendarText : "Monthly"}
+            />
+          )}
         </Box>
       ) : (
         <Box sx={{ display: "flex" }}>
@@ -78,10 +83,14 @@ const TransactionHeader = (props) => {
                   href={`${headData.path}`}
                   style={{ textDecoration: "none", color: "inherit" }}
                 >
-                  <HeadingTypo variant="h4">{headData.name}</HeadingTypo>
+                  <Typography variant="h4" sx={headingStyle}>
+                    {headData.name}
+                  </Typography>
                 </Link>
               ) : (
-                <HeadingTypo variant="h4">{headData.name}</HeadingTypo>
+                <Typography variant="h4" sx={headingStyle}>
+                  {headData.name}
+                </Typography>
               )}
             </StyledButton>
           ))}

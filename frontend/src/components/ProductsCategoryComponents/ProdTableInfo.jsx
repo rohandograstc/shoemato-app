@@ -8,7 +8,7 @@ const ProdTableInfo = () => {
   const headArray = [
     {
       name: "Categories",
-      btnWidth: "fit-content",
+      btnWidth: "180px",
       btnRadius: "0px 0px 10px 0px",
       mrx: "5px",
     },
@@ -34,6 +34,7 @@ const ProdTableInfo = () => {
           searchwidth={"320px"}
           calendar={false}
           searchIcon={true}
+          renewwhite={true}
         />
         <ProdCategoryTable />
       </Paper>
