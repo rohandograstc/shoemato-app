@@ -3,6 +3,7 @@ import { Box, Typography } from "@mui/material";
 
 import styles from "./DashboardComponents/dashboard.module.css";
 import { subHeadingStyle } from "@/globalStyles/typoStyles";
+import ReportBtnIcon from "@/assets/svg/reportBtnIcon"
 
 const ReportBtn = () => {
   return (
@@ -12,7 +13,7 @@ const ReportBtn = () => {
           variant="contained"
           btnwidth={"90%"}
           sx={{ border: "2px solid white" }}
-          startIcon={<StyledReportIcon />}
+          startIcon={<ReportBtnIcon />}
         >
           <Typography variant="p" sx={subHeadingStyle}>
             Report
