@@ -4,9 +4,10 @@ import uploadCSVIconGray from "../../../assets/svg/uploadCSVIconGray.svg";
 import Modal from "@mui/material/Modal";
 import Image from "next/image";
 import styles from "../product.module.css";
-import { CellTypo } from "@/styledComponents/CellTypo";
 import { StyledButton } from "@/styledComponents/StyledBtn";
 import BrowseIcon from "@/assets/svg/browseIcon";
+import { Typography } from "@mui/material";
+import { headingStyle, inputStyle, paraStyle } from "@/globalStyles/typoStyles";
 
 const style = {
   position: "absolute",
@@ -51,13 +52,19 @@ const UploadCsvModal = (props) => {
           <Box sx={innerDivStyle}>
             <Box className={styles.modalContentLeft}>
               <Image src={uploadCSVIconGray} alt="uploadCSVIcon" />
-              <CellTypo variant="span" fheight={"140%"} fsize={"23px"}>
+              <Typography
+                variant="span"
+                sx={{ ...headingStyle, fontSize: "23px", lineHeight: "140%" }}
+              >
                 Drag & Drop
-              </CellTypo>
+              </Typography>
             </Box>
-            <CellTypo variant="span" fheight={"140%"} fsize={"16px"}>
+            <Typography
+              variant="span"
+              sx={{ ...inputStyle, lineHeight: "140%" }}
+            >
               or
-            </CellTypo>
+            </Typography>
             <StyledButton
               variant="contained"
               btnwidth={"130px"}
@@ -65,15 +72,9 @@ const UploadCsvModal = (props) => {
               btnradius={"10px"}
               startIcon={<BrowseIcon />}
             >
-              <CellTypo
-                variant="p"
-                fheight={"20px"}
-                fsize={"14px"}
-                fweight={"600"}
-                fcolor="white"
-              >
+              <Typography sx={{ ...paraStyle, color: "white" }} variant="p">
                 Browse
-              </CellTypo>
+              </Typography>
             </StyledButton>
           </Box>
         </Box>

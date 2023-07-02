@@ -1,8 +1,8 @@
-import { HeadingTypo } from "@/styledComponents/HeadingTypo";
 import { StyledButton } from "@/styledComponents/StyledBtn";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 import styles from "./addVendor.module.css";
+import { subHeadingStyle } from "@/globalStyles/typoStyles";
 
 const FormButton = () => {
   return (
@@ -14,9 +14,9 @@ const FormButton = () => {
         btnpad={"10px"}
         sx={{ marginTop: "20px" }}
       >
-        <HeadingTypo variant="p" fsize={"14px"}>
+        <Typography variant="p" sx={subHeadingStyle}>
           SAVE
-        </HeadingTypo>
+        </Typography>
       </StyledButton>
       <StyledButton
         btnradius={"10px"}
@@ -30,9 +30,9 @@ const FormButton = () => {
           boxShadow: "none",
         }}
       >
-        <HeadingTypo variant="p" fsize={"14px"}>
+        <Typography variant="p" sx={subHeadingStyle}>
           Discard
-        </HeadingTypo>
+        </Typography>
       </StyledButton>
     </Box>
   );

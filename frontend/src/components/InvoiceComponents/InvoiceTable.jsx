@@ -10,7 +10,6 @@ import {
 } from "@mui/material";
 import React from "react";
 import { rows, tableHead } from "./constants.jsx";
-import { CellTypo } from "@/styledComponents/CellTypo.jsx";
 import { paraStyle } from "@/globalStyles/typoStyles.jsx";
 
 const InvoiceTable = () => {

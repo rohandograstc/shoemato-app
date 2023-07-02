@@ -10,7 +10,6 @@ import {
 } from "@mui/material";
 import React from "react";
 import { brows as rows, btableHead as tableHead } from "./constants.jsx";
-import { CellTypo } from "@/styledComponents/CellTypo.jsx";
 import { paraStyle } from "@/globalStyles/typoStyles.jsx";
 
 const TransactionTable = () => {

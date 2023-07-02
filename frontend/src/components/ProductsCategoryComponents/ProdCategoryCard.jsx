@@ -1,4 +1,3 @@
-import { HeadingTypo } from "@/styledComponents/HeadingTypo";
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import styles from "./prodCategory.module.css";

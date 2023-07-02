@@ -3,7 +3,6 @@ import React from "react";
 import styles from "./addproducts.module.css";
 
 import { Box, FormControlLabel, Typography } from "@mui/material";
-import { HeadingTypo } from "@/styledComponents/HeadingTypo";
 import { IOSSwitch } from "@/styledComponents/SwitchStyled";
 import { StyledButton } from "@/styledComponents/StyledBtn";
 import ProdInput from "./SubComponents/ProductFormComp/ProdInput";

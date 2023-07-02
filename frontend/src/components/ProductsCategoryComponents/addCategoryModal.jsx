@@ -4,7 +4,6 @@ import Image from "next/image";
 //MUI Imports
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
-import { CellTypo } from "@/styledComponents/CellTypo";
 import CloseIcon from "@mui/icons-material/Close";
 import { InputAdornment, OutlinedInput, Typography } from "@mui/material";
 

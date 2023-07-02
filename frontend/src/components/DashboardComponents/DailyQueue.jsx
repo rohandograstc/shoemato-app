@@ -2,8 +2,6 @@ import { Box, Button, Typography } from "@mui/material";
 import React from "react";
 import styles from "./dashboard.module.css";
 import { StyledSlider } from "@/styledComponents/StyledSlider";
-import { HeadingTypo } from "@/styledComponents/HeadingTypo";
-import { CellTypo } from "@/styledComponents/CellTypo";
 import Link from "next/link";
 import { headingStyle, paraStyle, subHeadingStyle } from "@/globalStyles/typoStyles";
 

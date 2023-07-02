@@ -11,7 +11,6 @@ import {
 } from "@mui/material";
 import React from "react";
 import { rows, tableHead } from "./constants";
-import { CellTypo } from "@/styledComponents/CellTypo";
 import Link from "next/link";
 import { paraStyle } from "@/globalStyles/typoStyles";
 
@@ -48,7 +47,9 @@ const TransactionTable = ({ pathId }) => {
               </TableCell>
               {tableHead.slice(1, tableHead.length).map((cellName, i) => (
                 <TableCell key={i} sx={{ py: "27px" }} align="center">
-                  <CellTypo variant="span">{cellName}</CellTypo>
+                  <Typography sx={paraStyle} variant="span">
+                    {cellName}
+                  </Typography>
                 </TableCell>
               ))}
             </TableRow>

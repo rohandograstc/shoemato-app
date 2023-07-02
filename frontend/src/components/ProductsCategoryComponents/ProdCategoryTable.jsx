@@ -10,7 +10,6 @@ import {
 } from "@mui/material";
 import React from "react";
 import { rows, tableHead } from "./constants.jsx";
-import { CellTypo } from "@/styledComponents/CellTypo.jsx";
 import EditIcon from "@/assets/svg/editIcon.jsx";
 import CrossIcon from "@/assets/svg/crossIcon.jsx";
 import { paraStyle } from "@/globalStyles/typoStyles.jsx";
