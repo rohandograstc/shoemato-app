@@ -26,13 +26,8 @@ const IconArray = [
 const sideNavArray = [
   { name: "Dashboard", link: "/dashboard" },
   { name: "Daily Sales", link: "/dailysales" },
-  // { name: "Products" },
   { name: "Products", link: "/products" },
   { name: "Return", link: "/return" },
-  // { name: "Invoice" },
-  // { name: "Vendors" },
-  // { name: "Daily Sales" },
-  // { name: "Return" },
   { name: "Invoice", link: "/invoice" },
   { name: "Vendors", link: "/vendors" },
   { name: "Inventory", link: "/inventory" },
