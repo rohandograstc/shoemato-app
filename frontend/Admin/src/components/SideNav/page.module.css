@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+.logo {
+  margin: 10px auto 0;
+}
+
+.appBar {
+  background-color: #0d1a26;
+}
+
+.appbarTexts {
+  font-weight: 600;
+  font-size: 20px;
+  font-family: "Montserrat" !important;
+}
+
+.listCon{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}

@@ -1,0 +1,262 @@
+.productsSection {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px 40px;
+}
+
+.dragDropDiv {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  padding: 2px;
+  border: 3px dashed #0d1a26;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 1700px) {
+  .dragDropDiv {
+    gap: 30px;
+  }
+}
+
+/* Carousel Div  */
+
+.carouselCon {
+  width: 100%;
+  height: 300px;
+}
+.carouselImage {
+  width: 300px;
+  height: 300px;
+}
+.carouselModalImage {
+  border-radius: 10px 10px 0 0;
+  width: 300px;
+  height: 300px;
+}
+
+/* Dots Div  */
+
+.colorDiv {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.divDot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.redcol {
+  background: #fd0e0e;
+}
+.yellowcol {
+  background: #e8fb10;
+}
+.graycol {
+  background: #d9d9d9;
+}
+.blackcol {
+  background: #0d0000;
+}
+
+/* Product View */
+
+.productViewSection {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.productViewCon {
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding-right: 5px;
+}
+
+.productContentCon {
+  width: 80%;
+  height: 100%;
+  padding: 1px 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contentTypo {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.5px;
+  color: #79767c;
+}
+
+/* Products Form  */
+
+.prodFormSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.prodFormCon {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 30px 40px 10px;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.inputFieldCon {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.inputBigStyle {
+  /* border: 1px solid #232321; */
+  border-radius: 10px;
+  width: 100%;
+}
+
+.inputStyle {
+  /* border: 1px solid #232321; */
+  border-radius: 10px;
+  width: 50%;
+}
+
+.inputQuanStyle {
+  /* border: 1px solid #232321; */
+  border-radius: 0 8px 8px 0;
+  width: 100%;
+  border-left: none;
+}
+
+.autoCompStyle {
+  border: 0.5px solid #232321;
+  border-radius: 8px;
+  width: 100%;
+  padding: 0;
+}
+
+.smallInput {
+  /* border: 1px solid #232321; */
+  border-radius: 8px;
+  width: 25%;
+}
+.notchedOutline {
+  border-color: initial !important;
+}
+.tagTypo {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 160%;
+  color: #ffffff;
+}
+
+.typeCon {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+}
+
+.quantityCon {
+  width: 100%;
+  display: flex;
+  gap: 0px;
+}
+
+.dropdownText {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 160%;
+  display: flex;
+  align-items: center;
+  color: #79767c;
+  width: 130px;
+  border-radius: 8px 0 0 8px;
+}
+
+.typeBtn {
+  position: relative;
+  border: 1px solid #0d1a26;
+  border-radius: 10px;
+  width: 30.4%;
+  height: 39.95px;
+  margin-bottom: 10px;
+}
+
+.typeBtnText {
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: center;
+  padding-top: 7px;
+  width: 42px;
+  height: 38px;
+  background: #0d1a26;
+  border-radius: 9px 0px 0px 9px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #ffffff;
+}
+@media screen and (max-width: 1400px) {
+  .typeBtn {
+    width: 32.1%;
+  }
+}
+
+.numBtnCon {
+  /* display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between; */
+  width: 50%;
+}
+
+.numbInnerCont {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.tagsItemsTypoCon {
+  padding: 0 10px;
+  border-radius: 20px;
+  margin: 0 10px;
+}
+
+.tagsItemsTypo {
+  background: #9fa3a9;
+  border-radius: 20px;
+  padding: 5px 18px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  color: #000000;
+  text-transform: none;
+}
