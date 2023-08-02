@@ -31,7 +31,7 @@ const MonthlySelect = () => {
   );
 };
 
-export default function () {
+const Graph = () => {
   const vendorNameArray = [
     {
       name: "Vendor",
@@ -125,3 +125,4 @@ export default function () {
     </Grid>
   );
 }
+export default Graph; 
