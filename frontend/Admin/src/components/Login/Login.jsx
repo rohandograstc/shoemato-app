@@ -58,7 +58,7 @@ function Login({ setEnter }) {
             sx={inputBoxStyle}
           />
           <Typography className={style.desc_text}>
-            <Link href="#" style={{textDecoration:'none', color:'black', 'font-family': 'Open Sans'}}>Forgot your password?</Link>
+            <Link href="#" style={{textDecoration:'none', color:'black', fontFamily: 'Open Sans'}}>Forgot your password?</Link>
           </Typography>
           <FormGroup>
             <FormControlLabel
@@ -111,7 +111,7 @@ function Login({ setEnter }) {
             </ThemeProvider>
           </Stack>
           <Typography className={style.desc_text} style={{ marginTop: "1rem" }}>
-            <Link href='#' style={{'font-family': 'Open Sans', textDecoration:'none', color:'black'}}>Terms And Conditions</Link>
+            <Link href='#' style={{fontFamily: 'Open Sans', textDecoration:'none', color:'black'}}>Terms And Conditions</Link>
           </Typography>
         </Stack>
       </Stack>
