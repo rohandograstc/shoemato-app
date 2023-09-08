@@ -197,7 +197,7 @@ const Register = ({ setEnter }) => {
                   label="Optional T&C"
                 />
               </FormGroup>
-            </div>
+            </div> 
             <Stack>
               <ThemeProvider theme={theme}>
                 <Button
