@@ -16,11 +16,7 @@ function App({ Component, pageProps }) {
   return (
     <I18nextProvider i18n={i18n}>
       {enter ?
-        <Box
-          sx={{
-            display: "flex",
-          }}
-        >
+        <Box sx={{ display: "flex" }} >
           <SideNav />
           <Box component="main" sx={{ flexGrow: 1, p: 2 }}>
             <Box>
@@ -28,13 +24,8 @@ function App({ Component, pageProps }) {
               <Component {...pageProps} />
             </Box>
           </Box>
-        </Box> : <>
-          {
-            exist ?
-              <Login setExist={setExist} setEnter={setEnter} /> :
-              <Register setExist={setExist} setEnter={setEnter} />
-          }
-        </>
+        </Box>
+        : <> { exist ? <Login setExist={setExist} setEnter={setEnter} /> : <Register setExist={setExist} setEnter={setEnter} /> } </>
       }
     </I18nextProvider>
   );

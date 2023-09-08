@@ -20,6 +20,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { grey } from "@mui/material/colors";
 import Link from "next/link";
+import { useRouter } from 'next/navigation'
 
 const Register = ({ setEnter }) => {
   const [userData, setUserData] = useState({
@@ -31,6 +32,7 @@ const Register = ({ setEnter }) => {
     email: "",
     password: "",
   });
+  const router = useRouter()
 
   const handleChange = (e) => {
     setUserData({ ...userData, [e.target.name]: e.target.value });
@@ -210,7 +212,13 @@ const Register = ({ setEnter }) => {
                     height: 40,
                     mt: 2,
                   }}
-                  onClick={() => setEnter(true)}
+                  onClick={() =>
+                    {
+                      setTimeout(() => {
+                        setEnter(true);
+                      }, 1000);
+                      router.push('/dashboard');
+                    }}
                 >
                   REGISTER
                 </Button>

@@ -19,6 +19,7 @@ import Image from "next/image";
 import fbIcon from "../../assets/facebook_icon.svg";
 import appleIcon from "../../assets/apple_icon.svg";
 import googleIcon from "../../assets/google_icon.svg";
+import { useRouter } from "next/router";
 
 function Login({ setEnter }) {
   const [credentials, setCredentials] = useState({
@@ -30,6 +31,8 @@ function Login({ setEnter }) {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
     console.log(credentials);
   };
+
+  const router = useRouter();
 
   return (
     <Box className={style.super_container}>
@@ -105,7 +108,13 @@ function Login({ setEnter }) {
                 variant="contained"
                 endIcon={<ArrowForwardIcon style={{ fontSize: "14px" }} />}
                 sx={{ display: "flex", justifyContent: "space-between" }}
-                onClick={() => setEnter(true)}>
+                onClick={() => 
+                  {
+                    setTimeout(() => {
+                      setEnter(true);
+                    }, 1000);
+                    router.push('/dashboard');
+                  }}>
                 EMAIL LOGIN
               </Button>
             </ThemeProvider>
