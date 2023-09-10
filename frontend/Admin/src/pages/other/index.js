@@ -1,9 +1,10 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { addUser } from "@/Redux/Features/user/userSlice";
 import { wrapper } from "../../Redux/store";
 import { increment } from "@/Redux/Features/counter/coutersSlice";
 import Page from "@/Roles/Example/Page";
 import { fetchUsers } from "../../Redux/Features/user/userSliceApi";
+import Loading from "./loading";
 
 export const getServerSideProps = wrapper.getServerSideProps(
   (store) => async () => {
@@ -15,7 +16,13 @@ export const getServerSideProps = wrapper.getServerSideProps(
 );
 
 const Other = (props) => {
-  return <Page title="Other Page" linkTo="/" />;
+  return (
+    <>
+      <Suspense fallback={<Loading />}>
+        <Page title="Other Page" linkTo="/" />
+      </Suspense>
+    </>
+  );
 };
 
 export default Other;
